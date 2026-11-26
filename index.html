@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UGLY BLACK FRIDAY — Ugly Christmas Sweaters &amp; Pet Sweaters</title>
+<meta name="description" content="Ugly Black Friday is the home of ugly Christmas sweaters and pet sweaters. Our own original designs plus a sweater shop full of holiday heat. Part of A.I. NOW.">
+<style>
+  :root{
+    --pink:#ff2e88; --violet:#8a2be2; --cyan:#00e5ff; --red:#e4002b;
+    --green:#00c853; --gold:#ffc400; --black:#0a0a0a; --white:#ffffff;
+    --pine:#0d3b21; --pine-deep:#07231a; --pine-dark:#051f14; --cranberry:#c8102e; --cranberry-deep:#7a0c1d; --cream:#fff6e5;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Arial Black',Arial,Helvetica,sans-serif;background:var(--pine-deep);color:var(--white);overflow-x:hidden;}
+  a{text-decoration:none;}
+  img{max-width:100%;display:block;}
+
+  /* ---------- HEADER / BRAND MARK ---------- */
+  header{background:var(--black);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-bottom:4px solid var(--pink);position:sticky;top:0;z-index:50;}
+  .brandmark{display:flex;align-items:center;gap:14px;}
+  .brandmark .wordmark{font-size:34px;letter-spacing:1px;color:var(--white);font-weight:900;}
+  .brandmark .wordmark .now{background:linear-gradient(90deg,var(--pink),var(--violet),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .brandmark .pill{background:var(--pink);color:#fff;font-size:12px;padding:5px 12px;border-radius:999px;letter-spacing:2px;}
+  header nav{display:flex;gap:10px;flex-wrap:wrap;}
+  header nav a{background:#1d1d1d;color:#fff;border:2px solid var(--cyan);padding:9px 16px;border-radius:999px;font-size:13px;letter-spacing:1px;}
+  header nav a:hover{background:var(--cyan);color:#000;}
+
+  /* ---------- HERO ---------- */
+  .hero{background:linear-gradient(120deg,var(--cranberry-deep) 0%,var(--cranberry) 34%,#a31621 58%,var(--pine) 100%);padding:56px 24px 64px;text-align:center;width:100%;}
+  .hero .kicker{display:inline-block;background:#000;color:var(--gold);padding:8px 20px;border-radius:999px;font-size:14px;letter-spacing:3px;margin-bottom:22px;}
+  .hero h1{font-size:clamp(44px,9vw,104px);line-height:.95;text-transform:uppercase;text-shadow:5px 5px 0 #000;}
+  .hero h1 .yellow{color:var(--gold);}
+  .hero p{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:clamp(17px,2.6vw,26px);max-width:1100px;margin:24px auto 0;line-height:1.45;text-shadow:1px 1px 0 rgba(0,0,0,.45);color:var(--cream);}
+  .hero .cta-row{margin-top:34px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .btn{display:inline-block;padding:16px 34px;border-radius:999px;font-size:17px;letter-spacing:1px;border:3px solid #000;box-shadow:5px 5px 0 #000;transition:transform .08s ease;}
+  .btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 #000;}
+  .btn-gold{background:var(--gold);color:#000;}
+  .btn-black{background:#000;color:#fff;border-color:#fff;box-shadow:5px 5px 0 rgba(0,0,0,.5);}
+
+  .marquee{background:var(--gold);color:#000;overflow:hidden;white-space:nowrap;padding:10px 0;border-top:4px solid #000;border-bottom:4px solid #000;}
+  .marquee span{display:inline-block;font-size:18px;letter-spacing:2px;animation:slide 22s linear infinite;}
+  @keyframes slide{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* ---------- SECTIONS ---------- */
+  section{padding:64px 24px;width:100%;}
+  .section-head{text-align:center;max-width:1200px;margin:0 auto 40px;}
+  .section-head h2{font-size:clamp(32px,5.5vw,58px);text-transform:uppercase;line-height:1.05;}
+  .section-head p{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:clamp(15px,2vw,20px);margin-top:14px;line-height:1.5;}
+  .tag{display:inline-block;padding:6px 16px;border-radius:999px;font-size:12px;letter-spacing:3px;margin-bottom:16px;background:#000;color:#fff;}
+
+  .designs-sec{background:var(--pine);background-image:radial-gradient(circle at 15% 20%,rgba(255,196,0,.20),transparent 40%),radial-gradient(circle at 85% 80%,rgba(200,16,46,.30),transparent 40%);}
+  .shop-sec{background:linear-gradient(180deg,var(--cranberry-deep),#5e0a1a);}
+  .pet-sec{background:linear-gradient(120deg,#0a2e1c,#14532d);}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;max-width:1280px;margin:0 auto;}
+  .card{border-radius:18px;overflow:hidden;border:3px solid #000;box-shadow:7px 7px 0 rgba(0,0,0,.55);display:flex;flex-direction:column;}
+  .card .art{background:#fff;}
+  .card .art img{width:100%;height:260px;object-fit:cover;}
+  .card .body{padding:18px;display:flex;flex-direction:column;gap:10px;flex:1;}
+  .card h3{font-size:21px;line-height:1.2;text-transform:uppercase;}
+  .card .desc{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:14px;line-height:1.45;flex:1;}
+  .card .price{font-size:26px;color:var(--gold);}
+  .card .drop{font-size:13px;letter-spacing:1px;color:#fff;background:var(--red);display:inline-block;padding:5px 12px;border-radius:999px;align-self:flex-start;}
+  .shop-btn{display:block;text-align:center;background:var(--cranberry);color:#fff;padding:13px;border-radius:999px;font-size:15px;letter-spacing:1px;border:2px solid #000;}
+  .shop-btn:hover{background:var(--gold);color:#000;}
+
+  /* dropship tiles (no photos — styled CSS tiles) */
+  .tile{min-height:230px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:22px;gap:10px;}
+  .tile .emoji-free-badge{font-size:12px;letter-spacing:3px;background:#000;color:var(--gold);padding:5px 12px;border-radius:999px;}
+  .tile h3{color:#fff;text-shadow:2px 2px 0 rgba(0,0,0,.4);}
+  .tile .price{color:#fff;font-size:30px;text-shadow:2px 2px 0 rgba(0,0,0,.4);}
+  .tile .shop-btn{background:#000;border-color:#fff;width:100%;}
+  .tile .shop-btn:hover{background:#fff;color:#000;}
+  .t1{background:linear-gradient(135deg,#c8102e,#e04536);}
+  .t2{background:linear-gradient(135deg,#0d3b21,#1d7a3a);}
+  .t3{background:linear-gradient(135deg,#8a5a00,#d99a00);}
+  .t4{background:linear-gradient(135deg,#14532d,#c8102e);}
+  .t5{background:linear-gradient(135deg,#5e0a1a,#0d3b21);}
+  .t6{background:linear-gradient(135deg,#c8102e,#e8a200);}
+  .t7{background:linear-gradient(135deg,#0d3b21,#7a0c1d);}
+  .t8{background:linear-gradient(135deg,#8f1d2c,#14532d);}
+
+  .design-card .body{background:#0c2b19;}
+  .pet-card .body{background:rgba(0,0,0,.35);}
+
+  /* ---------- JOIN THE LIST ---------- */
+  .join{background:var(--cranberry);text-align:center;padding:56px 24px;border-top:5px solid #000;border-bottom:5px solid #000;}
+  .join h2{font-size:clamp(28px,5vw,50px);text-transform:uppercase;text-shadow:3px 3px 0 rgba(0,0,0,.35);}
+  .join p{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:19px;margin:14px auto 26px;max-width:900px;line-height:1.5;}
+
+  footer{background:var(--black);text-align:center;padding:38px 24px;font-family:Arial,Helvetica,sans-serif;}
+  footer .foot-brand{font-family:'Arial Black',Arial,sans-serif;font-size:24px;margin-bottom:10px;}
+  footer .foot-brand .now{background:linear-gradient(90deg,var(--pink),var(--violet),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  footer p{color:#bbb;font-size:14px;line-height:1.6;}
+  footer a{color:var(--cyan);}
+
+  /* ---------- C9 CHRISTMAS LIGHT STRINGS ---------- */
+  .lights{background:linear-gradient(180deg,var(--pine-dark),#07281b);line-height:0;overflow:hidden;}
+  .lights-svg{width:100%;height:auto;display:block;}
+  .lights .wire{fill:none;stroke:#0a3520;stroke-width:3;}
+  .lights .drop-line{stroke:#0a3520;stroke-width:2.5;}
+  .lights .socket{fill:#123f27;stroke:#000;stroke-width:1;}
+  .lights .glass{stroke:rgba(0,0,0,.35);stroke-width:1;animation:glassPulse var(--d,3s) ease-in-out var(--dl,0s) infinite;}
+  .lights .glow{filter:blur(6px);opacity:.55;animation:glowPulse var(--d,3s) ease-in-out var(--dl,0s) infinite;}
+  @keyframes glowPulse{0%,100%{opacity:.35}50%{opacity:.85}}
+  @keyframes glassPulse{0%,100%{opacity:.82}50%{opacity:1}}
+  .lights .glow.sputter{animation:sputterGlow 6.8s linear var(--dl,0s) infinite;}
+  .lights .glass.sputter{animation:sputterGlass 6.8s linear var(--dl,0s) infinite;}
+  @keyframes sputterGlow{0%,100%{opacity:.8}4%{opacity:.1}6%{opacity:.85}8%{opacity:.15}11%{opacity:.8}52%{opacity:.75}54%{opacity:.2}57%{opacity:.8}}
+  @keyframes sputterGlass{0%,100%{opacity:1}4%{opacity:.45}6%{opacity:1}8%{opacity:.5}11%{opacity:1}52%{opacity:.95}54%{opacity:.55}57%{opacity:1}}
+
+  /* ---------- RED-NOSED REINDEER (hero) ---------- */
+  .reindeer{width:190px;margin:0 auto 6px;}
+  .reindeer svg{width:100%;height:auto;display:block;overflow:visible;}
+  .noseHalo{filter:blur(6px);opacity:.75;animation:noseHalo 4.8s linear infinite;}
+  .noseCore{animation:noseCore 4.8s linear infinite;}
+  @keyframes noseHalo{0%,50%{opacity:.8}55%,60%{opacity:.05}65%,79%{opacity:.8}82%,86%{opacity:.05}91%,100%{opacity:.8}}
+  @keyframes noseCore{0%,50%{fill:#ff2d1e;filter:drop-shadow(0 0 10px rgba(255,45,30,.95))}55%,60%{fill:#6e0d05;filter:drop-shadow(0 0 0 rgba(255,45,30,0))}65%,79%{fill:#ff2d1e;filter:drop-shadow(0 0 10px rgba(255,45,30,.95))}82%,86%{fill:#6e0d05;filter:drop-shadow(0 0 0 rgba(255,45,30,0))}91%,100%{fill:#ff2d1e;filter:drop-shadow(0 0 10px rgba(255,45,30,.95))}}
+
+  /* ---------- REDUCED MOTION: everything stays steadily lit ---------- */
+  @media (prefers-reduced-motion: reduce){
+    .marquee span{animation:none;}
+    .lights .glow,.lights .glass,.lights .glow.sputter,.lights .glass.sputter{animation:none;}
+    .lights .glow{opacity:.6;}
+    .lights .glass{opacity:1;}
+    .noseHalo{animation:none;opacity:.55;}
+    .noseCore{animation:none;fill:#ff2d1e;filter:drop-shadow(0 0 8px rgba(255,45,30,.8));}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brandmark">
+    <div class="wordmark">A.I. <span class="now">NOW</span></div>
+    <div class="pill">UGLY BLACK FRIDAY</div>
+  </div>
+  <nav>
+    <a href="#designs">OUR DESIGNS</a>
+    <a href="#shop">SWEATER SHOP</a>
+    <a href="#pets">PET SWEATERS</a>
+    <a href="https://shop.artificial-intelligencenow.com">THE STORE</a>
+  </nav>
+</header>
+
+<div class="lights" aria-hidden="true"></div>
+
+<div class="hero">
+  <div class="reindeer" aria-hidden="true">
+    <svg viewBox="0 0 220 208">
+      <g fill="none" stroke="#caa06a" stroke-width="8" stroke-linecap="round">
+        <path d="M74 62 C58 46 50 34 44 18"/>
+        <path d="M60 44 C50 40 42 40 34 44"/>
+        <path d="M66 54 C58 52 50 54 44 58"/>
+        <path d="M146 62 C162 46 170 34 176 18"/>
+        <path d="M160 44 C170 40 178 40 186 44"/>
+        <path d="M154 54 C162 52 170 54 176 58"/>
+      </g>
+      <ellipse cx="42" cy="86" rx="18" ry="10" fill="#a06a3b" transform="rotate(-28 42 86)"/>
+      <ellipse cx="178" cy="86" rx="18" ry="10" fill="#a06a3b" transform="rotate(28 178 86)"/>
+      <ellipse cx="44" cy="86" rx="9" ry="5" fill="#e0aa72" transform="rotate(-28 44 86)"/>
+      <ellipse cx="176" cy="86" rx="9" ry="5" fill="#e0aa72" transform="rotate(28 176 86)"/>
+      <ellipse cx="110" cy="118" rx="64" ry="56" fill="#b57e46"/>
+      <ellipse cx="110" cy="140" rx="36" ry="25" fill="#eccfa3"/>
+      <ellipse cx="66" cy="132" rx="10" ry="6" fill="#ff8fa3" opacity=".55"/>
+      <ellipse cx="154" cy="132" rx="10" ry="6" fill="#ff8fa3" opacity=".55"/>
+      <circle cx="84" cy="106" r="7" fill="#241407"/>
+      <circle cx="136" cy="106" r="7" fill="#241407"/>
+      <circle cx="86.5" cy="103.5" r="2.4" fill="#fff"/>
+      <circle cx="138.5" cy="103.5" r="2.4" fill="#fff"/>
+      <path d="M98 152 Q110 161 122 152" fill="none" stroke="#7c4a21" stroke-width="4" stroke-linecap="round"/>
+      <circle class="noseHalo" cx="110" cy="130" r="17" fill="#ff2d1e"/>
+      <circle class="noseCore" cx="110" cy="130" r="10.5" fill="#ff2d1e" stroke="#a30f02" stroke-width="1.5"/>
+      <ellipse cx="106" cy="126" rx="3.4" ry="2.4" fill="#fff" opacity=".75"/>
+      <path d="M50 160 Q110 184 170 160 L170 178 Q110 202 50 178 Z" fill="#c8102e"/>
+      <path d="M84 170 L84 188 M110 176 L110 194 M136 170 L136 188" stroke="#ffc400" stroke-width="5"/>
+    </svg>
+  </div>
+  <div class="kicker">SWEATER SEASON IS HERE</div>
+  <h1>UGLY<br>BLACK <span class="yellow">FRIDAY</span></h1>
+  <p>The home of ugly Christmas sweaters &amp; pet sweaters. Our own original designs you won't find anywhere else — plus a sweater shop stacked with holiday heat for you, your family, and your four-legged partner in crime.</p>
+  <div class="cta-row">
+    <a class="btn btn-gold" href="#designs">SEE OUR OWN DESIGNS</a>
+    <a class="btn btn-black" href="#shop">SHOP SWEATERS NOW</a>
+  </div>
+</div>
+
+<div class="marquee"><span>UGLY SWEATERS &nbsp;•&nbsp; PET SWEATERS &nbsp;•&nbsp; MATCHING SETS &nbsp;•&nbsp; ORIGINAL DESIGNS &nbsp;•&nbsp; UGLY SWEATERS &nbsp;•&nbsp; PET SWEATERS &nbsp;•&nbsp; MATCHING SETS &nbsp;•&nbsp; ORIGINAL DESIGNS &nbsp;•&nbsp;</span></div>
+
+<div class="lights" aria-hidden="true"></div>
+
+<!-- ============ OUR OWN DESIGNS (POD LANE) ============ -->
+<section class="designs-sec" id="designs">
+  <div class="section-head">
+    <div class="tag">PRINTED TO ORDER — ONLY HERE</div>
+    <h2>Our Own Designs</h2>
+    <p>Designed by us, printed to order, shipped to your door. Nobody else on Earth sells these. New designs drop on Black Friday — get on the list so you don't miss your size.</p>
+  </div>
+  <div class="grid">
+
+    <div class="card design-card">
+      <div class="art"><img src="forklift-certified-santa.png" alt="Forklift Certified Santa design — Santa driving a forklift loaded with presents"></div>
+      <div class="body">
+        <h3>Forklift Certified Santa</h3>
+        <p class="desc">The big man traded the sleigh for a forklift this year. Warehouse-Christmas humor for the crew that actually moves the presents.</p>
+        <span class="drop">NEW DESIGN — DROPPING BLACK FRIDAY</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">SHOP THE DROP</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="detroit-football.png" alt="Detroit Football design — Honolulu blue and silver vintage block letters with a football"></div>
+      <div class="body">
+        <h3>Detroit Football</h3>
+        <p class="desc">Honolulu blue and silver, vintage block letters, game-day energy. City pride you can wear all winter long.</p>
+        <span class="drop">NEW DESIGN — DROPPING BLACK FRIDAY</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">SHOP THE DROP</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="sleighin-in-the-313.png" alt="Sleighin' in the 313 design — Santa's sleigh over a Detroit skyline at night"></div>
+      <div class="body">
+        <h3>Sleighin' in the 313</h3>
+        <p class="desc">Santa's sleigh over the Detroit skyline on a snowy night. The 313 does Christmas louder than anybody.</p>
+        <span class="drop">NEW DESIGN — DROPPING BLACK FRIDAY</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">SHOP THE DROP</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="dear-santa-i-can-explain.png" alt="Dear Santa, I Can Explain design — cheeky Santa with an empty cookie plate"></div>
+      <div class="body">
+        <h3>Dear Santa, I Can Explain</h3>
+        <p class="desc">For the ones who've been good-ish. Vintage lettering, one cheeky Santa, and a cookie plate with a story to tell.</p>
+        <span class="drop">NEW DESIGN — DROPPING BLACK FRIDAY</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">SHOP THE DROP</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="last-santa-standing.png" alt="Last Santa Standing design — Santas parachuting from a flying sleigh"></div>
+      <div class="body">
+        <h3>Last Santa Standing</h3>
+        <p class="desc">A sky full of Santas parachuting out of one flying sleigh — and only one sticks the rooftop landing. May the best Santa win.</p>
+        <span class="drop">NEW DESIGN — DROPPING BLACK FRIDAY</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">SHOP THE DROP</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="christmas-grouch.png" alt="Resting Grouch Face design — an original grumpy green grouch tangled in Christmas lights holding a NOPE sign"></div>
+      <div class="body">
+        <h3>Resting Grouch Face</h3>
+        <p class="desc">Our own grumpy green grouch, tangled in lights he never asked for, holding a sign that says it all: NOPE. For everybody whose Christmas spirit is on backorder.</p>
+        <span class="drop">NEW DESIGN — DROPPING BLACK FRIDAY</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">SHOP THE DROP</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="tiny-tree-big-heart.png" alt="Tiny Tree, Big Heart design — a scrawny little Christmas tree with one red ornament and a crooked gold star"></div>
+      <div class="body">
+        <h3>Tiny Tree, Big Heart</h3>
+        <p class="desc">One scrawny little tree, one red ornament, one crooked star — and more heart than trees ten times its size. The sweet one of the bunch.</p>
+        <span class="drop">NEW DESIGN — DROPPING BLACK FRIDAY</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">SHOP THE DROP</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="nice-list-good-boy.png" alt="Good Boy on the Nice List design — a shaggy dog in a Santa hat sitting next to wrapped presents"></div>
+      <div class="body">
+        <h3>Good Boy on the Nice List</h3>
+        <p class="desc">A shaggy good boy in a Santa hat, posted up next to the presents. He earned that Nice List spot and he knows it.</p>
+        <span class="drop">NEW DESIGN — DROPPING BLACK FRIDAY</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">SHOP THE DROP</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="penguin-express.png" alt="Penguin Express Delivery design — a cartoon penguin mailman on a sled stacked with presents"></div>
+      <div class="body">
+        <h3>Penguin Express Delivery</h3>
+        <p class="desc">A penguin mailman on a sled stacked higher than he is. Neither snow nor Black Friday slows the Penguin Express.</p>
+        <span class="drop">NEW DESIGN — DROPPING BLACK FRIDAY</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">SHOP THE DROP</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="chillin-snowman.png" alt="Chillin' Since December design — a cool snowman in sunglasses holding a mug of hot cocoa"></div>
+      <div class="body">
+        <h3>Chillin' Since December</h3>
+        <p class="desc">Sunglasses on, cocoa in hand, not a care in the world. The coolest snowman on the block — literally.</p>
+        <span class="drop">NEW DESIGN — DROPPING BLACK FRIDAY</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">SHOP THE DROP</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="polar-delivery-crew.png" alt="North Pole Delivery Crew design — a polar bear in a delivery sweater carrying a tall stack of presents"></div>
+      <div class="body">
+        <h3>North Pole Delivery Crew</h3>
+        <p class="desc">A polar bear in a delivery sweater carrying the whole neighborhood's Christmas in one trip. Crew certified.</p>
+        <span class="drop">NEW DESIGN — DROPPING BLACK FRIDAY</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">SHOP THE DROP</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="merry-chaos.png" alt="Merry Chaos design — a cat tangled in Christmas lights"></div>
+      <div class="body">
+        <h3>Merry Chaos</h3>
+        <p class="desc">One cat. One string of Christmas lights. Zero regrets. If your house looks like this every December, this is your sweater.</p>
+        <span class="drop">NEW DESIGN — DROPPING BLACK FRIDAY</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">SHOP THE DROP</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="santas-boss.png" alt="Santa's Boss design — confident Santa in sunglasses, the owner half of the matching set"></div>
+      <div class="body">
+        <h3>Santa's Boss — Matching Set (You)</h3>
+        <p class="desc">The owner half of our matching set. Sunglasses on, arms crossed — everybody knows who really runs Christmas morning.</p>
+        <span class="drop">NEW DESIGN — DROPPING BLACK FRIDAY</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">SHOP THE DROP</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="lights" aria-hidden="true"></div>
+
+<!-- ============ SWEATER SHOP (DROPSHIP LANE) ============ -->
+<section class="shop-sec" id="shop">
+  <div class="section-head">
+    <div class="tag">IN THE STORE RIGHT NOW</div>
+    <h2>The Sweater Shop</h2>
+    <p>Ready to ship from the A.I. NOW store today. Tap any sweater to buy it at shop.artificial-intelligencenow.com.</p>
+  </div>
+  <div class="grid">
+
+    <div class="card tile t1">
+      <div class="emoji-free-badge">SWEATER SHOP</div>
+      <h3>Santa Belly Sweater</h3>
+      <div class="price">$24.99</div>
+      <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">BUY IT AT THE STORE</a>
+    </div>
+
+    <div class="card tile t2">
+      <div class="emoji-free-badge">SWEATER SHOP</div>
+      <h3>Let's Get Blitzened Reindeer Sweatshirt</h3>
+      <div class="price">$29.99</div>
+      <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">BUY IT AT THE STORE</a>
+    </div>
+
+    <div class="card tile t3">
+      <div class="emoji-free-badge">SWEATER SHOP</div>
+      <h3>Highland Cow Christmas Sweatshirt</h3>
+      <div class="price">$29.99</div>
+      <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">BUY IT AT THE STORE</a>
+    </div>
+
+    <div class="card tile t4">
+      <div class="emoji-free-badge">SWEATER SHOP</div>
+      <h3>Family Gingerbread Sweater</h3>
+      <div class="price">$27.99</div>
+      <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">BUY IT AT THE STORE</a>
+    </div>
+
+    <div class="card tile t5">
+      <div class="emoji-free-badge">SWEATER SHOP</div>
+      <h3>"6 7" Meme Ugly Sweater</h3>
+      <div class="price">$27.99</div>
+      <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">BUY IT AT THE STORE</a>
+    </div>
+
+    <div class="card tile t6">
+      <div class="emoji-free-badge">SWEATER SHOP</div>
+      <h3>Sequined Reindeer Knit Pullover</h3>
+      <div class="price">$29.99</div>
+      <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">BUY IT AT THE STORE</a>
+    </div>
+
+    <div class="card tile t7">
+      <div class="emoji-free-badge">SWEATER SHOP</div>
+      <h3>Bow Jacquard Sweater</h3>
+      <div class="price">$34.99</div>
+      <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">BUY IT AT THE STORE</a>
+    </div>
+
+    <div class="card tile t8">
+      <div class="emoji-free-badge">SWEATER SHOP</div>
+      <h3>Light-Up Santa Tree Sweater</h3>
+      <div class="price">$49.99</div>
+      <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">BUY IT AT THE STORE</a>
+    </div>
+
+  </div>
+</section>
+
+<div class="lights" aria-hidden="true"></div>
+
+<!-- ============ PET SWEATERS ============ -->
+<section class="pet-sec" id="pets">
+  <div class="section-head">
+    <div class="tag">FOR THE FOUR-LEGGED FAMILY</div>
+    <h2>Pet Sweaters</h2>
+    <p>Your dog did not ask to be this cute. Dress them up anyway — and match them while you're at it.</p>
+  </div>
+  <div class="grid">
+
+    <div class="card tile t3">
+      <div class="emoji-free-badge">PET SWEATER</div>
+      <h3>Gingerbread Pet Sweater + Antler Hood</h3>
+      <div class="price">$27.99</div>
+      <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">BUY IT AT THE STORE</a>
+    </div>
+
+    <div class="card pet-card">
+      <div class="art"><img src="santas-little-helper.png" alt="Santa's Little Helper design — a small dog in a Santa hat, the pet half of the matching set"></div>
+      <div class="body">
+        <h3>Santa's Little Helper — Matching Set (Your Pet)</h3>
+        <p class="desc">The pet half of the set. You wear Santa's Boss, they wear Santa's Little Helper — Christmas card photo, handled.</p>
+        <span class="drop">NEW DESIGN — DROPPING BLACK FRIDAY</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">SHOP THE DROP</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ JOIN THE LIST ============ -->
+<div class="join">
+  <h2>Get 10% Off Your First Order</h2>
+  <p>New here? Join the List &amp; get 10% OFF your first order — plus first dibs when the new designs drop on Black Friday.</p>
+  <a class="btn btn-black" href="https://shop.artificial-intelligencenow.com/pages/join-the-list">JOIN THE LIST</a>
+</div>
+
+<footer>
+  <div class="foot-brand">A.I. <span class="now">NOW</span></div>
+  <p>Ugly Black Friday is part of A.I. NOW.<br>
+  <a href="https://artificial-intelligencenow.com">artificial-intelligencenow.com</a> • <a href="https://shop.artificial-intelligencenow.com">shop.artificial-intelligencenow.com</a></p>
+</footer>
+
+<script>
+(function(){
+  var NS='http://www.w3.org/2000/svg';
+  var COLORS=[
+    {glass:'#ff4038', glow:'#ff2d1e'},   /* red */
+    {glass:'#ffc93c', glow:'#ffb300'},   /* warm gold */
+    {glass:'#2fe673', glow:'#00c853'},   /* green */
+    {glass:'#4db2ff', glow:'#2196f3'},   /* blue */
+    {glass:'#ff6fae', glow:'#ff2e88'}    /* pink */
+  ];
+  function el(name, attrs){
+    var e=document.createElementNS(NS,name);
+    for(var k in attrs){ e.setAttribute(k, attrs[k]); }
+    return e;
+  }
+  function build(container){
+    var W=1200, H=104, top=10, sag=26;
+    var w=container.clientWidth||1200;
+    var n=Math.max(9, Math.min(22, Math.round(w/78)));
+    var svg=el('svg',{viewBox:'0 0 '+W+' '+H, 'class':'lights-svg', 'aria-hidden':'true'});
+    function yAt(x){ var t=x/W; return top + sag*4*t*(1-t); }
+    var step=W/(n-1), pts=[], i, x, y;
+    for(i=0;i<n;i++){ x=i*step; pts.push([x, yAt(x)]); }
+    var d='M -10 '+(yAt(0)-4);
+    for(i=0;i<pts.length-1;i++){
+      var x1=pts[i][0], y1=pts[i][1], x2=pts[i+1][0], y2=pts[i+1][1];
+      d+=' Q '+((x1+x2)/2)+' '+((y1+y2)/2+16)+' '+x2+' '+y2;
+    }
+    d+=' L '+(W+10)+' '+(yAt(W)-4);
+    svg.appendChild(el('path',{d:d, 'class':'wire'}));
+    pts.forEach(function(p, idx){
+      var c=COLORS[idx%COLORS.length];
+      var bx=p[0], by=p[1];
+      var dur=(2.4+((idx*37)%10)*0.22).toFixed(2);
+      var delay=(-((idx*53)%20)*0.31).toFixed(2);
+      var style='--d:'+dur+'s;--dl:'+delay+'s';
+      var sputter=(idx%7===3) ? ' sputter' : '';
+      var g=el('g',{});
+      g.appendChild(el('line',{x1:bx, y1:by, x2:bx, y2:by+7, 'class':'drop-line'}));
+      var glow=el('ellipse',{cx:bx, cy:by+30, rx:19, ry:23, fill:c.glow, 'class':'glow'+sputter});
+      glow.setAttribute('style', style);
+      g.appendChild(glow);
+      g.appendChild(el('rect',{x:bx-5.5, y:by+7, width:11, height:10, rx:2, 'class':'socket'}));
+      var glassPath='M '+bx+' '+(by+16)
+        +' C '+(bx+10.5)+' '+(by+22)+', '+(bx+12)+' '+(by+30)+', '+bx+' '+(by+44)
+        +' C '+(bx-12)+' '+(by+30)+', '+(bx-10.5)+' '+(by+22)+', '+bx+' '+(by+16)+' Z';
+      var glass=el('path',{d:glassPath, fill:c.glass, 'class':'glass'+sputter});
+      glass.setAttribute('style', style);
+      g.appendChild(glass);
+      g.appendChild(el('ellipse',{cx:bx-4, cy:by+30, rx:3, ry:6, fill:'#ffffff', opacity:'.55'}));
+      svg.appendChild(g);
+    });
+    container.appendChild(svg);
+  }
+  var strings=document.querySelectorAll('.lights');
+  for(var s=0;s<strings.length;s++){ build(strings[s]); }
+})();
+</script>
+
+</body>
+</html>
