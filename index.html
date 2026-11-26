@@ -85,6 +85,23 @@
   .design-card .body{background:#0c2b19;}
   .pet-card .body{background:rgba(0,0,0,.35);}
 
+
+  /* ---------- CARTOON SWEATERS SECTION ---------- */
+  .cartoon-sec{background:linear-gradient(180deg,#7a0c1d 0%,#a31621 45%,#0d3b21 100%);}
+  .cartoon-sec .section-head h2{color:var(--gold);text-shadow:3px 3px 0 #000;}
+  /* ---------- DECOR TREES + HERO CARTOONS ---------- */
+  .trees{display:flex;justify-content:center;align-items:flex-end;gap:26px;padding:10px 0 0;}
+  .trees svg{width:74px;height:auto;}
+  .trees svg.tree-big{width:104px;}
+  .hero-cartoons{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:36px;}
+  .hero-cartoons img{width:150px;height:150px;object-fit:cover;border-radius:18px;border:3px solid #000;box-shadow:5px 5px 0 rgba(0,0,0,.55);}
+  .match-banner{max-width:1100px;margin:0 auto 34px;background:var(--gold);color:#000;border:3px solid #000;border-radius:18px;box-shadow:6px 6px 0 rgba(0,0,0,.55);padding:20px 26px;text-align:center;}
+  .match-banner h3{font-size:clamp(22px,3.4vw,34px);text-transform:uppercase;}
+  .match-banner p{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:16px;margin-top:8px;line-height:1.5;}
+  .pet-decor{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:0 auto 34px;max-width:1100px;}
+  .pet-decor img{width:170px;height:170px;object-fit:cover;border-radius:18px;border:3px solid #000;box-shadow:5px 5px 0 rgba(0,0,0,.55);}
+  .pet-sec .section-head h2{font-size:clamp(38px,6.5vw,68px);}
+
   /* ---------- JOIN THE LIST ---------- */
   .join{background:var(--cranberry);text-align:center;padding:56px 24px;border-top:5px solid #000;border-bottom:5px solid #000;}
   .join h2{font-size:clamp(28px,5vw,50px);text-transform:uppercase;text-shadow:3px 3px 0 rgba(0,0,0,.35);}
@@ -139,6 +156,7 @@
   </div>
   <nav>
     <a href="#designs">OUR DESIGNS</a>
+    <a href="#cartoons">CARTOON SWEATERS</a>
     <a href="#shop">SWEATER SHOP</a>
     <a href="#pets">PET SWEATERS</a>
     <a href="https://shop.artificial-intelligencenow.com">THE STORE</a>
@@ -178,12 +196,23 @@
       <path d="M84 170 L84 188 M110 176 L110 194 M136 170 L136 188" stroke="#ffc400" stroke-width="5"/>
     </svg>
   </div>
-  <div class="kicker">SWEATER SEASON IS HERE</div>
+  <div class="trees" aria-hidden="true">
+  <svg viewBox="0 0 120 170"><polygon points="60,6 96,58 78,58 108,104 84,104 116,150 4,150 36,104 12,104 42,58 24,58" fill="#1d7a3a" stroke="#0a3520" stroke-width="4"/><rect x="50" y="150" width="20" height="16" fill="#7a4a21"/><circle cx="60" cy="34" r="7" fill="#e4002b"/><circle cx="42" cy="76" r="6" fill="#ffc400"/><circle cx="80" cy="88" r="6" fill="#4db2ff"/><circle cx="56" cy="118" r="6" fill="#ff6fae"/><circle cx="86" cy="128" r="5" fill="#ffc400"/><polygon points="60,0 64,10 74,10 66,16 70,26 60,20 50,26 54,16 46,10 56,10" fill="#ffc400"/></svg>
+  <svg viewBox="0 0 120 170" class="tree-big"><polygon points="60,6 96,58 78,58 108,104 84,104 116,150 4,150 36,104 12,104 42,58 24,58" fill="#14532d" stroke="#0a3520" stroke-width="4"/><rect x="50" y="150" width="20" height="16" fill="#7a4a21"/><circle cx="48" cy="48" r="6" fill="#ffc400"/><circle cx="76" cy="70" r="6" fill="#e4002b"/><circle cx="40" cy="104" r="6" fill="#ff6fae"/><circle cx="84" cy="118" r="6" fill="#4db2ff"/><circle cx="60" cy="132" r="5" fill="#ffc400"/><polygon points="60,0 64,10 74,10 66,16 70,26 60,20 50,26 54,16 46,10 56,10" fill="#ffc400"/></svg>
+  <svg viewBox="0 0 120 170"><polygon points="60,6 96,58 78,58 108,104 84,104 116,150 4,150 36,104 12,104 42,58 24,58" fill="#1d7a3a" stroke="#0a3520" stroke-width="4"/><rect x="50" y="150" width="20" height="16" fill="#7a4a21"/><circle cx="66" cy="40" r="6" fill="#4db2ff"/><circle cx="38" cy="86" r="6" fill="#e4002b"/><circle cx="82" cy="100" r="6" fill="#ffc400"/><circle cx="52" cy="126" r="6" fill="#ff6fae"/><polygon points="60,0 64,10 74,10 66,16 70,26 60,20 50,26 54,16 46,10 56,10" fill="#ffc400"/></svg>
+</div>
+  <div class="kicker">SWEATER SEASON IS HERE — FOR YOU &amp; YOUR PET</div>
   <h1>UGLY<br>BLACK <span class="yellow">FRIDAY</span></h1>
-  <p>The home of ugly Christmas sweaters &amp; pet sweaters. Our own original designs you won't find anywhere else — plus a sweater shop stacked with holiday heat for you, your family, and your four-legged partner in crime.</p>
+  <p>Ugly Christmas sweaters for PEOPLE <u>and</u> their PETS — cats, dogs, and every good boy and girl in between. Our own original designs you won't find anywhere else, a cartoon sweater wall that never quits, and matching sets so you and your pet can twin all season.</p>
   <div class="cta-row">
-    <a class="btn btn-gold" href="#designs">SEE OUR OWN DESIGNS</a>
-    <a class="btn btn-black" href="#shop">SHOP SWEATERS NOW</a>
+    <a class="btn btn-gold" href="#cartoons">SEE THE CARTOON SWEATERS</a>
+    <a class="btn btn-black" href="#pets">SHOP PET SWEATERS</a>
+  </div>
+  <div class="hero-cartoons" aria-hidden="true">
+    <img src="cat-tangled-in-lights.png" alt="">
+    <img src="dog-backup-reindeer.png" alt="">
+    <img src="santa-stuck-in-chimney.png" alt="">
+    <img src="pet-pug-part-time-reindeer.png" alt="">
   </div>
 </div>
 
@@ -335,6 +364,956 @@
 
 <div class="lights" aria-hidden="true"></div>
 
+
+<div class="lights" aria-hidden="true"></div>
+
+<!-- ============ CARTOON SWEATERS ============ -->
+<section class="cartoon-sec" id="cartoons">
+  <div class="section-head">
+    <div class="tag">ALL-NEW ORIGINAL CARTOON DROP</div>
+    <h2>Cartoon Sweaters</h2>
+    <p>Ninety-three brand-new cartoon designs, drawn by us and nobody else — Santas, snowmen, penguins, pets, trap-setting kids, city-pride athletes, and total chaos. Every one is an original. Tap any design to shop the Cartoon Sweaters collection — and yes, there are pet cartoons in here too, because around here you MATCH YOUR PET.</p>
+  </div>
+  <div class="trees" aria-hidden="true">
+  <svg viewBox="0 0 120 170"><polygon points="60,6 96,58 78,58 108,104 84,104 116,150 4,150 36,104 12,104 42,58 24,58" fill="#1d7a3a" stroke="#0a3520" stroke-width="4"/><rect x="50" y="150" width="20" height="16" fill="#7a4a21"/><circle cx="60" cy="34" r="7" fill="#e4002b"/><circle cx="42" cy="76" r="6" fill="#ffc400"/><circle cx="80" cy="88" r="6" fill="#4db2ff"/><circle cx="56" cy="118" r="6" fill="#ff6fae"/><circle cx="86" cy="128" r="5" fill="#ffc400"/><polygon points="60,0 64,10 74,10 66,16 70,26 60,20 50,26 54,16 46,10 56,10" fill="#ffc400"/></svg>
+  <svg viewBox="0 0 120 170" class="tree-big"><polygon points="60,6 96,58 78,58 108,104 84,104 116,150 4,150 36,104 12,104 42,58 24,58" fill="#14532d" stroke="#0a3520" stroke-width="4"/><rect x="50" y="150" width="20" height="16" fill="#7a4a21"/><circle cx="48" cy="48" r="6" fill="#ffc400"/><circle cx="76" cy="70" r="6" fill="#e4002b"/><circle cx="40" cy="104" r="6" fill="#ff6fae"/><circle cx="84" cy="118" r="6" fill="#4db2ff"/><circle cx="60" cy="132" r="5" fill="#ffc400"/><polygon points="60,0 64,10 74,10 66,16 70,26 60,20 50,26 54,16 46,10 56,10" fill="#ffc400"/></svg>
+  <svg viewBox="0 0 120 170"><polygon points="60,6 96,58 78,58 108,104 84,104 116,150 4,150 36,104 12,104 42,58 24,58" fill="#1d7a3a" stroke="#0a3520" stroke-width="4"/><rect x="50" y="150" width="20" height="16" fill="#7a4a21"/><circle cx="66" cy="40" r="6" fill="#4db2ff"/><circle cx="38" cy="86" r="6" fill="#e4002b"/><circle cx="82" cy="100" r="6" fill="#ffc400"/><circle cx="52" cy="126" r="6" fill="#ff6fae"/><polygon points="60,0 64,10 74,10 66,16 70,26 60,20 50,26 54,16 46,10 56,10" fill="#ffc400"/></svg>
+</div>
+  <div class="grid" style="margin-top:34px;">
+
+    <div class="card design-card">
+      <div class="art"><img src="santa-stuck-in-chimney.png" alt="Santa Stuck In Chimney cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Santa Stuck In Chimney</h3>
+        <p class="desc">Santa stuck in a brick chimney, legs kicking, waving for help Slogan: “SEND COOKIES.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="yeti-hot-cocoa.png" alt="Yeti Hot Cocoa cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Yeti Hot Cocoa</h3>
+        <p class="desc">Fluffy white yeti in a tiny Santa hat sipping a giant mug of hot cocoa with marshmallows Slogan: “YETI FOR CHRISTMAS.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="elf-on-strike.png" alt="Elf On Strike cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Elf On Strike</h3>
+        <p class="desc">Grumpy elf with a blank picket sign and crossed arms, tiny elves behind him Slogan: “ELVES ON STRIKE.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="snowball-fight-crew.png" alt="Snowball Fight Crew cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Snowball Fight Crew</h3>
+        <p class="desc">Three snowmen in scarves and earmuffs mid-snowball-fight, one dramatically hit Slogan: “SNOWBALL CHAMPIONS.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="reindeer-karaoke.png" alt="Reindeer Karaoke cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Reindeer Karaoke</h3>
+        <p class="desc">Red-nosed reindeer singing into a microphone on a tiny stage, musical notes around Slogan: “SLEIGH BELLS ROCK.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="gingerbread-realtor.png" alt="Gingerbread Realtor cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Gingerbread Realtor</h3>
+        <p class="desc">Smiling gingerbread person in a tiny blazer holding a blank yard sign in front of a gingerbread house Slogan: “GINGERBREAD REALTOR.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="nutcracker-drummer.png" alt="Nutcracker Drummer cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Nutcracker Drummer</h3>
+        <p class="desc">Traditional generic wooden toy-soldier nutcracker playing a big drum with drumsticks, music notes flying Slogan: “NUTCRACKER BEATS.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="polar-bear-ice-skates.png" alt="Polar Bear Ice Skates cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Polar Bear Ice Skates</h3>
+        <p class="desc">Chubby polar bear ice skating unsteadily, arms windmilling, wearing a striped scarf Slogan: “GRACEFUL-ISH.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="cat-tangled-in-lights.png" alt="Cat Tangled In Lights cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Cat Tangled In Lights</h3>
+        <p class="desc">Mischievous cartoon cat completely tangled in a string of colorful Christmas lights Slogan: “I HELPED DECORATE.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="dog-backup-reindeer.png" alt="Dog Backup Reindeer cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Dog Backup Reindeer</h3>
+        <p class="desc">Happy cartoon dog wearing fake reindeer antlers, harnessed to a tiny sleigh, tongue out Slogan: “BACKUP REINDEER.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="santa-snow-surfer.png" alt="Santa Snow Surfer cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Santa Snow Surfer</h3>
+        <p class="desc">Santa surfing on his sleigh over a snowy wave Slogan: “SLEIGH THE WAVE.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="mrs-claus-baker.png" alt="Mrs Claus Baker cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Mrs Claus Baker</h3>
+        <p class="desc">Mrs. Claus in an apron holding a tray of Christmas cookies Slogan: “CLAUS KITCHEN CREW.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="snowman-selfie.png" alt="Snowman Selfie cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Snowman Selfie</h3>
+        <p class="desc">Snowman in a Santa hat taking a selfie with a selfie stick Slogan: “SNOWMAN SELFIE CLUB.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="penguin-hot-tub.png" alt="Penguin Hot Tub cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Penguin Hot Tub</h3>
+        <p class="desc">Three penguins relaxing in a steaming wooden hot tub in the snow Slogan: “PENGUIN HOT TUB CLUB.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="reindeer-traffic-cop.png" alt="Reindeer Traffic Cop cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Reindeer Traffic Cop</h3>
+        <p class="desc">Reindeer traffic cop holding a stop sign directing flying sleighs Slogan: “SLEIGH TRAFFIC CONTROL.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="runaway-gingerbread.png" alt="Runaway Gingerbread cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Runaway Gingerbread</h3>
+        <p class="desc">Gingerbread cookie character sprinting away from Santa's reaching hand Slogan: “CATCH ME IF YOU CAN.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="elf-workshop-chaos.png" alt="Elf Workshop Chaos cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Elf Workshop Chaos</h3>
+        <p class="desc">Cartoon elf juggling too many toys at a workbench with toys piling up Slogan: “WORKSHOP SAFETY: QUESTIONABLE.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="santa-yoga.png" alt="Santa Yoga cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Santa Yoga</h3>
+        <p class="desc">Santa in a wobbly yoga tree pose on a mat, elves watching Slogan: “DOWNWARD SLEIGH.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="snow-queen.png" alt="Snow Queen cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Snow Queen</h3>
+        <p class="desc">Glamorous snow-woman with ice crown, sunglasses and feather-boa scarf in a diva pose Slogan: “SNOW QUEEN ENERGY.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="cardinal-santa-hat.png" alt="Cardinal Santa Hat cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Cardinal Santa Hat</h3>
+        <p class="desc">Plump red cardinal bird in a Santa hat and tiny scarf on a snowy pine branch with ornaments Slogan: “LITTLE RED MESSENGER.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="raccoon-caroler.png" alt="Raccoon Caroler cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Raccoon Caroler</h3>
+        <p class="desc">Chubby raccoon in scarf and earmuffs singing carols from a songbook Slogan: “CAROLING MENACE.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="moose-sweater-model.png" alt="Moose Sweater Model cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Moose Sweater Model</h3>
+        <p class="desc">Big goofy moose modeling a tiny ugly Christmas sweater Slogan: “ORIGINAL SWEATER MODEL.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="fox-on-skis.png" alt="Fox On Skis cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Fox On Skis</h3>
+        <p class="desc">Red fox in goggles and scarf zooming downhill on skis Slogan: “FOX ON THE SLOPES.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="hedgehog-ornament.png" alt="Hedgehog Ornament cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Hedgehog Ornament</h3>
+        <p class="desc">Tiny hedgehog with a bow curled around a shiny Christmas ornament Slogan: “PRICKLY BUT FESTIVE.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="turtle-sleigh.png" alt="Turtle Sleigh cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Turtle Sleigh</h3>
+        <p class="desc">Determined turtle in a Santa hat pulling a sleigh piled with presents Slogan: “THERE BY NEW YEAR'S.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="owl-night-watch.png" alt="Owl Night Watch cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Owl Night Watch</h3>
+        <p class="desc">Wide-eyed owl in a Santa hat holding cocoa on a snowy branch under a crescent moon Slogan: “SANTA WATCH: NIGHT SHIFT.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="bunny-snow-angel.png" alt="Bunny Snow Angel cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Bunny Snow Angel</h3>
+        <p class="desc">Fluffy bunny in a pink sweater making a snow angel, ears spread wide Slogan: “SNOW ANGEL IN TRAINING.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="santa-sleigh-selfie.png" alt="Santa Sleigh Selfie cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Santa Sleigh Selfie</h3>
+        <p class="desc">Santa taking a selfie in his flying sleigh with reindeer photobombing Slogan: “SLEIGH SELFIE.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="elf-tug-of-war.png" alt="Elf Tug Of War cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Elf Tug Of War</h3>
+        <p class="desc">Two teams of elves in a tug-of-war over one giant Christmas cookie Slogan: “COOKIE TUG-OF-WAR CHAMPS.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="gingerbread-band.png" alt="Gingerbread Band cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Gingerbread Band</h3>
+        <p class="desc">Gingerbread band playing guitar, trumpet, and drums Slogan: “THE GINGER BAND.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="snowman-barbershop.png" alt="Snowman Barbershop cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Snowman Barbershop</h3>
+        <p class="desc">Snowman in a barber chair with a rabbit barber trimming his carrot nose Slogan: “CARROT NOSE BARBERSHOP.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="reindeer-dentist.png" alt="Reindeer Dentist cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Reindeer Dentist</h3>
+        <p class="desc">Reindeer dentist in a coat holding a toothbrush with one huge sparkling tooth Slogan: “NORTH POLE DENTAL.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="polar-bear-ice-fishing.png" alt="Polar Bear Ice Fishing cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Polar Bear Ice Fishing</h3>
+        <p class="desc">Polar bear in a trapper hat ice fishing, pulling up a candy cane Slogan: “ICE FISHING CLUB.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="penguin-bowling.png" alt="Penguin Bowling cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Penguin Bowling</h3>
+        <p class="desc">Penguins sliding down a bowling lane toward penguin-shaped pins, one penguin as the bowling ball Slogan: “PENGUIN BOWLING LEAGUE.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="santa-winter-bbq.png" alt="Santa Winter Bbq cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Santa Winter Bbq</h3>
+        <p class="desc">Santa grilling burgers in deep snow wearing an apron and sunglasses Slogan: “WINTER GRILL MASTER.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="toy-robot-helper.png" alt="Toy Robot Helper cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Toy Robot Helper</h3>
+        <p class="desc">Generic retro tin toy robot in Santa hat holding a present Slogan: “SANTA'S TIN HELPER.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="trex-wrapping-fail.png" alt="T-Rex Wrapping Fail cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>T-Rex Wrapping Fail</h3>
+        <p class="desc">Cartoon T-rex with tiny arms struggling to wrap a present, tape on snout Slogan: “WRAPPING IS HARD.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="unicorn-festive.png" alt="Unicorn Festive cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Unicorn Festive</h3>
+        <p class="desc">Cartoon unicorn with ornament on horn and garland scarf Slogan: “MAGICALLY FESTIVE.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="llama-garland.png" alt="Llama Garland cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Llama Garland</h3>
+        <p class="desc">Fluffy cartoon llama in garland scarf and Santa hat, smug Slogan: “FA-LA-LA-LLAMA.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="koala-tree-topper.png" alt="Koala Tree Topper cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Koala Tree Topper</h3>
+        <p class="desc">Sleepy cartoon koala hugging top of Christmas tree with star Slogan: “TREE TOPPER KOALA.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="panda-snowboard.png" alt="Panda Snowboard cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Panda Snowboard</h3>
+        <p class="desc">Cartoon panda in goggles and striped sweater snowboarding downhill Slogan: “SNOWBOARDING PANDA CLUB.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="tiger-festive.png" alt="Tiger Festive cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Tiger Festive</h3>
+        <p class="desc">Cartoon tiger in Santa hat and bow tie roaring happily with a present under one paw Slogan: “FESTIVE AND FIERCE.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="elephant-big-gift.png" alt="Elephant Big Gift cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Elephant Big Gift</h3>
+        <p class="desc">Cartoon elephant holding a huge shiny ornament in its trunk, wearing a tiny party bow Slogan: “BIG GIFT ENERGY.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="monkey-garland-mess.png" alt="Monkey Garland Mess cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Monkey Garland Mess</h3>
+        <p class="desc">Cartoon monkey tangled in green garland and ornaments, grinning sheepishly Slogan: “GARLAND GONE WRONG.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="frog-mistletoe.png" alt="Frog Mistletoe cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Frog Mistletoe</h3>
+        <p class="desc">Cartoon frog wearing a tiny crown, holding mistletoe over its head and puckering up Slogan: “KISS ME, I'M FESTIVE.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="bee-merry.png" alt="Bee Merry cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Bee Merry</h3>
+        <p class="desc">Chubby bee in Santa hat wrapped in Christmas lights Slogan: “BEE MERRY.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="santa-claws-crab.png" alt="Santa Claws Crab cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Santa Claws Crab</h3>
+        <p class="desc">Red crab in Santa hat holding a tiny present Slogan: “SANTA CLAWS.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="octopus-tree-decorator.png" alt="Octopus Tree Decorator cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Octopus Tree Decorator</h3>
+        <p class="desc">Octopus decorating a Christmas tree with all eight arms Slogan: “PROFESSIONAL TREE DECORATOR.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="snail-slow-glow.png" alt="Snail Slow Glow cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Snail Slow Glow</h3>
+        <p class="desc">Snail with shell wrapped in glowing Christmas lights, sparkly trail Slogan: “SLOW AND GLOWING.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="grandma-elf-boss.png" alt="Grandma Elf Boss cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Grandma Elf Boss</h3>
+        <p class="desc">Sassy grandma elf with glasses and bun holding clipboard and wooden spoon Slogan: “GRANDMA RUNS THE WORKSHOP.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="trap-master-lights.png" alt="Trap Master Lights cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Trap Master Lights</h3>
+        <p class="desc">Original cartoon kid with messy brown hair crouching behind a couch rigging a Christmas-lights tripwire across a doorway Slogan: “TRAP MASTER: CHRISTMAS DIVISION.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="ornament-marbles.png" alt="Ornament Marbles cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Ornament Marbles</h3>
+        <p class="desc">Original cartoon kid with messy brown hair pouring Christmas ornaments like marbles across a floor while a generic toy burglar slips in the background Slogan: “ORNAMENT MARBLE DEFENSE.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="toy-car-slip.png" alt="Toy Car Slip cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Toy Car Slip</h3>
+        <p class="desc">Original cartoon kid with messy brown hair setting tiny toy cars at the top of the stairs, thumbs up Slogan: “TOY CAR AMBUSH.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="feather-fan-fort.png" alt="Feather Fan Fort cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Feather Fan Fort</h3>
+        <p class="desc">Original cartoon kid with messy brown hair behind a pillow fort aiming a feather-loaded electric fan next to a tub of glue Slogan: “FEATHER FAN FORT.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="tarantula-free-zone.png" alt="Tarantula Free Zone cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Tarantula Free Zone</h3>
+        <p class="desc">Original cartoon kid with messy brown hair holding a blank sign in front of a doorway barricaded with wrapping paper tubes Slogan: “TARANTULA-FREE ZONE.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="tongue-on-pole.png" alt="Tongue On Pole cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Tongue On Pole</h3>
+        <p class="desc">Bundled-up cartoon kid with tongue stuck to a frosty pole, friend laughing beside him Slogan: “STUCK ON CHRISTMAS.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="snowball-payback.png" alt="Snowball Payback cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Snowball Payback</h3>
+        <p class="desc">Small cartoon kid grinning behind an enormous snowball bigger than himself Slogan: “PAYBACK IS COMING.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="mile-long-wishlist.png" alt="Mile Long Wishlist cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Mile Long Wishlist</h3>
+        <p class="desc">Cartoon kid at a desk writing a wish list on a scroll unrolling across the floor and out the door Slogan: “DEAR SANTA: IT'S A LONG LIST.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="present-shaker.png" alt="Present Shaker cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Present Shaker</h3>
+        <p class="desc">Cartoon kid shaking a wrapped present next to his ear, one eye squinted Slogan: “PROFESSIONAL PRESENT SHAKER.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="brothers-snowball-war.png" alt="Brothers Snowball War cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Brothers Snowball War</h3>
+        <p class="desc">Two cartoon brothers back to back in a snow fort with snowballs stacked like cannonballs Slogan: “BROTHERS IN SNOW.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="detroit-football-rb.png" alt="Detroit Football Rb cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Detroit Football Rb</h3>
+        <p class="desc">Original cartoon football running back in Honolulu blue and silver breaking away from defenders in snow, Detroit-style skyline Slogan: “DETROIT FOOTBALL.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="detroit-football-qb.png" alt="Detroit Football Qb cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Detroit Football Qb</h3>
+        <p class="desc">Original cartoon quarterback in Honolulu blue and silver throwing a pass, skyline and snow Slogan: “MOTOR CITY AIR RAID.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="los-angeles-dunk.png" alt="Los Angeles Dunk cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Los Angeles Dunk</h3>
+        <p class="desc">Original cartoon basketball guard in purple and gold mid-dunk, palm trees and sunset Slogan: “PURPLE AND GOLD STANDARD.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="chicago-basketball-air.png" alt="Chicago Basketball Air cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Chicago Basketball Air</h3>
+        <p class="desc">Original cartoon basketball player in red and black floating mid-air for a layup, city skyline Slogan: “CHICAGO FLIGHT CLUB.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="kansas-city-celebration.png" alt="Kansas City Celebration cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Kansas City Celebration</h3>
+        <p class="desc">Two original cartoon football players (quarterback and tight end) in red and gold celebrating a touchdown, confetti Slogan: “RED AND GOLD FOREVER.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="green-bay-snow-qb.png" alt="Green Bay Snow Qb cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Green Bay Snow Qb</h3>
+        <p class="desc">Original cartoon quarterback in green and gold throwing a pass in heavy snow, visible breath Slogan: “FROZEN TUNDRA FOOTBALL.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="new-england-dynasty.png" alt="New England Dynasty cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>New England Dynasty</h3>
+        <p class="desc">Generic cartoon quarterback silhouette in navy and red, face in shadow, raising a generic silver trophy, confetti Slogan: “DYNASTY WEATHER.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="gamer-spawn-loot.png" alt="Gamer Spawn Loot cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Gamer Spawn Loot</h3>
+        <p class="desc">Original cartoon gamer with headset and controller, neon pink/cyan/teal glow shapes and pixel hearts Slogan: “SPAWN. LOOT. REPEAT..”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="snowman-junior-build.png" alt="Snowman Junior Build cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Snowman Junior Build</h3>
+        <p class="desc">Parent snowman helping a baby snowman put on its first coal buttons Slogan: “JUNIOR'S FIRST BUILD.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="reindeer-road-test.png" alt="Reindeer Road Test cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Reindeer Road Test</h3>
+        <p class="desc">Nervous young reindeer taking his sleigh driving test, stern elf examiner with clipboard, cones knocked over Slogan: “ROAD TEST DAY.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="elf-ornament-escape.png" alt="Elf Ornament Escape cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Elf Ornament Escape</h3>
+        <p class="desc">Cheerful elf trapped inside a giant gold bauble, holding a "HELP!" sign Slogan: “SEND HELP (AND COOKIES).”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="polar-bear-ice-fishing-b.png" alt="Polar Bear Ice Fishing cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Polar Bear Ice Fishing</h3>
+        <p class="desc">Polar bear ice fishing proudly holds up a giant candy cane he caught Slogan: “THE BIG ONE.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="penguin-toboggan-pileup.png" alt="Penguin Toboggan Pileup cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Penguin Toboggan Pileup</h3>
+        <p class="desc">Six dizzy penguins tangled in a toboggan crash pile-up at the bottom of a hill Slogan: “BRAKES ARE OPTIONAL.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="yeti-tiny-tree.png" alt="Yeti Tiny Tree cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Yeti Tiny Tree</h3>
+        <p class="desc">Huge friendly yeti gently decorating a tiny knee-high Christmas tree Slogan: “BIG GUY, TINY TREE.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="cat-tangled-lights.png" alt="Cat Tangled Lights cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Cat Tangled Lights</h3>
+        <p class="desc">Smug orange tabby completely tangled in glowing Christmas lights, proud of it Slogan: “TOTALLY WORTH IT.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="chihuahua-sled-team.png" alt="Chihuahua Sled Team cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Chihuahua Sled Team</h3>
+        <p class="desc">Four tiny chihuahuas in harnesses and mini antlers pulling Santa's sleigh; reindeer watch in disbelief Slogan: “THE BACKUP TEAM.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="gingerbread-realtor-b.png" alt="Gingerbread Realtor cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Gingerbread Realtor</h3>
+        <p class="desc">Gingerbread man in a tie holding a SOLD sign in front of a gingerbread house Slogan: “JUST LISTED: SMELLS AMAZING.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="reindeer-pushing-sleigh.png" alt="Reindeer Pushing Sleigh cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Reindeer Pushing Sleigh</h3>
+        <p class="desc">Santa and two reindeer pushing a sleigh stuck in a snowdrift Slogan: “TEAMWORK.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="snowball-league.png" alt="Snowball League cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Snowball League</h3>
+        <p class="desc">Championship snowball fight: snowmen in helmets vs elves, penguin referee Slogan: “SNOWBALL LEAGUE CHAMPS.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="elf-barista.png" alt="Elf Barista cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Elf Barista</h3>
+        <p class="desc">Elf barista serving giant cocoa at a North Pole coffee stand; sleepy reindeer in line Slogan: “NORTH POLE ROAST.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="reindeer-karaoke-b.png" alt="Reindeer Karaoke cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Reindeer Karaoke</h3>
+        <p class="desc">Diva reindeer in sunglasses singing karaoke on a tiny stage, reindeer fans with glow sticks Slogan: “SLEIGH THE MIC.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="toy-soldier-band.png" alt="Toy Soldier Band cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Toy Soldier Band</h3>
+        <p class="desc">Wooden toy soldier marching band with drums, trumpets and tuba in a parade Slogan: “TINY DRUMMER ENERGY.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="santa-yoga-b.png" alt="Santa Yoga cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Santa Yoga</h3>
+        <p class="desc">Santa wobbling in yoga tree pose on a mat in his workshop, elves spotting him Slogan: “PRE-FLIGHT STRETCH.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="elf-wrapped-himself.png" alt="Elf Wrapped Himself cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Elf Wrapped Himself</h3>
+        <p class="desc">Embarrassed elf tangled in wrapping paper and ribbon with a bow on his head, holding scissors Slogan: “QUALITY CONTROL.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="penguin-conga-line.png" alt="Penguin Conga Line cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Penguin Conga Line</h3>
+        <p class="desc">Seven penguins ice skating in a conga line, holding flippers, party hats on Slogan: “CONGA ON ICE.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="hedgehog-big-ornament.png" alt="Hedgehog Big Ornament cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Hedgehog Big Ornament</h3>
+        <p class="desc">Tiny hedgehog hauling an ornament three times his size toward the tree Slogan: “BIG PLANS.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="santa-snow-globe.png" alt="Santa Snow Globe cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Santa Snow Globe</h3>
+        <p class="desc">Santa peering into a snow globe where a miniature Santa waves back up at him Slogan: “PLOT TWIST.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="pet-smug-cat-sweater.png" alt="Pet Smug Cat Sweater cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Pet Smug Cat Sweater</h3>
+        <p class="desc">**PET** — Smug long-haired cat in a red fishbone-pattern sweater, sitting on a throne of presents Slogan: “DRESSED TO IMPRESS.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="pet-dog-matching-sweater.png" alt="Pet Dog Matching Sweater cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Pet Dog Matching Sweater</h3>
+        <p class="desc">**PET** — Goofy golden dog in a candy-cane sweater next to a puppy in the matching mini sweater Slogan: “TWINNING.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="pet-cat-vs-dog-snowball.png" alt="Pet Cat Vs Dog Snowball cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Pet Cat Vs Dog Snowball</h3>
+        <p class="desc">**PET** — Cat in a blue sweater vs dog in a red sweater, snowball fight behind backyard snow forts Slogan: “SNOWBALL SHOWDOWN.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="pet-pug-part-time-reindeer.png" alt="Pet Pug Part Time Reindeer cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Pet Pug Part Time Reindeer</h3>
+        <p class="desc">**PET** — Chubby pug in a reindeer-face sweater plus antler headband, taking his job very seriously Slogan: “PART-TIME REINDEER.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="pet-kitten-oversized-sweater.png" alt="Pet Kitten Oversized Sweater cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Pet Kitten Oversized Sweater</h3>
+        <p class="desc">**PET** — Tiny kitten swimming in a hugely oversized red sweater by the fireplace Slogan: “ROOM TO GROW.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="pet-dogs-caroling.png" alt="Pet Dogs Caroling cartoon sweater design" loading="lazy"></div>
+      <div class="body">
+        <h3>Pet Dogs Caroling</h3>
+        <p class="desc">**PET** — Three dogs in matching sweaters howling carols on a snowy porch, one holding the songbook upside down Slogan: “THE CHOIR.”</p>
+        <span class="drop">NEW CARTOON DESIGN</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP CARTOON SWEATERS</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- ============ SWEATER SHOP (DROPSHIP LANE) ============ -->
 <section class="shop-sec" id="shop">
   <div class="section-head">
@@ -408,9 +1387,19 @@
 <!-- ============ PET SWEATERS ============ -->
 <section class="pet-sec" id="pets">
   <div class="section-head">
-    <div class="tag">FOR THE FOUR-LEGGED FAMILY</div>
+    <div class="tag">FOR THE FOUR-LEGGED FAMILY — CATS &amp; DOGS</div>
     <h2>Pet Sweaters</h2>
-    <p>Your dog did not ask to be this cute. Dress them up anyway — and match them while you're at it.</p>
+    <p>Ugly Black Friday is for the whole family — including the members with paws. Real pet sweaters, live in the store right now, sized for cats and dogs who did not ask to be this cute.</p>
+  </div>
+  <div class="match-banner">
+    <h3>🐾 Match Your Pet 🐾</h3>
+    <p>Grab a sweater for you and the matching look for your pet — Christmas card photo, handled. Start with Santa's Boss for you and Santa's Little Helper for them, or twin up with any design from the Cartoon Sweaters wall.</p>
+  </div>
+  <div class="pet-decor" aria-hidden="true">
+    <img src="pet-kitten-oversized-sweater.png" alt="">
+    <img src="pet-dog-matching-sweater.png" alt="">
+    <img src="pet-smug-cat-sweater.png" alt="">
+    <img src="pet-dogs-caroling.png" alt="">
   </div>
   <div class="grid">
 
@@ -418,7 +1407,56 @@
       <div class="emoji-free-badge">PET SWEATER</div>
       <h3>Gingerbread Pet Sweater + Antler Hood</h3>
       <div class="price">$27.99</div>
-      <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">BUY IT AT THE STORE</a>
+      <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/products/gingerbread-pet-sweater-antler-hood">BUY IT AT THE STORE</a>
+    </div>
+
+    <div class="card tile t1">
+      <div class="emoji-free-badge">PET SWEATER</div>
+      <h3>Pet Sweater + Santa Hat 2-Pc Set</h3>
+      <div class="price">$34.99</div>
+      <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/products/pet-sweater-santa-hat-2-pc-set">BUY IT AT THE STORE</a>
+    </div>
+
+    <div class="card tile t2">
+      <div class="emoji-free-badge">PET SWEATER</div>
+      <h3>Elk Four-Legged Pet Coat</h3>
+      <div class="price">$27.99</div>
+      <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/products/elk-four-legged-pet-coat">BUY IT AT THE STORE</a>
+    </div>
+
+    <div class="card tile t4">
+      <div class="emoji-free-badge">PET SWEATER</div>
+      <h3>Red Truck Turtleneck Pet Sweater</h3>
+      <div class="price">$29.99</div>
+      <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/products/red-truck-turtleneck-pet-sweater">BUY IT AT THE STORE</a>
+    </div>
+
+    <div class="card tile t6">
+      <div class="emoji-free-badge">PET SWEATER</div>
+      <h3>Sequin Nutcracker Sparkle Vest</h3>
+      <div class="price">$29.99</div>
+      <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/products/sequin-nutcracker-sparkle-vest">BUY IT AT THE STORE</a>
+    </div>
+
+    <div class="card tile t5">
+      <div class="emoji-free-badge">PET SWEATER</div>
+      <h3>Big Dog Christmas Pullover</h3>
+      <div class="price">AT THE STORE</div>
+      <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/products/big-dog-christmas-pullover">BUY IT AT THE STORE</a>
+    </div>
+
+    <div class="card tile t7">
+      <div class="emoji-free-badge">PET SWEATER</div>
+      <h3>Reindeer Turtleneck Dog Sweater</h3>
+      <div class="price">AT THE STORE</div>
+      <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/products/reindeer-turtleneck-dog-sweater">BUY IT AT THE STORE</a>
+    </div>
+
+    <div class="card tile t8">
+      <div class="emoji-free-badge">PET SWEATER</div>
+      <h3>Gingerbread Pet Knit Sweater</h3>
+      <div class="price">AT THE STORE</div>
+      <a class="shop-btn" href="https://shop.artificial-intelligencenow.com/products/gingerbread-pet-knit-sweater">BUY IT AT THE STORE</a>
     </div>
 
     <div class="card pet-card">
@@ -426,13 +1464,20 @@
       <div class="body">
         <h3>Santa's Little Helper — Matching Set (Your Pet)</h3>
         <p class="desc">The pet half of the set. You wear Santa's Boss, they wear Santa's Little Helper — Christmas card photo, handled.</p>
-        <span class="drop">NEW DESIGN — DROPPING BLACK FRIDAY</span>
+        <span class="drop">MATCH YOUR PET</span>
         <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">SHOP THE DROP</a>
       </div>
     </div>
 
   </div>
+  <div class="trees" aria-hidden="true">
+  <svg viewBox="0 0 120 170"><polygon points="60,6 96,58 78,58 108,104 84,104 116,150 4,150 36,104 12,104 42,58 24,58" fill="#1d7a3a" stroke="#0a3520" stroke-width="4"/><rect x="50" y="150" width="20" height="16" fill="#7a4a21"/><circle cx="60" cy="34" r="7" fill="#e4002b"/><circle cx="42" cy="76" r="6" fill="#ffc400"/><circle cx="80" cy="88" r="6" fill="#4db2ff"/><circle cx="56" cy="118" r="6" fill="#ff6fae"/><circle cx="86" cy="128" r="5" fill="#ffc400"/><polygon points="60,0 64,10 74,10 66,16 70,26 60,20 50,26 54,16 46,10 56,10" fill="#ffc400"/></svg>
+  <svg viewBox="0 0 120 170" class="tree-big"><polygon points="60,6 96,58 78,58 108,104 84,104 116,150 4,150 36,104 12,104 42,58 24,58" fill="#14532d" stroke="#0a3520" stroke-width="4"/><rect x="50" y="150" width="20" height="16" fill="#7a4a21"/><circle cx="48" cy="48" r="6" fill="#ffc400"/><circle cx="76" cy="70" r="6" fill="#e4002b"/><circle cx="40" cy="104" r="6" fill="#ff6fae"/><circle cx="84" cy="118" r="6" fill="#4db2ff"/><circle cx="60" cy="132" r="5" fill="#ffc400"/><polygon points="60,0 64,10 74,10 66,16 70,26 60,20 50,26 54,16 46,10 56,10" fill="#ffc400"/></svg>
+  <svg viewBox="0 0 120 170"><polygon points="60,6 96,58 78,58 108,104 84,104 116,150 4,150 36,104 12,104 42,58 24,58" fill="#1d7a3a" stroke="#0a3520" stroke-width="4"/><rect x="50" y="150" width="20" height="16" fill="#7a4a21"/><circle cx="66" cy="40" r="6" fill="#4db2ff"/><circle cx="38" cy="86" r="6" fill="#e4002b"/><circle cx="82" cy="100" r="6" fill="#ffc400"/><circle cx="52" cy="126" r="6" fill="#ff6fae"/><polygon points="60,0 64,10 74,10 66,16 70,26 60,20 50,26 54,16 46,10 56,10" fill="#ffc400"/></svg>
+</div>
 </section>
+
+<div class="lights" aria-hidden="true"></div>
 
 <!-- ============ JOIN THE LIST ============ -->
 <div class="join">
@@ -440,6 +1485,8 @@
   <p>New here? Join the List &amp; get 10% OFF your first order — plus first dibs when the new designs drop on Black Friday.</p>
   <a class="btn btn-black" href="https://shop.artificial-intelligencenow.com/pages/join-the-list">JOIN THE LIST</a>
 </div>
+
+<div class="lights" aria-hidden="true"></div>
 
 <footer>
   <div class="foot-brand">A.I. <span class="now">NOW</span></div>
