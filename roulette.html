@@ -146,6 +146,29 @@
   :where(section:nth-of-type(even)){background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 5 L6 11 L12 5 M12 5 L18 11 L24 5 M0 17 L6 23 L12 17 M12 17 L18 23 L24 17' fill='none' stroke='%23ffffff' stroke-opacity='.07' stroke-width='2.4'/%3E%3C/svg%3E"),linear-gradient(180deg,#93392c,#6e1f16);}
 
 </style>
+
+<style id="tangle-kit">
+  /* ===== TANGLED LIGHTS — 70s/80s/90s house C9s, bright, some blinking, tangled everywhere ===== */
+  .x-tangle{position:relative;z-index:3;line-height:0;pointer-events:none;margin:-12px 0 -8px;overflow:visible;}
+  .x-tangle svg{width:100%;height:auto;display:block;overflow:visible;}
+  .x-tangle .twire{fill:none;stroke:#0a3520;stroke-width:4;stroke-linecap:round;}
+  .x-tangle .tsocket{fill:#123f27;stroke:#000;stroke-width:1;}
+  .x-tangle .tglow{filter:blur(10px);opacity:.95;}
+  .x-tangle .tglass{stroke:rgba(0,0,0,.35);stroke-width:1;}
+  .x-tangle .blink-a{animation:xTBlink 1.7s steps(1,end) -.3s infinite;}
+  .x-tangle .blink-b{animation:xTBlink 2.6s steps(1,end) -1.1s infinite;}
+  .x-tangle .blink-c{animation:xTBlink 3.4s steps(1,end) -2s infinite;}
+  @keyframes xTBlink{0%,56%{opacity:1}60%,90%{opacity:.1}94%,100%{opacity:1}}
+  .hero-castfig{width:150px;height:150px;border-radius:18px;border:3px solid #000;box-shadow:5px 5px 0 rgba(0,0,0,.55);background:#fff6e5;display:flex;align-items:center;justify-content:center;flex:0 0 auto;}
+  .hero-castfig svg{width:94%;height:94%;display:block;}
+  .x-treefig{width:92px;flex:0 0 auto;margin-bottom:2px;}
+  .x-treefig svg{width:100%;height:auto;display:block;}
+  @media(max-width:640px){.hero-castfig{width:110px;height:110px;}.x-treefig{width:64px;}}
+  @media (prefers-reduced-motion: reduce){
+    .x-tangle .blink-a,.x-tangle .blink-b,.x-tangle .blink-c{animation:none!important;}
+    .x-tangle .tglow{opacity:.85;}
+  }
+</style>
 </head>
 <body>
 
@@ -203,6 +226,7 @@
   <p>One spin. One sweater. Zero overthinking. The wheel only lands on our own original designs — and every single spin wins you the real discount code SWEATER10 for the store.</p>
 </div>
 
+<div class="x-tangle" aria-hidden="true"></div>
 <section>
     <div class="x-peek" aria-hidden="true"><svg viewBox="0 0 140 150" aria-hidden="true">
 <ellipse cx="70" cy="104" rx="42" ry="36" fill="#8d99ae" stroke="#5d6b82" stroke-width="3"/>
@@ -244,6 +268,7 @@
 </section>
 
 
+<div class="x-tangle" aria-hidden="true"></div>
 <div class="x-prefoot" aria-hidden="true">
 <div class="x-lights"></div>
 <div class="x-treescape" aria-hidden="true"><svg viewBox="0 0 40 64" class="x-bauble" aria-hidden="true"><line x1="20" y1="0" x2="20" y2="13" stroke="#0a3520" stroke-width="2.5"/><rect x="14" y="11" width="12" height="7" rx="2" fill="#c9a227"/><circle cx="20" cy="37" r="17" fill="#b23a2e"/><ellipse cx="14" cy="30" rx="5" ry="8" fill="#ffffff" opacity=".5"/></svg><svg class="x-ts-s" viewBox="0 0 120 170"><polygon points="60,6 96,58 78,58 108,104 84,104 116,150 4,150 36,104 12,104 42,58 24,58" fill="#1d7a3a" stroke="#0a3520" stroke-width="4"/><rect x="50" y="150" width="20" height="16" fill="#7a4a21"/><circle cx="60" cy="34" r="7" fill="#e4002b"/><circle cx="42" cy="76" r="6" fill="#ffc400"/><circle cx="80" cy="88" r="6" fill="#4db2ff"/><circle cx="56" cy="118" r="6" fill="#ff6fae"/><circle cx="86" cy="128" r="5" fill="#ffc400"/><polygon points="60,0 64,10 74,10 66,16 70,26 60,20 50,26 54,16 46,10 56,10" fill="#ffc400"/></svg><svg class="x-ts-m" viewBox="0 0 120 170"><polygon points="60,6 96,58 78,58 108,104 84,104 116,150 4,150 36,104 12,104 42,58 24,58" fill="#14532d" stroke="#0a3520" stroke-width="4"/><rect x="50" y="150" width="20" height="16" fill="#7a4a21"/><circle cx="60" cy="34" r="7" fill="#e4002b"/><circle cx="42" cy="76" r="6" fill="#ffc400"/><circle cx="80" cy="88" r="6" fill="#4db2ff"/><circle cx="56" cy="118" r="6" fill="#ff6fae"/><circle cx="86" cy="128" r="5" fill="#ffc400"/><polygon points="60,0 64,10 74,10 66,16 70,26 60,20 50,26 54,16 46,10 56,10" fill="#ffc400"/><ellipse cx="42" cy="80" rx="14" ry="5.5" fill="#ffffff" opacity=".92"/><ellipse cx="78" cy="80" rx="14" ry="5.5" fill="#ffffff" opacity=".92"/><ellipse cx="60" cy="52" rx="11" ry="4.6" fill="#ffffff" opacity=".92"/><ellipse cx="34" cy="126" rx="12" ry="5.5" fill="#ffffff" opacity=".88"/><ellipse cx="86" cy="126" rx="12" ry="5.5" fill="#ffffff" opacity=".88"/></svg><div class="x-mascot" aria-hidden="true"><svg viewBox="0 0 220 208">
@@ -291,6 +316,7 @@
 </svg><svg class="x-ts-m" viewBox="0 0 120 170"><polygon points="60,6 96,58 78,58 108,104 84,104 116,150 4,150 36,104 12,104 42,58 24,58" fill="#14532d" stroke="#0a3520" stroke-width="4"/><rect x="50" y="150" width="20" height="16" fill="#7a4a21"/><circle cx="60" cy="34" r="7" fill="#e4002b"/><circle cx="42" cy="76" r="6" fill="#ffc400"/><circle cx="80" cy="88" r="6" fill="#4db2ff"/><circle cx="56" cy="118" r="6" fill="#ff6fae"/><circle cx="86" cy="128" r="5" fill="#ffc400"/><polygon points="60,0 64,10 74,10 66,16 70,26 60,20 50,26 54,16 46,10 56,10" fill="#ffc400"/><ellipse cx="42" cy="80" rx="14" ry="5.5" fill="#ffffff" opacity=".92"/><ellipse cx="78" cy="80" rx="14" ry="5.5" fill="#ffffff" opacity=".92"/><ellipse cx="60" cy="52" rx="11" ry="4.6" fill="#ffffff" opacity=".92"/><ellipse cx="34" cy="126" rx="12" ry="5.5" fill="#ffffff" opacity=".88"/><ellipse cx="86" cy="126" rx="12" ry="5.5" fill="#ffffff" opacity=".88"/></svg><svg class="x-ts-s" viewBox="0 0 120 170"><polygon points="60,6 96,58 78,58 108,104 84,104 116,150 4,150 36,104 12,104 42,58 24,58" fill="#1d7a3a" stroke="#0a3520" stroke-width="4"/><rect x="50" y="150" width="20" height="16" fill="#7a4a21"/><circle cx="60" cy="34" r="7" fill="#e4002b"/><circle cx="42" cy="76" r="6" fill="#ffc400"/><circle cx="80" cy="88" r="6" fill="#4db2ff"/><circle cx="56" cy="118" r="6" fill="#ff6fae"/><circle cx="86" cy="128" r="5" fill="#ffc400"/><polygon points="60,0 64,10 74,10 66,16 70,26 60,20 50,26 54,16 46,10 56,10" fill="#ffc400"/></svg><svg viewBox="0 0 40 64" class="x-bauble" aria-hidden="true"><line x1="20" y1="0" x2="20" y2="13" stroke="#0a3520" stroke-width="2.5"/><rect x="14" y="11" width="12" height="7" rx="2" fill="#c9a227"/><circle cx="20" cy="37" r="17" fill="#2456a6"/><ellipse cx="14" cy="30" rx="5" ry="8" fill="#ffffff" opacity=".5"/></svg></div>
 <div class="x-parade"><div class="x-pitem"><img src="penguin-bowling.png" alt="" loading="lazy"></div><div class="x-pitem"><img src="penguin-conga-line.png" alt="" loading="lazy"></div><div class="x-pitem"><img src="penguin-hot-tub.png" alt="" loading="lazy"></div><div class="x-pitem"><img src="penguin-toboggan-pileup.png" alt="" loading="lazy"></div></div>
 </div>
+<div class="x-tangle" aria-hidden="true"></div>
 <footer>
   <div class="foot-brand">A.I. <span class="now">NOW</span></div>
   <p>Ugly Black Friday is part of A.I. NOW.<br>
@@ -450,6 +476,62 @@
     window.requestAnimationFrame(tick);
   }
   window.requestAnimationFrame(tick);
+}catch(e){}})();
+</script>
+
+
+<script id="tangle-kit-js">
+/* TANGLED LIGHTS builder: winding, looping C9 strands into every .x-tangle. Defensive by design. */
+(function(){try{
+  var NS='http://www.w3.org/2000/svg';
+  var COLORS=[
+    {glass:'#ff4038', glow:'#ff2d1e'},
+    {glass:'#ffc93c', glow:'#ffb300'},
+    {glass:'#2fe673', glow:'#00c853'},
+    {glass:'#4db2ff', glow:'#2196f3'},
+    {glass:'#ff9a1a', glow:'#ff6d00'}
+  ];
+  function el(n,at){var e=document.createElementNS(NS,n);for(var k in at){e.setAttribute(k,at[k]);}return e;}
+  function build(container,seed){
+    var W=1200,H=118,base=56;
+    var ph=seed*1.93, amp=26+((seed*29)%14), f1=2+((seed*13)%3), f2=5+((seed*7)%3);
+    var svg=el('svg',{viewBox:'0 0 '+W+' '+H,'aria-hidden':'true'});
+    function pt(t){
+      var x=t*W + 42*Math.sin(t*Math.PI*2*2+ph);
+      var y=base + amp*Math.sin(t*Math.PI*2*f1+ph) + 13*Math.sin(t*Math.PI*2*f2+ph*1.7);
+      return [x,y];
+    }
+    var N=160,pts=[],i,t;
+    for(i=0;i<=N;i++){pts.push(pt(i/N));}
+    var d='M '+pts[0][0].toFixed(1)+' '+pts[0][1].toFixed(1);
+    for(i=1;i<pts.length;i++){d+=' L '+pts[i][0].toFixed(1)+' '+pts[i][1].toFixed(1);}
+    svg.appendChild(el('path',{d:d,'class':'twire'}));
+    /* a second, looser loop strand crossing the first */
+    var d2='',pts2=[];
+    for(i=0;i<=N;i++){t=i/N;pts2.push([t*W + 30*Math.sin(t*Math.PI*2*3+ph+2.1), base+10 + (amp*.7)*Math.sin(t*Math.PI*2*(f1+1)+ph+3.4)]);}
+    d2='M '+pts2[0][0].toFixed(1)+' '+pts2[0][1].toFixed(1);
+    for(i=1;i<pts2.length;i++){d2+=' L '+pts2[i][0].toFixed(1)+' '+pts2[i][1].toFixed(1);}
+    svg.appendChild(el('path',{d:d2,'class':'twire',opacity:'.85'}));
+    var every=Math.max(10,Math.round(N/11)),placed=0;
+    for(i=4;i<N-2;i+=every){
+      var p=pts[i],q=pts[i+2];
+      var tilt=Math.max(-38,Math.min(38,Math.atan2(q[1]-p[1],q[0]-p[0])*57.3*.5));
+      var c=COLORS[(placed+seed)%COLORS.length];
+      var blk=(placed%5===1)?'blink-a':(placed%7===3)?'blink-b':(placed%11===5)?'blink-c':'';
+      var g=el('g',{transform:'translate('+p[0].toFixed(1)+' '+p[1].toFixed(1)+') rotate('+tilt.toFixed(1)+')'});
+      if(blk) g.setAttribute('class',blk);
+      g.appendChild(el('ellipse',{cx:0,cy:30,rx:30,ry:37,fill:c.glow,'class':'tglow'}));
+      g.appendChild(el('rect',{x:-7,y:2,width:14,height:12,rx:2,'class':'tsocket'}));
+      var gp='M 0 13 C 13 20, 15 30, 0 48 C -15 30, -13 20, 0 13 Z';
+      g.appendChild(el('path',{d:gp,fill:c.glass,'class':'tglass'}));
+      g.appendChild(el('ellipse',{cx:-5,cy:29,rx:3.6,ry:8,fill:'#ffffff',opacity:'.6'}));
+      svg.appendChild(g);
+      placed++;
+    }
+    container.appendChild(svg);
+  }
+  var xs=document.querySelectorAll('.x-tangle');
+  for(var s=0;s<xs.length;s++){ if(!xs[s].firstChild) build(xs[s],s+1); }
 }catch(e){}})();
 </script>
 
