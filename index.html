@@ -136,6 +136,26 @@
   @keyframes noseHalo{0%,50%{opacity:.8}55%,60%{opacity:.05}65%,79%{opacity:.8}82%,86%{opacity:.05}91%,100%{opacity:.8}}
   @keyframes noseCore{0%,50%{fill:#ff2d1e;filter:drop-shadow(0 0 10px rgba(255,45,30,.95))}55%,60%{fill:#6e0d05;filter:drop-shadow(0 0 0 rgba(255,45,30,0))}65%,79%{fill:#ff2d1e;filter:drop-shadow(0 0 10px rgba(255,45,30,.95))}82%,86%{fill:#6e0d05;filter:drop-shadow(0 0 0 rgba(255,45,30,0))}91%,100%{fill:#ff2d1e;filter:drop-shadow(0 0 10px rgba(255,45,30,.95))}}
 
+  /* ---------- COUNTDOWN (Black Friday drop / Christmas cutoff) ---------- */
+  .cd-strip{flex:1 1 100%;background:var(--gold);color:#000;text-align:center;font-size:13px;letter-spacing:2px;padding:7px 10px;border-radius:8px;}
+  .cd-strip .cd-strip-time{font-variant-numeric:tabular-nums;}
+  .countdown{background:var(--black);border-top:5px solid var(--gold);border-bottom:5px solid var(--gold);text-align:center;padding:44px 24px 50px;width:100%;}
+  .countdown .cd-kicker{display:inline-block;background:var(--cranberry);color:#fff;padding:7px 18px;border-radius:999px;font-size:13px;letter-spacing:3px;margin-bottom:18px;}
+  .countdown h2{font-size:clamp(34px,6.5vw,72px);text-transform:uppercase;line-height:1;text-shadow:4px 4px 0 rgba(200,16,46,.85);}
+  .countdown h2 .yellow{color:var(--gold);}
+  .countdown .cd-caption{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:clamp(15px,2.2vw,21px);color:var(--cream);margin-top:16px;letter-spacing:1px;min-height:1.2em;}
+  .cd-blocks{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:28px;}
+  .cd-block{background:var(--cranberry);border:3px solid #000;box-shadow:6px 6px 0 rgba(255,196,0,.9);border-radius:16px;min-width:104px;padding:16px 10px 12px;}
+  .cd-block .cd-num{display:block;font-size:clamp(38px,6vw,58px);line-height:1;color:#fff;font-variant-numeric:tabular-nums;}
+  .cd-block .cd-unit{display:block;font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:12px;letter-spacing:3px;color:var(--gold);margin-top:8px;}
+  .countdown .cd-sub{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:17px;color:#ddd;max-width:900px;margin:26px auto 0;line-height:1.5;}
+  .countdown .cd-sub a{color:var(--cyan);text-decoration:underline;}
+  @media (prefers-reduced-motion: no-preference){
+    .countdown h2{animation:cdGlow 2.6s ease-in-out infinite;}
+    @keyframes cdGlow{0%,100%{text-shadow:4px 4px 0 rgba(200,16,46,.85)}50%{text-shadow:4px 4px 0 rgba(200,16,46,.85),0 0 26px rgba(255,196,0,.75)}}
+  }
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+
   /* ---------- REDUCED MOTION: everything stays steadily lit ---------- */
   @media (prefers-reduced-motion: reduce){
     .marquee span{animation:none;}
@@ -144,6 +164,7 @@
     .lights .glass{opacity:1;}
     .noseHalo{animation:none;opacity:.55;}
     .noseCore{animation:none;fill:#ff2d1e;filter:drop-shadow(0 0 8px rgba(255,45,30,.8));}
+    .countdown h2{animation:none;}
   }
 </style>
 </head>
@@ -160,7 +181,9 @@
     <a href="#shop">SWEATER SHOP</a>
     <a href="#pets">PET SWEATERS</a>
     <a href="https://shop.artificial-intelligencenow.com">THE STORE</a>
+    <a href="https://shop.artificial-intelligencenow.com/pages/join-the-list">JOIN THE LIST — 10% OFF</a>
   </nav>
+  <div class="cd-strip" id="cdStrip">BLACK FRIDAY DROPS IN <span class="cd-strip-time">--:--:--</span></div>
 </header>
 
 <div class="lights" aria-hidden="true"></div>
@@ -214,6 +237,21 @@
     <img src="santa-stuck-in-chimney.png" alt="">
     <img src="pet-pug-part-time-reindeer.png" alt="">
   </div>
+</div>
+
+<!-- ============ COUNTDOWN ============ -->
+<div class="countdown" id="countdown">
+  <div class="cd-kicker" id="cdKicker">TONIGHT — MIDNIGHT, DETROIT TIME</div>
+  <h2 id="cdHeadline">BLACK FRIDAY <span class="yellow">DROPS IN</span></h2>
+  <p class="cd-caption" id="cdCaption"></p>
+  <div class="cd-blocks" id="cdBlocks" role="timer" aria-label="Countdown">
+    <div class="cd-block"><span class="cd-num" id="cdD">--</span><span class="cd-unit">DAYS</span></div>
+    <div class="cd-block"><span class="cd-num" id="cdH">--</span><span class="cd-unit">HOURS</span></div>
+    <div class="cd-block"><span class="cd-num" id="cdM">--</span><span class="cd-unit">MINUTES</span></div>
+    <div class="cd-block"><span class="cd-num" id="cdS">--</span><span class="cd-unit">SECONDS</span></div>
+  </div>
+  <p class="sr-only" id="cdSr" aria-live="polite"></p>
+  <p class="cd-sub" id="cdSub">New designs drop at midnight tonight. <a href="https://shop.artificial-intelligencenow.com/pages/join-the-list">Join the List</a> for 10% OFF your first order.</p>
 </div>
 
 <div class="marquee"><span>UGLY SWEATERS &nbsp;•&nbsp; PET SWEATERS &nbsp;•&nbsp; MATCHING SETS &nbsp;•&nbsp; ORIGINAL DESIGNS &nbsp;•&nbsp; UGLY SWEATERS &nbsp;•&nbsp; PET SWEATERS &nbsp;•&nbsp; MATCHING SETS &nbsp;•&nbsp; ORIGINAL DESIGNS &nbsp;•&nbsp;</span></div>
@@ -1671,7 +1709,8 @@
 <footer>
   <div class="foot-brand">A.I. <span class="now">NOW</span></div>
   <p>Ugly Black Friday is part of A.I. NOW.<br>
-  <a href="https://artificial-intelligencenow.com">artificial-intelligencenow.com</a> • <a href="https://shop.artificial-intelligencenow.com">shop.artificial-intelligencenow.com</a></p>
+  <a href="https://artificial-intelligencenow.com">artificial-intelligencenow.com</a> • <a href="https://shop.artificial-intelligencenow.com">shop.artificial-intelligencenow.com</a><br>
+  <a href="https://shop.artificial-intelligencenow.com/pages/join-the-list">Join the List — 10% off your first order</a></p>
 </footer>
 
 <script>
@@ -1730,6 +1769,93 @@
   }
   var strings=document.querySelectorAll('.lights');
   for(var s=0;s<strings.length;s++){ build(strings[s]); }
+})();
+</script>
+
+<script>
+/* Countdown — all target moments are Detroit (America/Detroit) wall-clock times,
+   converted to absolute timestamps so every visitor sees the same countdown. */
+(function(){
+  var TZ='America/Detroit';
+  var fmt=new Intl.DateTimeFormat('en-US',{timeZone:TZ,hourCycle:'h23',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  function parts(ts){ var o={}; var ps=fmt.formatToParts(new Date(ts)); for(var i=0;i<ps.length;i++){ o[ps[i].type]=ps[i].value; } return o; }
+  function detroitToUTC(y,mo,d,h,mi,s){
+    var guess=Date.UTC(y,mo-1,d,h,mi,s);
+    function off(ts){ var p=parts(ts); return Date.UTC(+p.year,+p.month-1,+p.day,+p.hour,+p.minute,+p.second)-ts; }
+    var t=guess-off(guess);
+    if(off(t)!==off(guess)){ t=guess-off(t); }
+    return t;
+  }
+  var BF=detroitToUTC(2026,11,27,0,0,0);       /* Black Friday — midnight tonight, Detroit */
+  var SHIP=detroitToUTC(2026,12,18,23,59,59);  /* last safe order moment for Christmas delivery, Detroit */
+  var JOIN='https://shop.artificial-intelligencenow.com/pages/join-the-list';
+  var el={
+    strip:document.getElementById('cdStrip'),
+    kicker:document.getElementById('cdKicker'),
+    head:document.getElementById('cdHeadline'),
+    cap:document.getElementById('cdCaption'),
+    blocks:document.getElementById('cdBlocks'),
+    d:document.getElementById('cdD'), h:document.getElementById('cdH'),
+    m:document.getElementById('cdM'), s:document.getElementById('cdS'),
+    sub:document.getElementById('cdSub'),
+    sr:document.getElementById('cdSr')
+  };
+  if(!el.head){ return; }
+  function pad(n){ return (n<10?'0':'')+n; }
+  function split(ms){ var t=Math.max(0,Math.floor(ms/1000)); return {d:Math.floor(t/86400), h:Math.floor(t%86400/3600), m:Math.floor(t%3600/60), s:t%60}; }
+  function compact(sp){ return (sp.d>0 ? sp.d+'D ' : '')+pad(sp.h)+':'+pad(sp.m)+':'+pad(sp.s); }
+  function joinLink(){ return '<a href="'+JOIN+'">Join the List</a>'; }
+  var lastPhase=0, lastMinute=-1;
+  function setPhase(phase){
+    if(phase===lastPhase){ return; }
+    lastPhase=phase;
+    if(phase===1){
+      el.kicker.textContent='TONIGHT — MIDNIGHT, DETROIT TIME';
+      el.head.innerHTML='BLACK FRIDAY <span class="yellow">DROPS IN</span>';
+      el.cap.textContent='';
+      el.blocks.style.display='';
+      el.sub.innerHTML='New designs drop at midnight tonight. '+joinLink()+' for 10% OFF your first order.';
+    } else if(phase===2){
+      el.kicker.textContent='THE DROP IS OPEN';
+      el.head.innerHTML='BLACK FRIDAY IS <span class="yellow">LIVE</span>';
+      el.cap.textContent='ORDER BY DEC 18 FOR CHRISTMAS DELIVERY — TIME LEFT TO ORDER:';
+      el.blocks.style.display='';
+      el.sub.innerHTML='The cartoon wall, the pet sweaters, and the matching sets are all live. '+joinLink()+' for 10% OFF your first order.';
+    } else {
+      el.kicker.textContent='THE SEASON\u2019S BRIGHTEST SWEATERS';
+      el.head.innerHTML='MERRY <span class="yellow">CHRISTMAS!</span>';
+      el.cap.textContent='';
+      el.blocks.style.display='none';
+      el.sub.innerHTML='The Christmas delivery cutoff (Dec 18) has passed — sweaters still ship for New Year\u2019s and beyond. '+joinLink()+' for 10% OFF your first order.';
+      el.strip.innerHTML='MERRY CHRISTMAS FROM UGLY BLACK FRIDAY';
+    }
+  }
+  function tick(){
+    var now=Date.now();
+    var phase, target;
+    if(now<BF){ phase=1; target=BF; }
+    else if(now<=SHIP){ phase=2; target=SHIP; }
+    else { phase=3; target=null; }
+    setPhase(phase);
+    if(phase===3){ return; }
+    var sp=split(target-now);
+    el.d.textContent=sp.d;
+    el.h.textContent=pad(sp.h);
+    el.m.textContent=pad(sp.m);
+    el.s.textContent=pad(sp.s);
+    if(phase===1){
+      el.strip.innerHTML='BLACK FRIDAY DROPS IN <span class="cd-strip-time">'+compact(sp)+'</span>';
+    } else {
+      el.strip.innerHTML='BLACK FRIDAY IS LIVE — ORDER BY DEC 18 FOR CHRISTMAS &bull; <span class="cd-strip-time">'+compact(sp)+'</span> LEFT TO ORDER';
+    }
+    if(sp.m!==lastMinute){
+      lastMinute=sp.m;
+      var words=(sp.d>0 ? sp.d+(sp.d===1?' day, ':' days, ') : '')+sp.h+(sp.h===1?' hour and ':' hours and ')+sp.m+(sp.m===1?' minute':' minutes');
+      el.sr.textContent=(phase===1 ? words+' until Black Friday.' : words+' left to order for Christmas delivery.');
+    }
+  }
+  tick();
+  setInterval(tick,1000);
 })();
 </script>
 
