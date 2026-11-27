@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900">
+<defs><linearGradient id="morn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#274472"/><stop offset="55%" stop-color="#c86a8a"/><stop offset="100%" stop-color="#ffc400"/></linearGradient></defs>
+<rect width="900" height="900" fill="url(#morn)"/>
+<g stroke="#ffd76a" stroke-width="10" stroke-linecap="round" opacity="0.8">
+<path d="M450 120 L450 190"/><path d="M250 180 L290 240"/><path d="M650 180 L610 240"/><path d="M140 330 L210 360"/><path d="M760 330 L690 360"/>
+</g>
+<circle cx="450" cy="430" r="130" fill="#ffd76a"/>
+<path d="M0 900 L0 640 Q450 560 900 640 L900 900 Z" fill="#1a1030"/>
+<g fill="#12081f">
+<path d="M250 760 L250 560 A80 90 0 0 1 410 560 L410 760 L382 760 L382 566 A52 62 0 0 0 278 566 L278 760 Z"/>
+<circle cx="470" cy="690" r="62"/>
+<path d="M408 690 A62 62 0 0 1 470 628 L470 752 A62 62 0 0 1 408 690" fill="#241543"/>
+</g>
+<g fill="#0d0620">
+<path d="M600 700 L640 700 L648 560 L632 470 L616 560 Z"/>
+<path d="M600 560 L560 500 M648 560 L690 505" stroke="#0d0620" stroke-width="17" stroke-linecap="round"/>
+<circle cx="624" cy="452" r="20"/>
+<path d="M600 462 Q624 442 648 462 L650 476 Q624 462 598 476 Z" fill="#0d0620"/>
+</g>
+<text x="450" y="845" text-anchor="middle" font-family="Georgia,serif" font-size="44" fill="#fff" letter-spacing="5">HE IS RISEN</text>
+</svg>

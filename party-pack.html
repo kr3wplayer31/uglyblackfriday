@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OFFICE PARTY PACK — Group Sweater Orders Made Easy | Ugly Black Friday</title>
+<meta name="description" content="Ordering ugly sweaters for the whole office, crew, or family: everyone picks their own design, one link does the shopping, and this page prints your sign-up sheet. Groups of 5+ use code SWEATER10.">
+<style>
+  :root{--pink:#ff2e88;--violet:#8a2be2;--cyan:#00e5ff;--red:#e4002b;--green:#00c853;--gold:#ffc400;--black:#0a0a0a;--pine:#0d3b21;--pine-deep:#07231a;--cranberry:#c8102e;--cranberry-deep:#7a0c1d;--cream:#fff6e5;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Arial Black',Arial,Helvetica,sans-serif;background:var(--pine-deep);color:#fff;overflow-x:hidden;}
+  a{text-decoration:none;}
+  img{max-width:100%;display:block;}
+  header{background:var(--black);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-bottom:4px solid var(--pink);position:sticky;top:0;z-index:50;}
+  .brandmark{display:flex;align-items:center;gap:14px;}
+  .wordmark{font-size:30px;letter-spacing:1px;color:#fff;font-weight:900;}
+  .wordmark .now{background:linear-gradient(90deg,var(--pink),var(--violet),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .pill{background:var(--pink);color:#fff;font-size:12px;padding:5px 12px;border-radius:999px;letter-spacing:2px;}
+  header nav{display:flex;gap:10px;flex-wrap:wrap;}
+  header nav a{background:#1d1d1d;color:#fff;border:2px solid var(--cyan);padding:9px 16px;border-radius:999px;font-size:13px;letter-spacing:1px;}
+  header nav a:hover{background:var(--cyan);color:#000;}
+  header nav a.here{background:var(--gold);color:#000;border-color:#000;}
+  .hero{background:linear-gradient(120deg,var(--cranberry-deep),var(--cranberry) 40%,var(--pine));padding:48px 24px 40px;text-align:center;}
+  .hero .kicker{display:inline-block;background:#000;color:var(--gold);padding:8px 20px;border-radius:999px;font-size:14px;letter-spacing:3px;margin-bottom:20px;}
+  .hero h1{font-size:clamp(36px,8vw,80px);line-height:.95;text-transform:uppercase;text-shadow:5px 5px 0 #000;}
+  .hero h1 .yellow{color:var(--gold);}
+  .hero p{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:clamp(16px,2.4vw,22px);max-width:1000px;margin:20px auto 0;line-height:1.5;color:var(--cream);}
+  section{padding:48px 24px;width:100%;}
+  .section-head{text-align:center;max-width:1100px;margin:0 auto 36px;}
+  .section-head h2{font-size:clamp(30px,5.5vw,54px);text-transform:uppercase;line-height:1.05;}
+  .section-head p{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:clamp(15px,2vw,19px);margin-top:14px;line-height:1.5;color:var(--cream);}
+  .tag{display:inline-block;padding:6px 16px;border-radius:999px;font-size:12px;letter-spacing:3px;margin-bottom:16px;background:#000;color:#fff;}
+  .btn{display:inline-block;padding:16px 34px;border-radius:999px;font-size:17px;letter-spacing:1px;border:3px solid #000;box-shadow:5px 5px 0 #000;cursor:pointer;font-family:inherit;}
+  .btn-gold{background:var(--gold);color:#000;}
+  .btn-black{background:#000;color:#fff;border-color:#fff;}
+  .cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:26px;}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;max-width:1150px;margin:0 auto;}
+  .step{background:#0c2b19;border:3px solid #000;border-radius:18px;box-shadow:7px 7px 0 rgba(0,0,0,.55);padding:24px;}
+  .step .num{font-size:38px;color:var(--gold);}
+  .step h3{font-size:20px;text-transform:uppercase;margin:8px 0;line-height:1.25;}
+  .step p{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:14px;line-height:1.6;color:#e8e8e8;}
+  .step a{color:var(--cyan);text-decoration:underline;}
+  /* deals strip */
+  .deals{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;max-width:1150px;margin:0 auto;}
+  .deal{border-radius:18px;border:3px solid #000;box-shadow:7px 7px 0 rgba(0,0,0,.55);padding:26px;text-align:center;}
+  .deal.bogo{background:linear-gradient(135deg,#8a5a00,#d99a00);color:#000;}
+  .deal.code{background:#000;border-color:var(--gold);}
+  .deal h3{font-size:clamp(22px,3.4vw,30px);text-transform:uppercase;line-height:1.15;}
+  .deal p{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:15px;line-height:1.6;margin-top:10px;}
+  .deal .codebox{display:inline-block;background:#fff;color:#000;font-size:clamp(22px,4vw,30px);letter-spacing:3px;padding:8px 22px;border-radius:12px;border:3px dashed var(--cranberry);margin-top:12px;font-family:'Arial Black',Arial,sans-serif;}
+  /* signup sheet builder */
+  .builder-sec{background:linear-gradient(180deg,#5e0a1a,var(--cranberry-deep));}
+  .builder{max-width:900px;margin:0 auto;background:#0c2b19;border:3px solid #000;border-radius:20px;box-shadow:7px 7px 0 rgba(0,0,0,.55);padding:26px;}
+  .builder label{display:block;font-size:14px;letter-spacing:2px;margin:16px 0 8px;color:var(--gold);}
+  .builder input,.builder select{width:100%;padding:14px;border-radius:12px;border:3px solid #000;font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:16px;background:#fff;color:#000;}
+  .builder .rowline{display:grid;grid-template-columns:1fr 130px 1fr;gap:10px;margin-bottom:10px;}
+  .builder .small-note{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:13px;color:#ccc;line-height:1.5;margin-top:8px;}
+  /* printable sheet */
+  #sheet{display:none;background:#fff;color:#000;max-width:900px;margin:34px auto 0;border-radius:6px;padding:34px;font-family:Arial,Helvetica,sans-serif;}
+  #sheet h2{font-family:'Arial Black',Arial,sans-serif;font-size:30px;text-transform:uppercase;text-align:center;}
+  #sheet .s-sub{text-align:center;font-weight:bold;margin-top:8px;font-size:15px;line-height:1.5;}
+  #sheet table{width:100%;border-collapse:collapse;margin-top:22px;}
+  #sheet th,#sheet td{border:2px solid #000;padding:10px;font-size:14px;text-align:left;}
+  #sheet th{background:#ffc400;font-family:'Arial Black',Arial,sans-serif;font-size:13px;letter-spacing:1px;}
+  #sheet .s-foot{margin-top:18px;font-size:13px;font-weight:bold;line-height:1.6;}
+  .fineprint{max-width:900px;margin:30px auto 0;font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:14px;line-height:1.65;color:#ccc;text-align:center;}
+  footer{background:var(--black);text-align:center;padding:38px 24px;font-family:Arial,Helvetica,sans-serif;}
+  footer .foot-brand{font-family:'Arial Black',Arial,sans-serif;font-size:24px;margin-bottom:10px;}
+  footer .foot-brand .now{background:linear-gradient(90deg,var(--pink),var(--violet),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  footer p{color:#bbb;font-size:14px;line-height:1.6;}
+  footer a{color:var(--cyan);}
+  @media (max-width:560px){.builder .rowline{grid-template-columns:1fr;}}
+  @media print{
+    body{background:#fff;}
+    header,.hero,.how-sec,.deals-sec,.builder-sec .builder,.builder-sec .section-head,footer,.fineprint,.no-print{display:none!important;}
+    .builder-sec{background:#fff;padding:0;}
+    #sheet{display:block!important;margin:0;box-shadow:none;}
+  }
+  @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brandmark">
+    <div class="wordmark">A.I. <span class="now">NOW</span></div>
+    <div class="pill">UGLY BLACK FRIDAY</div>
+  </div>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="design.html">🎨 DESIGN YOUR OWN</a>
+    <a href="roulette.html">🎰 ROULETTE</a>
+    <a href="gift-finder.html">🎁 GIFT FINDER</a>
+    <a href="ugly-meter.html">🌡️ UGLY METER</a>
+    <a href="wall.html">📸 THE WALL</a>
+    <a href="drops.html">🎄 DEC DROPS</a>
+    <a href="party-pack.html" class="here">🎉 PARTY PACK</a>
+    <a href="https://shop.artificial-intelligencenow.com">THE STORE</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="kicker">OFFICE PARTIES • CREWS • WHOLE FAMILIES</div>
+  <h1>Office Party<br><span class="yellow">Pack</span></h1>
+  <p>One person organizes. Everybody picks their OWN design — no forcing twelve people into the same sweater. One store link, one sign-up sheet, done. Here's the whole play, start to finish.</p>
+</div>
+
+<section class="how-sec">
+  <div class="section-head">
+    <div class="tag">HOW GROUP ORDERING WORKS HERE</div>
+    <h2>Four Steps. Zero Herding Cats.</h2>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="num">1</div>
+      <h3>Share The One Link</h3>
+      <p>Send your crew the collection link: <a href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters</a>. That's the whole catalog — our own designs, the sweater shop, all of it.</p>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <h3>Everyone Picks Their Own</h3>
+      <p>Each person chooses the design that fits THEIR personality — the forklift guy gets Forklift Santa, the cat person gets Merry Chaos. Matching is allowed. Matching is not required.</p>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <h3>Collect Names &amp; Sizes</h3>
+      <p>Use the sign-up sheet generator below. Print it for the break room, or copy the rows into your group chat. Name, size, design — that's all you need from each person.</p>
+    </div>
+    <div class="step">
+      <div class="num">4</div>
+      <h3>One Checkout, One Code</h3>
+      <p>The organizer places one order with everyone's picks. Group of 5 or more sweaters? Enter the group code at checkout (see below). Then somebody books the party photo.</p>
+    </div>
+  </div>
+</section>
+
+<section class="deals-sec" style="padding-top:0;">
+  <div class="section-head">
+    <div class="tag" style="background:var(--gold);color:#000;">THE REAL GROUP PERKS — NO MADE-UP BULK MATH</div>
+    <h2>What Your Group Actually Gets</h2>
+    <p>We don't invent bulk price tiers. Here are the two real deals that apply to group orders, exactly as they run in the store:</p>
+  </div>
+  <div class="deals">
+    <div class="deal bogo">
+      <h3>🎁 Buy 1 Get 1 Free</h3>
+      <p>On OUR OWN printed-to-order designs, the store runs a real Buy 1 Get 1 Free deal — it's automatic at checkout, no code needed. Ten people in matching-season designs? Pair them up in the cart and half the pairs' second sweaters are on us. (Store discounts don't stack — the cart applies the best deal it can.)</p>
+    </div>
+    <div class="deal code">
+      <h3>👥 Groups Of 5+:<br>SWEATER10</h3>
+      <p>Ordering 5 or more sweaters in one order? Use the group code at checkout:</p>
+      <div class="codebox">SWEATER10</div>
+      <p>It's a real, active store code. One code per order, and like all store discounts it doesn't stack with the BOGO — pick whichever saves your group more at checkout.</p>
+    </div>
+  </div>
+</section>
+
+<section class="builder-sec">
+  <div class="section-head">
+    <div class="tag">PRINT IT • POST IT • PASS IT AROUND</div>
+    <h2>Sign-Up Sheet Generator</h2>
+    <p>Tell it your party name and how many people are in, and it builds a clean sign-up sheet with your group's details and the real store link printed right on it. Print it, tape it to the break-room fridge, and let the chaos organize itself.</p>
+  </div>
+
+  <div class="builder">
+    <label for="partyName">PARTY / GROUP NAME</label>
+    <input id="partyName" type="text" placeholder="e.g. Henderson Warehouse Crew — Holiday Party" maxlength="60">
+    <label for="organizer">ORGANIZER (OPTIONAL)</label>
+    <input id="organizer" type="text" placeholder="e.g. Dana — collecting sizes by Friday" maxlength="60">
+    <label for="rowCount">HOW MANY PEOPLE?</label>
+    <select id="rowCount">
+      <option value="5">5 people</option>
+      <option value="8" selected>8 people</option>
+      <option value="12">12 people</option>
+      <option value="16">16 people</option>
+      <option value="20">20 people</option>
+    </select>
+    <label>PRE-FILL ANY PICKS YOU ALREADY KNOW (OPTIONAL)</label>
+    <div id="prefill"></div>
+    <p class="small-note">Leave rows blank and they print as empty sign-up lines. Designs in the dropdown are our real original designs from the collection.</p>
+    <div class="cta-row" style="justify-content:flex-start;">
+      <button class="btn btn-gold" id="buildBtn" type="button">🖨️ BUILD MY SIGN-UP SHEET</button>
+    </div>
+  </div>
+
+  <div id="sheet" aria-live="polite"></div>
+  <div class="cta-row no-print" id="printRow" style="display:none;">
+    <button class="btn btn-gold" id="printBtn" type="button">🖨️ PRINT THE SHEET</button>
+    <a class="btn btn-black" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">OPEN THE COLLECTION</a>
+  </div>
+
+  <p class="fineprint">Ordering notes, straight: prices are the store's live prices — our own designs run $39.99 (sweatshirt) and $54.99 (all-over-print sweater), printed to order, so give printed-to-order picks a little production time before the party. Pet sweaters count too — plenty of offices have a mascot. Questions about a group order? Email <a href="mailto:support@artificial-intelligencenow.com" style="color:var(--cyan);">support@artificial-intelligencenow.com</a>.</p>
+</section>
+
+<footer>
+  <div class="foot-brand">A.I. <span class="now">NOW</span></div>
+  <p>Ugly Black Friday is part of A.I. NOW.<br>
+  <a href="index.html">uglyblackfriday.com</a> • <a href="https://shop.artificial-intelligencenow.com">shop.artificial-intelligencenow.com</a><br>
+  <a href="https://shop.artificial-intelligencenow.com/pages/join-the-list">Join the List — 10% off your first order</a></p>
+</footer>
+
+<script>
+(function(){
+  var DESIGNS=["Forklift Certified Santa","Detroit Football","Sleighin' in the 313","Dear Santa, I Can Explain","Last Santa Standing","Resting Grouch Face","Tiny Tree, Big Heart","Good Boy on the Nice List","Penguin Express Delivery","Chillin' Since December","North Pole Delivery Crew","Merry Chaos","Cat Tangled In Lights","Santa Stuck In Chimney","Yeti Hot Cocoa","Elf On Strike","Snowball Fight Crew","Reindeer Karaoke","Gingerbread Realtor","Santa's Boss (You) + Santa's Little Helper (Pet)","Still deciding…"];
+  var SIZES=["S","M","L","XL","2XL","3XL"];
+  var prefill=document.getElementById('prefill');
+  function rowHTML(){
+    var sizeOpts='<option value="">Size…</option>'+SIZES.map(function(s){return '<option>'+s+'</option>';}).join("");
+    var designOpts='<option value="">Design…</option>'+DESIGNS.map(function(d){return '<option>'+d+'</option>';}).join("");
+    return '<div class="rowline"><input type="text" class="pf-name" placeholder="Name" maxlength="30"><select class="pf-size">'+sizeOpts+'</select><select class="pf-design">'+designOpts+'</select></div>';
+  }
+  prefill.innerHTML=rowHTML()+rowHTML()+rowHTML();
+  var sheet=document.getElementById('sheet');
+  document.getElementById('buildBtn').addEventListener('click',function(){
+    var party=document.getElementById('partyName').value.trim()||"Our Holiday Sweater Party";
+    var org=document.getElementById('organizer').value.trim();
+    var count=parseInt(document.getElementById('rowCount').value,10);
+    var names=prefill.querySelectorAll('.pf-name'), sizes=prefill.querySelectorAll('.pf-size'), designs=prefill.querySelectorAll('.pf-design');
+    var rows="";
+    for(var i=0;i<count;i++){
+      var n="",s="",d="";
+      if(i<names.length){ n=names[i].value.trim(); s=sizes[i].value; d=designs[i].value; }
+      rows+='<tr><td>'+(i+1)+'</td><td>'+(n||'&nbsp;')+'</td><td>'+(s||'&nbsp;')+'</td><td>'+(d||'&nbsp;')+'</td></tr>';
+    }
+    sheet.innerHTML=
+      '<h2>🎄 '+party.replace(/</g,"&lt;")+' 🎄</h2>'+
+      '<p class="s-sub">UGLY SWEATER SIGN-UP SHEET — Ugly Black Friday (uglyblackfriday.com)<br>'+
+      'Pick your design at: shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters<br>'+
+      'Write your name, your size, and the design you want. '+(org?('Organizer: '+org.replace(/</g,"&lt;")+'. '):'')+'Group of 5+ uses code SWEATER10 at checkout.</p>'+
+      '<table><tr><th style="width:36px;">#</th><th>NAME</th><th style="width:90px;">SIZE</th><th>DESIGN I WANT</th></tr>'+rows+'</table>'+
+      '<p class="s-foot">Our own designs are Buy 1 Get 1 Free in the store (automatic at checkout; discounts don\'t stack — SWEATER10 or BOGO, whichever saves more). Printed-to-order designs need a little production time — sign up early!</p>';
+    sheet.style.display='block';
+    document.getElementById('printRow').style.display='flex';
+    sheet.scrollIntoView({behavior:'smooth'});
+  });
+  document.getElementById('printBtn').addEventListener('click',function(){ window.print(); });
+})();
+</script>
+</body>
+</html>

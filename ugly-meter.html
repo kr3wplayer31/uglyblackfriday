@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE UGLY METER — Which Is Uglier? | Ugly Black Friday</title>
+<meta name="description" content="Head-to-head ugly sweater duels. Tap the uglier design, watch your tally climb, and crown tonight's Champion of Ugly. Your votes, your screen, your champion.">
+<style>
+  :root{--pink:#ff2e88;--violet:#8a2be2;--cyan:#00e5ff;--red:#e4002b;--green:#00c853;--gold:#ffc400;--black:#0a0a0a;--pine:#0d3b21;--pine-deep:#07231a;--cranberry:#c8102e;--cranberry-deep:#7a0c1d;--cream:#fff6e5;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Arial Black',Arial,Helvetica,sans-serif;background:var(--pine-deep);color:#fff;overflow-x:hidden;}
+  a{text-decoration:none;}
+  img{max-width:100%;display:block;}
+  header{background:var(--black);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-bottom:4px solid var(--pink);position:sticky;top:0;z-index:50;}
+  .brandmark{display:flex;align-items:center;gap:14px;}
+  .wordmark{font-size:30px;letter-spacing:1px;color:#fff;font-weight:900;}
+  .wordmark .now{background:linear-gradient(90deg,var(--pink),var(--violet),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .pill{background:var(--pink);color:#fff;font-size:12px;padding:5px 12px;border-radius:999px;letter-spacing:2px;}
+  header nav{display:flex;gap:10px;flex-wrap:wrap;}
+  header nav a{background:#1d1d1d;color:#fff;border:2px solid var(--cyan);padding:9px 16px;border-radius:999px;font-size:13px;letter-spacing:1px;}
+  header nav a:hover{background:var(--cyan);color:#000;}
+  header nav a.here{background:var(--gold);color:#000;border-color:#000;}
+  .hero{background:linear-gradient(120deg,var(--cranberry-deep),var(--cranberry) 40%,var(--pine));padding:48px 24px 40px;text-align:center;}
+  .hero .kicker{display:inline-block;background:#000;color:var(--gold);padding:8px 20px;border-radius:999px;font-size:14px;letter-spacing:3px;margin-bottom:20px;}
+  .hero h1{font-size:clamp(38px,8.5vw,84px);line-height:.95;text-transform:uppercase;text-shadow:5px 5px 0 #000;}
+  .hero h1 .yellow{color:var(--gold);}
+  .hero p{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:clamp(16px,2.4vw,22px);max-width:1000px;margin:20px auto 0;line-height:1.5;color:var(--cream);}
+  section{padding:44px 24px;width:100%;}
+  .btn{display:inline-block;padding:15px 32px;border-radius:999px;font-size:16px;letter-spacing:1px;border:3px solid #000;box-shadow:5px 5px 0 #000;cursor:pointer;font-family:inherit;}
+  .btn-gold{background:var(--gold);color:#000;}
+  .btn-black{background:#000;color:#fff;border-color:#fff;}
+  /* duel */
+  .duel{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:stretch;max-width:1100px;margin:0 auto;}
+  .fighter{background:#0c2b19;border:3px solid #000;border-radius:20px;overflow:hidden;box-shadow:7px 7px 0 rgba(0,0,0,.55);cursor:pointer;font-family:inherit;color:#fff;text-align:center;padding:0;display:flex;flex-direction:column;transition:transform .1s ease;}
+  .fighter:hover{transform:scale(1.02);}
+  .fighter img{width:100%;height:min(58vw,360px);object-fit:cover;background:#fff;}
+  .fighter .fname{font-size:clamp(17px,3vw,24px);text-transform:uppercase;padding:14px 10px 4px;line-height:1.2;}
+  .fighter .wins{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:14px;color:var(--gold);padding-bottom:14px;}
+  .fighter .wins b{font-size:20px;}
+  .vs{align-self:center;background:var(--cranberry);border:3px solid #000;border-radius:50%;width:74px;height:74px;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:5px 5px 0 rgba(0,0,0,.55);z-index:2;}
+  .tallybar{max-width:1100px;margin:26px auto 0;background:#000;border:3px solid var(--gold);border-radius:16px;padding:16px 22px;text-align:center;font-size:clamp(15px,2.4vw,20px);text-transform:uppercase;}
+  .tallybar .yellow{color:var(--gold);}
+  .meter-wrap{max-width:1100px;margin:18px auto 0;}
+  .meter{height:30px;background:#1d1d1d;border:3px solid #000;border-radius:999px;overflow:hidden;}
+  .meter .fill{height:100%;width:0%;background:linear-gradient(90deg,var(--green),var(--gold),var(--cranberry));transition:width .4s ease;}
+  .meter-lbl{text-align:center;font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:13px;color:#ccc;margin-top:8px;letter-spacing:1px;}
+  /* podium */
+  .podium-sec{background:linear-gradient(180deg,#5e0a1a,var(--cranberry-deep));}
+  .section-head{text-align:center;max-width:1100px;margin:0 auto 34px;}
+  .section-head h2{font-size:clamp(30px,5.5vw,54px);text-transform:uppercase;line-height:1.05;}
+  .section-head p{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:clamp(15px,2vw,19px);margin-top:14px;line-height:1.5;color:var(--cream);}
+  .podium{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:1000px;margin:0 auto;align-items:end;}
+  .pod{border-radius:18px;overflow:hidden;border:3px solid #000;box-shadow:7px 7px 0 rgba(0,0,0,.55);background:#0c2b19;text-align:center;}
+  .pod img{width:100%;height:200px;object-fit:cover;background:#fff;}
+  .pod .medal{font-size:30px;padding-top:12px;}
+  .pod h3{font-size:17px;text-transform:uppercase;line-height:1.25;padding:6px 10px 2px;}
+  .pod .pwins{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:14px;color:var(--gold);padding-bottom:14px;}
+  .pod.first{outline:4px solid var(--gold);}
+  .pod .empty{padding:40px 16px;font-family:Arial,Helvetica,sans-serif;font-weight:bold;color:#bbb;line-height:1.6;font-size:15px;}
+  .podium-actions{text-align:center;margin-top:28px;}
+  .fineprint{max-width:900px;margin:30px auto 0;font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:14px;line-height:1.65;color:#ccc;text-align:center;}
+  footer{background:var(--black);text-align:center;padding:38px 24px;font-family:Arial,Helvetica,sans-serif;}
+  footer .foot-brand{font-family:'Arial Black',Arial,sans-serif;font-size:24px;margin-bottom:10px;}
+  footer .foot-brand .now{background:linear-gradient(90deg,var(--pink),var(--violet),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  footer p{color:#bbb;font-size:14px;line-height:1.6;}
+  footer a{color:var(--cyan);}
+  @media (max-width:560px){.duel{grid-template-columns:1fr;}.vs{margin:0 auto;}}
+  @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brandmark">
+    <div class="wordmark">A.I. <span class="now">NOW</span></div>
+    <div class="pill">UGLY BLACK FRIDAY</div>
+  </div>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="design.html">🎨 DESIGN YOUR OWN</a>
+    <a href="roulette.html">🎰 ROULETTE</a>
+    <a href="gift-finder.html">🎁 GIFT FINDER</a>
+    <a href="ugly-meter.html" class="here">🌡️ UGLY METER</a>
+    <a href="wall.html">📸 THE WALL</a>
+    <a href="drops.html">🎄 DEC DROPS</a>
+    <a href="party-pack.html">🎉 PARTY PACK</a>
+    <a href="https://shop.artificial-intelligencenow.com">THE STORE</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="kicker">HEAD-TO-HEAD • TAP THE UGLIER ONE</div>
+  <h1>The Ugly<br><span class="yellow">Meter</span></h1>
+  <p>Two of our original designs enter. You decide which one is uglier. Every tap crowns a winner, climbs the meter, and builds tonight's Champion of Ugly — on your screen, by your votes.</p>
+</div>
+
+<section>
+  <div class="duel" aria-live="polite">
+    <button class="fighter" id="fA" type="button">
+      <img id="imgA" src="cat-tangled-in-lights.png" alt="">
+      <span class="fname" id="nameA">Cat Tangled In Lights</span>
+      <span class="wins">YOUR VOTES: <b id="winsA">0</b></span>
+    </button>
+    <div class="vs" aria-hidden="true">VS</div>
+    <button class="fighter" id="fB" type="button">
+      <img id="imgB" src="santa-stuck-in-chimney.png" alt="">
+      <span class="fname" id="nameB">Santa Stuck In Chimney</span>
+      <span class="wins">YOUR VOTES: <b id="winsB">0</b></span>
+    </button>
+  </div>
+
+  <div class="tallybar" id="tally">DUELS VOTED TONIGHT: <span class="yellow" id="duelCount">0</span> &nbsp;•&nbsp; UGLY METER: <span class="yellow" id="meterPct">0%</span></div>
+  <div class="meter-wrap">
+    <div class="meter"><div class="fill" id="meterFill"></div></div>
+    <p class="meter-lbl">THE METER FILLS WITH EVERY DUEL YOU JUDGE — 25 DUELS MAXES IT OUT. PURE FUN, ZERO CONSEQUENCES.</p>
+  </div>
+</section>
+
+<section class="podium-sec">
+  <div class="section-head">
+    <h2>🏆 Champion Of Ugly</h2>
+    <p>Your personal podium, built live from the duels above. The design you keep picking climbs — the one with the most of your votes wears the crown.</p>
+  </div>
+  <div class="podium" id="podium">
+    <div class="pod"><div class="empty">No votes yet.<br>Judge a duel above and your champion appears here.</div></div>
+    <div class="pod"><div class="empty">🥈 Second place<br>is waiting on your votes.</div></div>
+    <div class="pod"><div class="empty">🥉 Third place<br>is waiting on your votes.</div></div>
+  </div>
+  <div class="podium-actions">
+    <a class="btn btn-gold" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">SHOP THE CHAMPIONS</a>
+    <button class="btn btn-black" id="resetBtn" type="button" style="margin-left:10px;">↻ RESET MY TALLY</button>
+  </div>
+  <p class="fineprint">Honest fine print: this tally lives on this screen, in this visit — it's tonight's tally, counted from your taps only. There's no global leaderboard and no made-up vote counts; close the tab and the crown goes back up for grabs. Want your champion for real? Every design here is a real sweater in the Cartoon Sweaters collection.</p>
+</section>
+
+<footer>
+  <div class="foot-brand">A.I. <span class="now">NOW</span></div>
+  <p>Ugly Black Friday is part of A.I. NOW.<br>
+  <a href="index.html">uglyblackfriday.com</a> • <a href="https://shop.artificial-intelligencenow.com">shop.artificial-intelligencenow.com</a><br>
+  <a href="https://shop.artificial-intelligencenow.com/pages/join-the-list">Join the List — 10% off your first order</a></p>
+</footer>
+
+<script>
+(function(){
+  var DESIGNS=[
+    ["cat-tangled-in-lights.png","Cat Tangled In Lights"],
+    ["santa-stuck-in-chimney.png","Santa Stuck In Chimney"],
+    ["yeti-hot-cocoa.png","Yeti Hot Cocoa"],
+    ["elf-on-strike.png","Elf On Strike"],
+    ["snowball-fight-crew.png","Snowball Fight Crew"],
+    ["reindeer-karaoke.png","Reindeer Karaoke"],
+    ["gingerbread-realtor.png","Gingerbread Realtor"],
+    ["nutcracker-drummer.png","Nutcracker Drummer"],
+    ["polar-bear-ice-skates.png","Polar Bear Ice Skates"],
+    ["dog-backup-reindeer.png","Dog Backup Reindeer"],
+    ["santa-snow-surfer.png","Santa Snow Surfer"],
+    ["mrs-claus-baker.png","Mrs Claus Baker"],
+    ["snowman-selfie.png","Snowman Selfie"],
+    ["penguin-hot-tub.png","Penguin Hot Tub"],
+    ["reindeer-traffic-cop.png","Reindeer Traffic Cop"],
+    ["runaway-gingerbread.png","Runaway Gingerbread"],
+    ["elf-workshop-chaos.png","Elf Workshop Chaos"],
+    ["santa-yoga.png","Santa Yoga"],
+    ["snow-queen.png","Snow Queen"],
+    ["cardinal-santa-hat.png","Cardinal Santa Hat"],
+    ["raccoon-caroler.png","Raccoon Caroler"],
+    ["moose-sweater-model.png","Moose Sweater Model"],
+    ["fox-on-skis.png","Fox On Skis"],
+    ["hedgehog-ornament.png","Hedgehog Ornament"],
+    ["turtle-sleigh.png","Turtle Sleigh"],
+    ["owl-night-watch.png","Owl Night Watch"],
+    ["bunny-snow-angel.png","Bunny Snow Angel"],
+    ["santa-sleigh-selfie.png","Santa Sleigh Selfie"],
+    ["gingerbread-band.png","Gingerbread Band"],
+    ["snowman-barbershop.png","Snowman Barbershop"],
+    ["forklift-certified-santa.png","Forklift Certified Santa"],
+    ["trex-wrapping-fail.png","T-Rex Wrapping Fail"],
+    ["unicorn-festive.png","Festive Unicorn"],
+    ["penguin-conga-line.png","Penguin Conga Line"],
+    ["chihuahua-sled-team.png","Chihuahua Sled Team"],
+    ["tiny-tree-big-heart.png","Tiny Tree, Big Heart"]
+  ];
+  DESIGNS.forEach(function(d){ var p=new Image(); p.src=d[0]; });
+  var wins={}, duels=0, curA=0, curB=1;
+  var imgA=document.getElementById('imgA'), imgB=document.getElementById('imgB'),
+      nameA=document.getElementById('nameA'), nameB=document.getElementById('nameB'),
+      winsA=document.getElementById('winsA'), winsB=document.getElementById('winsB'),
+      duelCount=document.getElementById('duelCount'), meterPct=document.getElementById('meterPct'),
+      meterFill=document.getElementById('meterFill'), podium=document.getElementById('podium');
+  function w(i){ return wins[i]||0; }
+  function showPair(){
+    imgA.src=DESIGNS[curA][0]; imgA.alt=DESIGNS[curA][1]+" cartoon sweater design";
+    imgB.src=DESIGNS[curB][0]; imgB.alt=DESIGNS[curB][1]+" cartoon sweater design";
+    nameA.textContent=DESIGNS[curA][1];
+    nameB.textContent=DESIGNS[curB][1];
+    winsA.textContent=w(curA);
+    winsB.textContent=w(curB);
+  }
+  function nextPair(keepIdx){
+    var other;
+    do{ other=Math.floor(Math.random()*DESIGNS.length); }while(other===keepIdx);
+    if(Math.random()<0.5){ curA=keepIdx; curB=other; } else { curB=keepIdx; curA=other; }
+    showPair();
+  }
+  function renderPodium(){
+    var ranked=Object.keys(wins).map(function(k){return {i:+k,w:wins[k]};}).filter(function(r){return r.w>0;}).sort(function(a,b){return b.w-a.w;}).slice(0,3);
+    var medals=["👑 CHAMPION OF UGLY","🥈 SECOND","🥉 THIRD"];
+    if(!ranked.length) return;
+    var html="";
+    for(var r=0;r<3;r++){
+      if(ranked[r]){
+        var d=DESIGNS[ranked[r].i];
+        html+='<div class="pod'+(r===0?' first':'')+'"><img src="'+d[0]+'" alt="'+d[1]+' cartoon sweater design"><div class="medal">'+medals[r]+'</div><h3>'+d[1]+'</h3><div class="pwins">'+ranked[r].w+' of your votes</div></div>';
+      }else{
+        html+='<div class="pod"><div class="empty">'+medals[r]+'<br>still up for grabs — keep voting.</div></div>';
+      }
+    }
+    podium.innerHTML=html;
+  }
+  function vote(idx){
+    wins[idx]=w(idx)+1;
+    duels++;
+    duelCount.textContent=duels;
+    var pct=Math.min(100,Math.round(duels/25*100));
+    meterPct.textContent=pct+"%";
+    meterFill.style.width=pct+"%";
+    renderPodium();
+    nextPair(idx); /* winner stays on to defend the title */
+  }
+  document.getElementById('fA').addEventListener('click',function(){ vote(curA); });
+  document.getElementById('fB').addEventListener('click',function(){ vote(curB); });
+  document.getElementById('resetBtn').addEventListener('click',function(){
+    wins={}; duels=0; duelCount.textContent="0"; meterPct.textContent="0%"; meterFill.style.width="0%";
+    podium.innerHTML='<div class="pod"><div class="empty">No votes yet.<br>Judge a duel above and your champion appears here.</div></div><div class="pod"><div class="empty">🥈 Second place<br>is waiting on your votes.</div></div><div class="pod"><div class="empty">🥉 Third place<br>is waiting on your votes.</div></div>';
+    curA=0; curB=1; showPair();
+  });
+  showPair();
+})();
+</script>
+</body>
+</html>

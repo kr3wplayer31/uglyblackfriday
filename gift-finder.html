@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAUGHTY / NICE GIFT FINDER — Ugly Black Friday</title>
+<meta name="description" content="Answer 3 questions — who it's for, the vibe, the budget — and the Naughty/Nice Gift Finder picks 3 real sweaters from the Ugly Black Friday store.">
+<style>
+  :root{--pink:#ff2e88;--violet:#8a2be2;--cyan:#00e5ff;--red:#e4002b;--green:#00c853;--gold:#ffc400;--black:#0a0a0a;--pine:#0d3b21;--pine-deep:#07231a;--cranberry:#c8102e;--cranberry-deep:#7a0c1d;--cream:#fff6e5;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Arial Black',Arial,Helvetica,sans-serif;background:var(--pine-deep);color:#fff;overflow-x:hidden;}
+  a{text-decoration:none;}
+  img{max-width:100%;display:block;}
+  header{background:var(--black);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-bottom:4px solid var(--pink);position:sticky;top:0;z-index:50;}
+  .brandmark{display:flex;align-items:center;gap:14px;}
+  .wordmark{font-size:30px;letter-spacing:1px;color:#fff;font-weight:900;}
+  .wordmark .now{background:linear-gradient(90deg,var(--pink),var(--violet),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .pill{background:var(--pink);color:#fff;font-size:12px;padding:5px 12px;border-radius:999px;letter-spacing:2px;}
+  header nav{display:flex;gap:10px;flex-wrap:wrap;}
+  header nav a{background:#1d1d1d;color:#fff;border:2px solid var(--cyan);padding:9px 16px;border-radius:999px;font-size:13px;letter-spacing:1px;}
+  header nav a:hover{background:var(--cyan);color:#000;}
+  header nav a.here{background:var(--gold);color:#000;border-color:#000;}
+  .hero{background:linear-gradient(120deg,var(--cranberry-deep),var(--cranberry) 40%,var(--pine));padding:48px 24px 40px;text-align:center;}
+  .hero .kicker{display:inline-block;background:#000;color:var(--gold);padding:8px 20px;border-radius:999px;font-size:14px;letter-spacing:3px;margin-bottom:20px;}
+  .hero h1{font-size:clamp(38px,8.5vw,84px);line-height:.95;text-transform:uppercase;text-shadow:5px 5px 0 #000;}
+  .hero h1 .yellow{color:var(--gold);}
+  .hero p{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:clamp(16px,2.4vw,22px);max-width:1000px;margin:20px auto 0;line-height:1.5;color:var(--cream);}
+  section{padding:44px 24px;width:100%;}
+  .btn{display:inline-block;padding:15px 32px;border-radius:999px;font-size:16px;letter-spacing:1px;border:3px solid #000;box-shadow:5px 5px 0 #000;cursor:pointer;font-family:inherit;}
+  .btn-gold{background:var(--gold);color:#000;}
+  .btn-black{background:#000;color:#fff;border-color:#fff;}
+  .quiz{max-width:1000px;margin:0 auto;}
+  .qblock{background:#0c2b19;border:3px solid #000;border-radius:20px;box-shadow:7px 7px 0 rgba(0,0,0,.55);padding:26px;margin-bottom:24px;}
+  .qblock h2{font-size:clamp(22px,4vw,32px);text-transform:uppercase;}
+  .qblock h2 .step{color:var(--gold);}
+  .opts{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px;}
+  .opt{flex:1 1 150px;background:#1d1d1d;color:#fff;border:3px solid var(--cyan);border-radius:16px;padding:16px 12px;font-family:inherit;font-size:16px;letter-spacing:1px;cursor:pointer;text-transform:uppercase;}
+  .opt small{display:block;font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:12px;letter-spacing:0;text-transform:none;color:#bbb;margin-top:6px;}
+  .opt.sel{background:var(--gold);color:#000;border-color:#000;}
+  .opt.sel small{color:#333;}
+  .go-row{text-align:center;margin:6px 0 10px;}
+  #goBtn{font-size:20px;padding:18px 44px;}
+  #goBtn:disabled{opacity:.45;cursor:not-allowed;}
+  .hint{text-align:center;font-family:Arial,Helvetica,sans-serif;font-weight:bold;color:#ccc;font-size:14px;}
+  .results{display:none;}
+  .results h2{text-align:center;font-size:clamp(28px,5.5vw,50px);text-transform:uppercase;text-shadow:3px 3px 0 #000;margin-bottom:10px;}
+  .results .sub{text-align:center;font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:17px;color:var(--cream);max-width:900px;margin:0 auto 30px;line-height:1.5;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;max-width:1200px;margin:0 auto;}
+  .card{border-radius:18px;overflow:hidden;border:3px solid #000;box-shadow:7px 7px 0 rgba(0,0,0,.55);display:flex;flex-direction:column;background:#0c2b19;}
+  .card .art{background:#fff;}
+  .card .art img{width:100%;height:250px;object-fit:cover;}
+  .card .tileart{min-height:250px;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font-size:22px;text-transform:uppercase;color:#fff;text-shadow:2px 2px 0 rgba(0,0,0,.4);}
+  .card .body{padding:18px;display:flex;flex-direction:column;gap:10px;flex:1;}
+  .card h3{font-size:20px;line-height:1.2;text-transform:uppercase;}
+  .card .why{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:14px;line-height:1.45;flex:1;}
+  .card .price{font-size:26px;color:var(--gold);}
+  .card .pick{font-size:12px;letter-spacing:2px;color:#000;background:var(--gold);display:inline-block;padding:5px 12px;border-radius:999px;align-self:flex-start;}
+  .shop-btn{display:block;text-align:center;background:var(--cranberry);color:#fff;padding:13px;border-radius:999px;font-size:15px;letter-spacing:1px;border:2px solid #000;}
+  .shop-btn:hover{background:var(--gold);color:#000;}
+  .again-row{text-align:center;margin-top:30px;}
+  .fineprint{max-width:900px;margin:30px auto 0;font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:14px;line-height:1.6;color:#ccc;text-align:center;}
+  footer{background:var(--black);text-align:center;padding:38px 24px;font-family:Arial,Helvetica,sans-serif;}
+  footer .foot-brand{font-family:'Arial Black',Arial,sans-serif;font-size:24px;margin-bottom:10px;}
+  footer .foot-brand .now{background:linear-gradient(90deg,var(--pink),var(--violet),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  footer p{color:#bbb;font-size:14px;line-height:1.6;}
+  footer a{color:var(--cyan);}
+  @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brandmark">
+    <div class="wordmark">A.I. <span class="now">NOW</span></div>
+    <div class="pill">UGLY BLACK FRIDAY</div>
+  </div>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="design.html">🎨 DESIGN YOUR OWN</a>
+    <a href="roulette.html">🎰 ROULETTE</a>
+    <a href="gift-finder.html" class="here">🎁 GIFT FINDER</a>
+    <a href="ugly-meter.html">🌡️ UGLY METER</a>
+    <a href="wall.html">📸 THE WALL</a>
+    <a href="drops.html">🎄 DEC DROPS</a>
+    <a href="party-pack.html">🎉 PARTY PACK</a>
+    <a href="https://shop.artificial-intelligencenow.com">THE STORE</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="kicker">NAUGHTY OR NICE — WE'VE GOT A SWEATER FOR BOTH</div>
+  <h1>The Gift<br><span class="yellow">Finder</span></h1>
+  <p>Three questions. That's it. Tell us who it's for, the vibe you're after, and the budget — we'll hand you three real picks from the real store. No endless scrolling, no gift panic.</p>
+</div>
+
+<section>
+  <div class="quiz">
+    <div class="qblock" data-q="who">
+      <h2><span class="step">1.</span> Who is it for?</h2>
+      <div class="opts">
+        <button class="opt" data-v="him" type="button">🧔 For Him<small>Dads, brothers, boyfriends, coworkers</small></button>
+        <button class="opt" data-v="her" type="button">💃 For Her<small>Moms, sisters, girlfriends, besties</small></button>
+        <button class="opt" data-v="kids" type="button">🧒 For Kids<small>The small chaos agents</small></button>
+        <button class="opt" data-v="pet" type="button">🐾 For The Pet<small>Cats &amp; dogs who run the house</small></button>
+      </div>
+    </div>
+
+    <div class="qblock" data-q="vibe">
+      <h2><span class="step">2.</span> What's the vibe?</h2>
+      <div class="opts">
+        <button class="opt" data-v="funny" type="button">😂 Funny<small>Maximum laughs at the party</small></button>
+        <button class="opt" data-v="faith" type="button">🕊️ Faith &amp; Sweet<small>Gentle, warm, reason-for-the-season</small></button>
+        <button class="opt" data-v="pets" type="button">🐶 Pets<small>Animal chaos, all season</small></button>
+        <button class="opt" data-v="classic" type="button">🎄 Classic<small>Timeless Christmas, zero regrets</small></button>
+      </div>
+    </div>
+
+    <div class="qblock" data-q="budget">
+      <h2><span class="step">3.</span> What's the budget?</h2>
+      <div class="opts">
+        <button class="opt" data-v="b40" type="button">Under $40<small>Smart &amp; funny</small></button>
+        <button class="opt" data-v="b60" type="button">Under $60<small>The sweet spot</small></button>
+        <button class="opt" data-v="big" type="button">Go Big<small>Best gift at the party, period</small></button>
+      </div>
+    </div>
+
+    <div class="go-row"><button class="btn btn-gold" id="goBtn" type="button" disabled>🎁 FIND MY 3 GIFTS</button></div>
+    <p class="hint" id="goHint">Answer all 3 questions and the button lights up.</p>
+  </div>
+
+  <div class="results" id="results" aria-live="polite">
+    <h2>🎄 Your 3 Picks</h2>
+    <p class="sub" id="resultSub"></p>
+    <div class="grid" id="resultGrid"></div>
+    <div class="again-row">
+      <button class="btn btn-black" id="againBtn" type="button">↻ START OVER</button>
+      <a class="btn btn-gold" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters" style="margin-left:10px;">BROWSE THE WHOLE COLLECTION</a>
+    </div>
+    <p class="fineprint">Every pick is a real product in the A.I. NOW store right now — prices shown are the store's prices. Our own printed-to-order designs run $39.99 (sweatshirt) and $54.99 (all-over-print sweater), and they're part of the store's Buy 1 Get 1 Free deal on our own designs. Buying for a pet? Pet sweaters are their own products with their own sizes — check the size notes on the product page.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-brand">A.I. <span class="now">NOW</span></div>
+  <p>Ugly Black Friday is part of A.I. NOW.<br>
+  <a href="index.html">uglyblackfriday.com</a> • <a href="https://shop.artificial-intelligencenow.com">shop.artificial-intelligencenow.com</a><br>
+  <a href="https://shop.artificial-intelligencenow.com/pages/join-the-list">Join the List — 10% off your first order</a></p>
+</footer>
+
+<script>
+(function(){
+  var STORE="https://shop.artificial-intelligencenow.com";
+  var COLL=STORE+"/collections/ugly-christmas-sweaters";
+  /* Real catalog. kind: design (collection link, printed to order) | shop (store root) | pet (product page) */
+  var PRODUCTS=[
+    {name:"Santa Belly Sweater",price:24.99,kind:"shop",who:["him","kids"],vibe:["funny"],why:"The classic belly laugh. Works on literally every guy at the party."},
+    {name:"Let's Get Blitzened Reindeer Sweatshirt",price:29.99,kind:"shop",who:["him","her"],vibe:["funny"],why:"For the one who takes the office party VERY seriously."},
+    {name:"Highland Cow Christmas Sweatshirt",price:29.99,kind:"shop",who:["her"],vibe:["pets","classic"],why:"A fluffy Highland cow in Christmas mode. Cute beats ugly every time."},
+    {name:"Family Gingerbread Sweater",price:27.99,kind:"shop",who:["kids","her","him"],vibe:["classic","faith"],why:"Sweet, warm, family-photo ready. The gentle pick."},
+    {name:"\"6 7\" Meme Ugly Sweater",price:27.99,kind:"shop",who:["kids","him"],vibe:["funny"],why:"The meme sweater the kids will fight over."},
+    {name:"Sequined Reindeer Knit Pullover",price:29.99,kind:"shop",who:["her"],vibe:["classic"],why:"Sparkle with plausible deniability. Party-ready."},
+    {name:"Bow Jacquard Sweater",price:34.99,kind:"shop",who:["her"],vibe:["classic","faith"],why:"The pretty one. Church, dinner, photos — handled."},
+    {name:"Light-Up Santa Tree Sweater",price:49.99,kind:"shop",who:["him","her","kids"],vibe:["funny","classic"],why:"It. Lights. Up. The sweater that wins the room."},
+    {name:"Gingerbread Pet Sweater + Antler Hood",price:27.99,kind:"pet",url:STORE+"/products/gingerbread-pet-sweater-antler-hood",who:["pet"],vibe:["pets","classic"],why:"A gingerbread sweater AND an antler hood. The photo writes itself."},
+    {name:"Pet Sweater + Santa Hat 2-Pc Set",price:34.99,kind:"pet",url:STORE+"/products/pet-sweater-santa-hat-2-pc-set",who:["pet"],vibe:["pets","classic"],why:"Two pieces, one extremely good boy or girl."},
+    {name:"Elk Four-Legged Pet Coat",price:27.99,kind:"pet",url:STORE+"/products/elk-four-legged-pet-coat",who:["pet"],vibe:["pets","funny"],why:"Four-legged elk energy. Maximum commitment to the bit."},
+    {name:"Red Truck Turtleneck Pet Sweater",price:29.99,kind:"pet",url:STORE+"/products/red-truck-turtleneck-pet-sweater",who:["pet"],vibe:["pets","classic"],why:"The red-truck Christmas look, sized for your copilot."},
+    {name:"Sequin Nutcracker Sparkle Vest",price:29.99,kind:"pet",url:STORE+"/products/sequin-nutcracker-sparkle-vest",who:["pet"],vibe:["pets","funny"],why:"For the pet who was born for the spotlight."},
+    {name:"Forklift Certified Santa — Our Design Sweater",price:54.99,kind:"design",img:"forklift-certified-santa.png",who:["him"],vibe:["funny"],why:"Our own design, printed to order. For the guy who actually moves Christmas."},
+    {name:"Dear Santa, I Can Explain — Our Design Sweatshirt",price:39.99,kind:"design",img:"dear-santa-i-can-explain.png",who:["him","her","kids"],vibe:["funny"],why:"For the good-ish. Our own design on a printed-to-order sweatshirt."},
+    {name:"Merry Chaos — Our Design Sweater",price:54.99,kind:"design",img:"merry-chaos.png",who:["her","him"],vibe:["pets","funny"],why:"One cat, one string of lights, zero regrets. Our own all-over-print design."},
+    {name:"Tiny Tree, Big Heart — Our Design",price:39.99,kind:"design",img:"tiny-tree-big-heart.png",who:["her","kids","him"],vibe:["faith","classic"],why:"One scrawny tree with more heart than trees ten times its size. The sweet one."},
+    {name:"Cardinal Santa Hat — Our Design",price:39.99,kind:"design",img:"cardinal-santa-hat.png",who:["her"],vibe:["faith","classic"],why:"A plump red cardinal in a Santa hat. Little red messenger, big warmth."},
+    {name:"Good Boy on the Nice List — Our Design",price:39.99,kind:"design",img:"nice-list-good-boy.png",who:["kids","her","him"],vibe:["pets","faith"],why:"A good boy in a Santa hat next to the presents. He earned that Nice List spot."},
+    {name:"Cat Tangled In Lights — Our Design",price:39.99,kind:"design",img:"cat-tangled-in-lights.png",who:["kids","her"],vibe:["pets","funny"],why:"'I helped decorate.' Every cat owner's whole December."},
+    {name:"Dog Backup Reindeer — Our Design",price:39.99,kind:"design",img:"dog-backup-reindeer.png",who:["kids","him"],vibe:["pets","funny"],why:"Fake antlers, tiny sleigh, tongue out. The backup reindeer is ready."},
+    {name:"Santa's Boss + Santa's Little Helper — Matching Set",price:54.99,kind:"design",img:"santas-boss.png",who:["pet","her","him"],vibe:["pets","classic"],why:"You wear Santa's Boss, your pet wears Santa's Little Helper. Christmas card: handled."},
+    {name:"Chillin' Since December — Our Design",price:39.99,kind:"design",img:"chillin-snowman.png",who:["him","kids"],vibe:["funny","classic"],why:"Sunglasses on, cocoa in hand. The coolest snowman on the block."},
+    {name:"Penguin Express Delivery — Our Design",price:39.99,kind:"design",img:"penguin-express.png",who:["kids"],vibe:["funny","classic"],why:"A penguin mailman on a sled stacked with presents. Kids love this one."},
+    {name:"Design Your Own Custom Sweater",price:59.99,kind:"studio",who:["him","her","kids"],vibe:["funny","classic","pets","faith"],why:"Nothing fits? They design it themselves in our studio — front, back, even the sleeves."}
+  ];
+  var answers={who:null,vibe:null,budget:null};
+  var goBtn=document.getElementById('goBtn'), hint=document.getElementById('goHint');
+  document.querySelectorAll('.qblock').forEach(function(block){
+    var q=block.getAttribute('data-q');
+    block.querySelectorAll('.opt').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        block.querySelectorAll('.opt').forEach(function(b){b.classList.remove('sel');});
+        btn.classList.add('sel');
+        answers[q]=btn.getAttribute('data-v');
+        var done=answers.who&&answers.vibe&&answers.budget;
+        goBtn.disabled=!done;
+        hint.textContent=done?"Locked in. Hit the button.":"Answer all 3 questions and the button lights up.";
+      });
+    });
+  });
+  function budgetOK(p){
+    if(answers.budget==="b40") return p.price<40;
+    if(answers.budget==="b60") return p.price<60;
+    return true; /* go big: everything qualifies, priciest first */
+  }
+  function score(p){
+    var s=0;
+    if(p.who.indexOf(answers.who)>-1) s+=4;
+    if(p.vibe.indexOf(answers.vibe)>-1) s+=4;
+    if(answers.who==="pet"&&p.kind==="pet") s+=3;
+    if(answers.budget==="big") s+=p.price/100;
+    return s;
+  }
+  function cardHTML(p,i){
+    var art, link, btn;
+    if(p.kind==="design"){ art='<div class="art"><img src="'+p.img+'" alt="'+p.name+' design" loading="lazy"></div>'; link=COLL; btn="SHOP THIS DESIGN"; }
+    else if(p.kind==="pet"){ art='<div class="tileart" style="background:linear-gradient(135deg,#0d3b21,#c8102e);">🐾 PET SWEATER</div>'; link=p.url; btn="BUY IT AT THE STORE"; }
+    else if(p.kind==="studio"){ art='<div class="tileart" style="background:linear-gradient(135deg,#8a2be2,#ff2e88);">🎨 THE STUDIO</div>'; link="design.html"; btn="OPEN THE DESIGN STUDIO"; }
+    else { art='<div class="tileart" style="background:linear-gradient(135deg,#c8102e,#d99a00);">🎄 SWEATER SHOP</div>'; link=STORE; btn="BUY IT AT THE STORE"; }
+    return '<div class="card">'+art+'<div class="body"><span class="pick">PICK #'+(i+1)+'</span><h3>'+p.name+'</h3><p class="why">'+p.why+'</p><div class="price">$'+p.price.toFixed(2)+'</div><a class="shop-btn" href="'+link+'">'+btn+'</a></div></div>';
+  }
+  goBtn.addEventListener('click',function(){
+    var pool=PRODUCTS.filter(budgetOK);
+    pool.sort(function(a,b){return score(b)-score(a);});
+    var picks=pool.slice(0,3);
+    var whoLabel={him:"him",her:"her",kids:"the kids",pet:"the pet"}[answers.who];
+    var vibeLabel={funny:"funny",faith:"faith & sweet",pets:"pet-powered",classic:"classic"}[answers.vibe];
+    var budLabel={b40:"under $40",b60:"under $60",big:"go-big"}[answers.budget];
+    document.getElementById('resultSub').textContent="For "+whoLabel+" · "+vibeLabel+" vibe · "+budLabel+" budget. Three real picks, best match first:";
+    document.getElementById('resultGrid').innerHTML=picks.map(cardHTML).join("");
+    var r=document.getElementById('results');
+    r.style.display='block';
+    r.scrollIntoView({behavior:'smooth'});
+  });
+  document.getElementById('againBtn').addEventListener('click',function(){
+    document.getElementById('results').style.display='none';
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+</html>

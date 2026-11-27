@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900">
+<defs><linearGradient id="dawn" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2b1a4d"/><stop offset="45%" stop-color="#7a2d5a"/><stop offset="75%" stop-color="#e86a17"/><stop offset="100%" stop-color="#ffc400"/></linearGradient></defs>
+<rect width="900" height="900" fill="url(#dawn)"/>
+<circle cx="450" cy="560" r="150" fill="#ffd76a" opacity="0.85"/>
+<circle cx="450" cy="560" r="185" fill="#ffc400" opacity="0.25"/>
+<path d="M0 900 L0 700 Q240 600 450 640 Q660 600 900 700 L900 900 Z" fill="#12081f"/>
+<g fill="#0a0514">
+<path d="M442 240 L458 240 L458 560 L442 560 Z"/><path d="M392 320 L508 320 L508 338 L392 338 Z"/>
+<path d="M252 330 L264 330 L264 570 L252 570 Z"/><path d="M216 396 L300 396 L300 410 L216 410 Z"/>
+<path d="M636 330 L648 330 L648 570 L636 570 Z"/><path d="M600 396 L684 396 L684 410 L600 410 Z"/>
+</g>
+<text x="450" y="830" text-anchor="middle" font-family="Georgia,serif" font-size="46" fill="#fff" letter-spacing="4">FAITH OVER FEAR</text>
+<text x="450" y="872" text-anchor="middle" font-family="Georgia,serif" font-size="26" fill="#ffd76a" letter-spacing="3">JOHN 3:16</text>
+</svg>

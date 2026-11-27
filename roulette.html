@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SWEATER ROULETTE — Ugly Black Friday</title>
+<meta name="description" content="Can't decide? Spin the Sweater Roulette. It lands on one of our original ugly Christmas sweater designs — and every spin wins the real code SWEATER10.">
+<style>
+  :root{--pink:#ff2e88;--violet:#8a2be2;--cyan:#00e5ff;--red:#e4002b;--green:#00c853;--gold:#ffc400;--black:#0a0a0a;--pine:#0d3b21;--pine-deep:#07231a;--cranberry:#c8102e;--cranberry-deep:#7a0c1d;--cream:#fff6e5;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Arial Black',Arial,Helvetica,sans-serif;background:var(--pine-deep);color:#fff;overflow-x:hidden;}
+  a{text-decoration:none;}
+  img{max-width:100%;display:block;}
+  header{background:var(--black);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-bottom:4px solid var(--pink);position:sticky;top:0;z-index:50;}
+  .brandmark{display:flex;align-items:center;gap:14px;}
+  .wordmark{font-size:30px;letter-spacing:1px;color:#fff;font-weight:900;}
+  .wordmark .now{background:linear-gradient(90deg,var(--pink),var(--violet),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .pill{background:var(--pink);color:#fff;font-size:12px;padding:5px 12px;border-radius:999px;letter-spacing:2px;}
+  header nav{display:flex;gap:10px;flex-wrap:wrap;}
+  header nav a{background:#1d1d1d;color:#fff;border:2px solid var(--cyan);padding:9px 16px;border-radius:999px;font-size:13px;letter-spacing:1px;}
+  header nav a:hover{background:var(--cyan);color:#000;}
+  header nav a.here{background:var(--gold);color:#000;border-color:#000;}
+  .hero{background:linear-gradient(120deg,var(--cranberry-deep),var(--cranberry) 40%,var(--pine));padding:48px 24px 40px;text-align:center;}
+  .hero .kicker{display:inline-block;background:#000;color:var(--gold);padding:8px 20px;border-radius:999px;font-size:14px;letter-spacing:3px;margin-bottom:20px;}
+  .hero h1{font-size:clamp(40px,9vw,92px);line-height:.95;text-transform:uppercase;text-shadow:5px 5px 0 #000;}
+  .hero h1 .yellow{color:var(--gold);}
+  .hero p{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:clamp(16px,2.4vw,22px);max-width:1000px;margin:20px auto 0;line-height:1.5;color:var(--cream);}
+  section{padding:48px 24px;width:100%;}
+  .btn{display:inline-block;padding:16px 34px;border-radius:999px;font-size:17px;letter-spacing:1px;border:3px solid #000;box-shadow:5px 5px 0 #000;transition:transform .08s ease;cursor:pointer;font-family:inherit;}
+  .btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 #000;}
+  .btn-gold{background:var(--gold);color:#000;}
+  .btn-black{background:#000;color:#fff;border-color:#fff;}
+  /* slot machine */
+  .machine{max-width:760px;margin:0 auto;background:#000;border:4px solid var(--gold);border-radius:24px;box-shadow:10px 10px 0 rgba(200,16,46,.8);padding:26px 20px 30px;text-align:center;}
+  .machine .lights-row{font-size:20px;letter-spacing:10px;color:var(--gold);margin-bottom:14px;}
+  .window{border:4px solid var(--cranberry);border-radius:18px;overflow:hidden;background:#fff;position:relative;}
+  .window img{width:100%;height:min(62vw,440px);object-fit:cover;}
+  .window .pointer{position:absolute;top:8px;left:50%;transform:translateX(-50%);font-size:34px;color:var(--gold);text-shadow:2px 2px 0 #000;z-index:2;}
+  .spin-name{font-size:clamp(24px,5vw,38px);text-transform:uppercase;margin-top:20px;min-height:1.2em;color:#fff;}
+  .spin-tag{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:16px;color:#ddd;margin-top:8px;min-height:1.4em;}
+  #spinBtn{margin-top:22px;font-size:22px;padding:18px 46px;}
+  .result{display:none;margin-top:26px;background:var(--cranberry);border:3px solid #000;border-radius:18px;padding:24px;box-shadow:6px 6px 0 rgba(0,0,0,.55);}
+  .result h2{font-size:clamp(26px,5vw,40px);text-transform:uppercase;}
+  .result p{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:16px;line-height:1.5;margin-top:10px;}
+  .codebox{display:inline-block;background:#fff;color:#000;font-size:clamp(24px,5vw,34px);letter-spacing:3px;padding:10px 26px;border-radius:12px;border:3px dashed var(--cranberry-deep);margin-top:14px;}
+  .fineprint{max-width:760px;margin:26px auto 0;font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:14px;line-height:1.6;color:#ccc;text-align:center;}
+  footer{background:var(--black);text-align:center;padding:38px 24px;font-family:Arial,Helvetica,sans-serif;}
+  footer .foot-brand{font-family:'Arial Black',Arial,sans-serif;font-size:24px;margin-bottom:10px;}
+  footer .foot-brand .now{background:linear-gradient(90deg,var(--pink),var(--violet),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  footer p{color:#bbb;font-size:14px;line-height:1.6;}
+  footer a{color:var(--cyan);}
+  @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brandmark">
+    <div class="wordmark">A.I. <span class="now">NOW</span></div>
+    <div class="pill">UGLY BLACK FRIDAY</div>
+  </div>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="design.html">🎨 DESIGN YOUR OWN</a>
+    <a href="roulette.html" class="here">🎰 ROULETTE</a>
+    <a href="gift-finder.html">🎁 GIFT FINDER</a>
+    <a href="ugly-meter.html">🌡️ UGLY METER</a>
+    <a href="wall.html">📸 THE WALL</a>
+    <a href="drops.html">🎄 DEC DROPS</a>
+    <a href="party-pack.html">🎉 PARTY PACK</a>
+    <a href="https://shop.artificial-intelligencenow.com">THE STORE</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="kicker">CAN'T DECIDE? LET FATE DECIDE.</div>
+  <h1>Sweater<br><span class="yellow">Roulette</span></h1>
+  <p>One spin. One sweater. Zero overthinking. The wheel only lands on our own original designs — and every single spin wins you the real discount code SWEATER10 for the store.</p>
+</div>
+
+<section>
+  <div class="machine">
+    <div class="lights-row" aria-hidden="true">★ ★ ★ ★ ★</div>
+    <div class="window">
+      <div class="pointer" aria-hidden="true">▼</div>
+      <img id="slotImg" src="cat-tangled-in-lights.png" alt="Sweater Roulette design window">
+    </div>
+    <div class="spin-name" id="spinName">Cat Tangled In Lights</div>
+    <p class="spin-tag" id="spinTag">Hit SPIN and let the ugly choose you.</p>
+    <button class="btn btn-gold" id="spinBtn" type="button">🎰 SPIN THE SWEATER</button>
+
+    <div class="result" id="result" aria-live="polite">
+      <h2>🎉 That's The One!</h2>
+      <p id="resultText">Fate has spoken.</p>
+      <p>Your roulette prize — a real store code, good at checkout:</p>
+      <div class="codebox">SWEATER10</div>
+      <p style="margin-top:18px;">
+        <a class="btn btn-gold" href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">THAT'S THE ONE — BUY IT</a>
+      </p>
+      <p style="margin-top:14px;"><button class="btn btn-black" id="againBtn" type="button">↻ SPIN AGAIN</button></p>
+    </div>
+  </div>
+  <p class="fineprint">How it works: the roulette spins through our real, original cartoon sweater designs and stops on one at random. The prize is the same every spin because it's a real code, not a gimmick: enter SWEATER10 at checkout at shop.artificial-intelligencenow.com. Don't love fate's pick? Spin again — fate has plenty more sweaters.</p>
+</section>
+
+<footer>
+  <div class="foot-brand">A.I. <span class="now">NOW</span></div>
+  <p>Ugly Black Friday is part of A.I. NOW.<br>
+  <a href="index.html">uglyblackfriday.com</a> • <a href="https://shop.artificial-intelligencenow.com">shop.artificial-intelligencenow.com</a><br>
+  <a href="https://shop.artificial-intelligencenow.com/pages/join-the-list">Join the List — 10% off your first order</a></p>
+</footer>
+
+<script>
+(function(){
+  var DESIGNS=[
+    ["cat-tangled-in-lights.png","Cat Tangled In Lights","I helped decorate."],
+    ["santa-stuck-in-chimney.png","Santa Stuck In Chimney","Send cookies."],
+    ["yeti-hot-cocoa.png","Yeti Hot Cocoa","Yeti for Christmas."],
+    ["elf-on-strike.png","Elf On Strike","The elves have demands."],
+    ["snowball-fight-crew.png","Snowball Fight Crew","Snowball champions."],
+    ["reindeer-karaoke.png","Reindeer Karaoke","Sleigh bells rock."],
+    ["gingerbread-realtor.png","Gingerbread Realtor","Just listed: smells amazing."],
+    ["nutcracker-drummer.png","Nutcracker Drummer","Nutcracker beats."],
+    ["polar-bear-ice-skates.png","Polar Bear Ice Skates","Graceful-ish."],
+    ["dog-backup-reindeer.png","Dog Backup Reindeer","Every team needs a backup."],
+    ["santa-snow-surfer.png","Santa Snow Surfer","Sleigh the wave."],
+    ["mrs-claus-baker.png","Mrs Claus Baker","Claus kitchen crew."],
+    ["snowman-selfie.png","Snowman Selfie","Snowman selfie club."],
+    ["penguin-hot-tub.png","Penguin Hot Tub","Penguin hot tub club."],
+    ["reindeer-traffic-cop.png","Reindeer Traffic Cop","Sleigh traffic control."],
+    ["runaway-gingerbread.png","Runaway Gingerbread","Catch me if you can."],
+    ["elf-workshop-chaos.png","Elf Workshop Chaos","Workshop safety: questionable."],
+    ["santa-yoga.png","Santa Yoga","Downward sleigh."],
+    ["snow-queen.png","Snow Queen","Snow queen energy."],
+    ["cardinal-santa-hat.png","Cardinal Santa Hat","Little red messenger."],
+    ["raccoon-caroler.png","Raccoon Caroler","Caroling menace."],
+    ["moose-sweater-model.png","Moose Sweater Model","The original sweater model."],
+    ["fox-on-skis.png","Fox On Skis","Fox on the slopes."],
+    ["hedgehog-ornament.png","Hedgehog Ornament","Prickly but festive."],
+    ["turtle-sleigh.png","Turtle Sleigh","There by New Year's."],
+    ["owl-night-watch.png","Owl Night Watch","Santa watch: night shift."],
+    ["bunny-snow-angel.png","Bunny Snow Angel","Snow angel in training."],
+    ["santa-sleigh-selfie.png","Santa Sleigh Selfie","Reindeer photobomb included."],
+    ["gingerbread-band.png","Gingerbread Band","The Ginger Band live."],
+    ["snowman-barbershop.png","Snowman Barbershop","Carrot nose barbershop."],
+    ["forklift-certified-santa.png","Forklift Certified Santa","He moves the presents now."],
+    ["trex-wrapping-fail.png","T-Rex Wrapping Fail","Wrapping is hard."],
+    ["unicorn-festive.png","Festive Unicorn","Maximum sparkle achieved."],
+    ["penguin-conga-line.png","Penguin Conga Line","Conga responsibly."],
+    ["chihuahua-sled-team.png","Chihuahua Sled Team","The backup team."],
+    ["tiny-tree-big-heart.png","Tiny Tree, Big Heart","Small tree, huge heart."]
+  ];
+  var img=document.getElementById('slotImg'),
+      nameEl=document.getElementById('spinName'),
+      tagEl=document.getElementById('spinTag'),
+      spinBtn=document.getElementById('spinBtn'),
+      againBtn=document.getElementById('againBtn'),
+      result=document.getElementById('result'),
+      resultText=document.getElementById('resultText'),
+      spinning=false, timer=null;
+  DESIGNS.forEach(function(d){ var p=new Image(); p.src=d[0]; });
+  function show(i){
+    img.src=DESIGNS[i][0];
+    img.alt=DESIGNS[i][1]+" cartoon sweater design";
+    nameEl.textContent=DESIGNS[i][1];
+    tagEl.textContent=DESIGNS[i][2];
+  }
+  function spin(){
+    if(spinning) return;
+    spinning=true;
+    result.style.display='none';
+    spinBtn.disabled=true;
+    spinBtn.textContent='🎰 SPINNING…';
+    var target=Math.floor(Math.random()*DESIGNS.length);
+    var steps=26+Math.floor(Math.random()*10);
+    var i=0, delay=45;
+    function tick(){
+      show(Math.floor(Math.random()*DESIGNS.length));
+      i++;
+      if(i<steps){
+        delay=delay*1.13;
+        timer=setTimeout(tick,delay);
+      }else{
+        show(target);
+        spinning=false;
+        spinBtn.disabled=false;
+        spinBtn.textContent='🎰 SPIN THE SWEATER';
+        resultText.textContent='Fate picked "'+DESIGNS[target][1]+'" — '+DESIGNS[target][2]+' Shop it in the Cartoon Sweaters collection and use your prize code at checkout.';
+        result.style.display='block';
+        result.scrollIntoView({behavior:'smooth',block:'nearest'});
+      }
+    }
+    tick();
+  }
+  spinBtn.addEventListener('click',spin);
+  againBtn.addEventListener('click',spin);
+})();
+</script>
+</body>
+</html>

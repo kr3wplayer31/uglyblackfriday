@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DECEMBER DROPS — 24 Doors of Ugly | Ugly Black Friday</title>
+<meta name="description" content="December 1–24: one door a day, each hiding one of our original ugly sweater designs. Opened doors stay open. Every revealed design is buyable in the store — the drop is the reveal, never fake scarcity.">
+<style>
+  :root{--pink:#ff2e88;--violet:#8a2be2;--cyan:#00e5ff;--red:#e4002b;--green:#00c853;--gold:#ffc400;--black:#0a0a0a;--pine:#0d3b21;--pine-deep:#07231a;--cranberry:#c8102e;--cranberry-deep:#7a0c1d;--cream:#fff6e5;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Arial Black',Arial,Helvetica,sans-serif;background:var(--pine-deep);color:#fff;overflow-x:hidden;}
+  a{text-decoration:none;}
+  img{max-width:100%;display:block;}
+  header{background:var(--black);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;border-bottom:4px solid var(--pink);position:sticky;top:0;z-index:50;}
+  .brandmark{display:flex;align-items:center;gap:14px;}
+  .wordmark{font-size:30px;letter-spacing:1px;color:#fff;font-weight:900;}
+  .wordmark .now{background:linear-gradient(90deg,var(--pink),var(--violet),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .pill{background:var(--pink);color:#fff;font-size:12px;padding:5px 12px;border-radius:999px;letter-spacing:2px;}
+  header nav{display:flex;gap:10px;flex-wrap:wrap;}
+  header nav a{background:#1d1d1d;color:#fff;border:2px solid var(--cyan);padding:9px 16px;border-radius:999px;font-size:13px;letter-spacing:1px;}
+  header nav a:hover{background:var(--cyan);color:#000;}
+  header nav a.here{background:var(--gold);color:#000;border-color:#000;}
+  .hero{background:linear-gradient(120deg,var(--cranberry-deep),var(--cranberry) 40%,var(--pine));padding:48px 24px 40px;text-align:center;}
+  .hero .kicker{display:inline-block;background:#000;color:var(--gold);padding:8px 20px;border-radius:999px;font-size:14px;letter-spacing:3px;margin-bottom:20px;}
+  .hero h1{font-size:clamp(38px,8.5vw,84px);line-height:.95;text-transform:uppercase;text-shadow:5px 5px 0 #000;}
+  .hero h1 .yellow{color:var(--gold);}
+  .hero p{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:clamp(16px,2.4vw,22px);max-width:1000px;margin:20px auto 0;line-height:1.5;color:var(--cream);}
+  .hero p a{color:var(--gold);text-decoration:underline;}
+  section{padding:44px 24px;width:100%;}
+  .status-line{max-width:1000px;margin:0 auto 30px;text-align:center;background:#000;border:3px solid var(--gold);border-radius:16px;padding:18px 22px;font-size:clamp(16px,2.6vw,22px);text-transform:uppercase;}
+  .status-line .yellow{color:var(--gold);}
+  .cal{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;max-width:1200px;margin:0 auto;}
+  .door{position:relative;border-radius:16px;overflow:hidden;border:3px solid #000;box-shadow:6px 6px 0 rgba(0,0,0,.55);min-height:210px;background:var(--cranberry);cursor:pointer;font-family:inherit;color:#fff;text-align:center;padding:0;}
+  .door .face{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:14px;background:linear-gradient(150deg,var(--cranberry),var(--cranberry-deep));transition:opacity .35s ease, transform .35s ease;z-index:2;}
+  .door .day{font-size:15px;letter-spacing:3px;color:var(--gold);}
+  .door .num{font-size:56px;line-height:1;text-shadow:3px 3px 0 #000;}
+  .door .hint{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:12px;color:#eee;}
+  .door.locked{cursor:not-allowed;background:#222;}
+  .door.locked .face{background:linear-gradient(150deg,#2b2b2b,#111);}
+  .door.locked .num{color:#777;text-shadow:none;}
+  .door.today{outline:4px solid var(--gold);outline-offset:2px;}
+  .door.open{cursor:default;}
+  .door.open .face{opacity:0;transform:translateY(-12px);pointer-events:none;}
+  .door .reveal{position:absolute;inset:0;display:flex;flex-direction:column;background:#0c2b19;z-index:1;}
+  .door .reveal img{width:100%;height:130px;object-fit:cover;background:#fff;}
+  .door .reveal .rname{font-size:14px;text-transform:uppercase;line-height:1.25;padding:10px 8px 4px;flex:1;}
+  .door .reveal a{background:var(--gold);color:#000;font-size:13px;letter-spacing:1px;padding:9px 6px;display:block;}
+  .door .reveal a:hover{background:#fff;}
+  .fineprint{max-width:900px;margin:34px auto 0;font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:14px;line-height:1.65;color:#ccc;text-align:center;}
+  .fineprint a{color:var(--cyan);text-decoration:underline;}
+  footer{background:var(--black);text-align:center;padding:38px 24px;font-family:Arial,Helvetica,sans-serif;}
+  footer .foot-brand{font-family:'Arial Black',Arial,sans-serif;font-size:24px;margin-bottom:10px;}
+  footer .foot-brand .now{background:linear-gradient(90deg,var(--pink),var(--violet),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  footer p{color:#bbb;font-size:14px;line-height:1.6;}
+  footer a{color:var(--cyan);}
+  @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brandmark">
+    <div class="wordmark">A.I. <span class="now">NOW</span></div>
+    <div class="pill">UGLY BLACK FRIDAY</div>
+  </div>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="design.html">🎨 DESIGN YOUR OWN</a>
+    <a href="roulette.html">🎰 ROULETTE</a>
+    <a href="gift-finder.html">🎁 GIFT FINDER</a>
+    <a href="ugly-meter.html">🌡️ UGLY METER</a>
+    <a href="wall.html">📸 THE WALL</a>
+    <a href="drops.html" class="here">🎄 DEC DROPS</a>
+    <a href="party-pack.html">🎉 PARTY PACK</a>
+    <a href="https://shop.artificial-intelligencenow.com">THE STORE</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="kicker">DECEMBER 1–24 • ONE DOOR A DAY</div>
+  <h1>December<br><span class="yellow">Drops</span></h1>
+  <p>Twenty-four doors. Behind every one: one of our original sweater designs, revealed on its day. And remember the big one — the <a href="index.html#countdown">homepage countdown</a> is ticking toward the Black Friday drop tonight, then the order-by date for Christmas delivery. Doors are for fun. The countdown is for real.</p>
+</div>
+
+<section>
+  <div class="status-line" id="statusLine">LOADING THE CALENDAR…</div>
+  <div class="cal" id="cal"></div>
+  <p class="fineprint">How this works, honestly: a door opens on its December date (Detroit time) and stays open — tap it to see the design hiding behind it. Future doors show the day they open. Every revealed design is a real design in our <a href="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters">Cartoon Sweaters collection</a> and stays buyable — the drop is the reveal, never fake scarcity. Nothing here "sells out" because a calendar page said so. Missed a day? Opened doors never close. Catch up anytime.</p>
+</section>
+
+<footer>
+  <div class="foot-brand">A.I. <span class="now">NOW</span></div>
+  <p>Ugly Black Friday is part of A.I. NOW.<br>
+  <a href="index.html">uglyblackfriday.com</a> • <a href="https://shop.artificial-intelligencenow.com">shop.artificial-intelligencenow.com</a><br>
+  <a href="https://shop.artificial-intelligencenow.com/pages/join-the-list">Join the List — 10% off your first order</a></p>
+</footer>
+
+<script>
+(function(){
+  var DOORS=[
+    ["santa-stuck-in-chimney.png","Santa Stuck In Chimney"],
+    ["yeti-hot-cocoa.png","Yeti Hot Cocoa"],
+    ["elf-on-strike.png","Elf On Strike"],
+    ["snowball-fight-crew.png","Snowball Fight Crew"],
+    ["reindeer-karaoke.png","Reindeer Karaoke"],
+    ["gingerbread-realtor.png","Gingerbread Realtor"],
+    ["nutcracker-drummer.png","Nutcracker Drummer"],
+    ["polar-bear-ice-skates.png","Polar Bear Ice Skates"],
+    ["cat-tangled-in-lights.png","Cat Tangled In Lights"],
+    ["dog-backup-reindeer.png","Dog Backup Reindeer"],
+    ["santa-snow-surfer.png","Santa Snow Surfer"],
+    ["mrs-claus-baker.png","Mrs Claus Baker"],
+    ["snowman-selfie.png","Snowman Selfie"],
+    ["penguin-hot-tub.png","Penguin Hot Tub"],
+    ["reindeer-traffic-cop.png","Reindeer Traffic Cop"],
+    ["runaway-gingerbread.png","Runaway Gingerbread"],
+    ["elf-workshop-chaos.png","Elf Workshop Chaos"],
+    ["santa-yoga.png","Santa Yoga"],
+    ["snow-queen.png","Snow Queen"],
+    ["cardinal-santa-hat.png","Cardinal Santa Hat"],
+    ["raccoon-caroler.png","Raccoon Caroler"],
+    ["moose-sweater-model.png","Moose Sweater Model"],
+    ["fox-on-skis.png","Fox On Skis"],
+    ["tiny-tree-big-heart.png","Tiny Tree, Big Heart"]
+  ];
+  var COLL="https://shop.artificial-intelligencenow.com/collections/ugly-christmas-sweaters";
+  /* Detroit date: shift UTC by -5 (EST) — Detroit is on EST through December. */
+  var now=new Date();
+  var detroit=new Date(now.getTime()+(now.getTimezoneOffset()-300)*60000);
+  var month=detroit.getMonth(); /* 11 = December */
+  var day=detroit.getDate();
+  var year=detroit.getFullYear();
+  var status=document.getElementById('statusLine');
+  var inSeason=(month===11&&year===2026);
+  var beforeSeason=(year<2026)||(year===2026&&month<11);
+  var afterSeason=(year>2026)||(year===2026&&month===11&&day>24);
+  if(beforeSeason){
+    status.innerHTML='🎄 THE DECEMBER DROPS START <span class="yellow">DEC 1</span> — EVERY DOOR IS LOCKED UNTIL ITS DAY';
+  }else if(inSeason){
+    status.innerHTML='🎄 TODAY IS <span class="yellow">DEC '+day+'</span> — DOORS 1–'+day+' ARE OPEN. TAP ONE!';
+  }else{
+    status.innerHTML='🎄 THE DECEMBER DROPS HAVE <span class="yellow">WRAPPED</span> — EVERY DOOR IS OPEN. ENJOY THE REVEALS!';
+  }
+  var cal=document.getElementById('cal');
+  DOORS.forEach(function(d,i){
+    var n=i+1;
+    var openable = afterSeason || (inSeason&&n<=day);
+    var isToday = inSeason&&n===day;
+    var btn=document.createElement('button');
+    btn.type='button';
+    btn.className='door'+(openable?'':' locked')+(isToday?' today':'');
+    btn.setAttribute('aria-label','December '+n+(openable?': open to reveal '+d[1]:': opens December '+n));
+    btn.innerHTML=
+      '<span class="reveal"><img src="'+d[0]+'" alt="'+d[1]+' cartoon sweater design" loading="lazy"><span class="rname">'+d[1]+'</span><a href="'+COLL+'">SHOP THIS DESIGN</a></span>'+
+      '<span class="face"><span class="day">DECEMBER</span><span class="num">'+n+'</span><span class="hint">'+(openable?(isToday?'★ TODAY — TAP TO OPEN ★':'TAP TO OPEN'):'🔒 OPENS DEC '+n)+'</span></span>';
+    if(openable){
+      btn.addEventListener('click',function(){ btn.classList.add('open'); });
+    }else{
+      btn.disabled=true;
+    }
+    cal.appendChild(btn);
+  });
+})();
+</script>
+</body>
+</html>

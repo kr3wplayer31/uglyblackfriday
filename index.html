@@ -102,6 +102,15 @@
   .pet-decor img{width:170px;height:170px;object-fit:cover;border-radius:18px;border:3px solid #000;box-shadow:5px 5px 0 rgba(0,0,0,.55);}
   .pet-sec .section-head h2{font-size:clamp(38px,6.5vw,68px);}
 
+  /* ---------- DESIGN YOUR OWN STUDIO BANNER ---------- */
+  .studio-sec{background:linear-gradient(120deg,#1a0533 0%,var(--violet) 45%,var(--pink) 100%);text-align:center;border-top:5px solid #000;border-bottom:5px solid #000;}
+  .studio-sec h2{font-size:clamp(36px,7vw,76px);text-transform:uppercase;line-height:1;text-shadow:5px 5px 0 #000;}
+  .studio-sec h2 .yellow{color:var(--gold);}
+  .studio-sec p{font-family:Arial,Helvetica,sans-serif;font-weight:bold;font-size:clamp(16px,2.4vw,22px);max-width:1000px;margin:20px auto 0;line-height:1.5;color:var(--cream);text-shadow:1px 1px 0 rgba(0,0,0,.4);}
+  .studio-sec .cta-row{margin-top:32px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .studio-perks{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px;}
+  .studio-perks span{background:#000;color:var(--gold);padding:8px 18px;border-radius:999px;font-size:13px;letter-spacing:2px;border:2px solid var(--gold);}
+
   /* ---------- JOIN THE LIST ---------- */
   .join{background:var(--cranberry);text-align:center;padding:56px 24px;border-top:5px solid #000;border-bottom:5px solid #000;}
   .join h2{font-size:clamp(28px,5vw,50px);text-transform:uppercase;text-shadow:3px 3px 0 rgba(0,0,0,.35);}
@@ -178,6 +187,7 @@
   <nav>
     <a href="#designs">OUR DESIGNS</a>
     <a href="#cartoons">CARTOON SWEATERS</a>
+    <a href="design.html">🎨 DESIGN YOUR OWN</a>
     <a href="#shop">SWEATER SHOP</a>
     <a href="#pets">PET SWEATERS</a>
     <a href="https://shop.artificial-intelligencenow.com">THE STORE</a>
@@ -235,7 +245,7 @@
     <img src="cat-tangled-in-lights.png" alt="">
     <img src="dog-backup-reindeer.png" alt="">
     <img src="santa-stuck-in-chimney.png" alt="">
-    <img src="pet-pug-part-time-reindeer.png" alt="">
+    <img src="pet-dog-matching-sweater.png" alt="">
   </div>
 </div>
 
@@ -255,6 +265,25 @@
 </div>
 
 <div class="marquee"><span>UGLY SWEATERS &nbsp;•&nbsp; PET SWEATERS &nbsp;•&nbsp; MATCHING SETS &nbsp;•&nbsp; ORIGINAL DESIGNS &nbsp;•&nbsp; UGLY SWEATERS &nbsp;•&nbsp; PET SWEATERS &nbsp;•&nbsp; MATCHING SETS &nbsp;•&nbsp; ORIGINAL DESIGNS &nbsp;•&nbsp;</span></div>
+
+<div class="lights" aria-hidden="true"></div>
+
+<!-- ============ DESIGN YOUR OWN STUDIO ============ -->
+<section class="studio-sec" id="studio">
+  <div class="tag" style="background:var(--gold);color:#000;">NEW — THE SWEATER STUDIO</div>
+  <h2>Design Your <span class="yellow">Own</span> Sweater</h2>
+  <p>Don't just wear the chaos — CREATE it. Pick your sweater color, slap on our original cartoon art, emojis, animated stickers and your own photos, write whatever you want on the front, the back, even the sleeves — then download your masterpiece and order it for real.</p>
+  <div class="cta-row">
+    <a class="btn btn-gold" href="design.html">🎨 OPEN THE DESIGN STUDIO</a>
+    <a class="btn btn-black" href="#cartoons">NEED INSPIRATION? SEE OURS</a>
+  </div>
+  <div class="studio-perks">
+    <span>FRONT + BACK + SLEEVES</span>
+    <span>200+ EMOJIS &amp; STICKERS</span>
+    <span>UPLOAD YOUR OWN PICS</span>
+    <span>CUSTOMS $59.99</span>
+  </div>
+</section>
 
 <div class="lights" aria-hidden="true"></div>
 
@@ -1530,6 +1559,61 @@
     </div>
 
   </div>
+</section>
+
+<div class="lights" aria-hidden="true"></div>
+
+<!-- ============ FAITH COLLECTION (ORIGINAL ART) ============ -->
+<section class="designs-sec" id="faith">
+  <div class="section-head">
+    <div class="tag">THE REASON FOR THE SEASON</div>
+    <h2>The Faith Collection</h2>
+    <p>Christmas is Jesus's birthday — so we made a collection for it. All original artwork drawn by us: the Nativity, the three crosses, the risen sunrise, and the words of Luke 2:11 (King James). Reverent, giftable, and only here.</p>
+  </div>
+  <div class="grid">
+
+    <div class="card design-card">
+      <div class="art"><img src="faith-nativity-silhouette.svg" alt="Nativity Silhouette design — Mary, Joseph and baby Jesus in the manger under the Star of Bethlehem"></div>
+      <div class="body">
+        <h3>Nativity Silhouette</h3>
+        <p class="desc">The holy family in the stable under the great star, on a deep midnight blue. O come let us adore Him.</p>
+        <span class="drop">NEW DESIGN — DROPPING BLACK FRIDAY</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">SHOP THE DROP</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="faith-three-crosses.svg" alt="Three Crosses design — three crosses on the hill at sunrise"></div>
+      <div class="body">
+        <h3>Three Crosses — Faith Over Fear</h3>
+        <p class="desc">Three crosses on the hill against a rising sun, with John 3:16 underneath. Faith over fear, all year long.</p>
+        <span class="drop">NEW DESIGN — DROPPING BLACK FRIDAY</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">SHOP THE DROP</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="faith-verse-luke.svg" alt="Luke 2:11 verse design — For unto you is born this day in the city of David a Saviour, which is Christ the Lord"></div>
+      <div class="body">
+        <h3>Luke 2:11 — The Verse Sweater</h3>
+        <p class="desc">"For unto you is born this day in the city of David a Saviour, which is Christ the Lord." King James, word for word, in classic gold and cranberry.</p>
+        <span class="drop">NEW DESIGN — DROPPING BLACK FRIDAY</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">SHOP THE DROP</a>
+      </div>
+    </div>
+
+    <div class="card design-card">
+      <div class="art"><img src="faith-risen-sunrise.svg" alt="He Is Risen design — the empty tomb and the risen silhouette at sunrise"></div>
+      <div class="body">
+        <h3>He Is Risen — Empty Tomb</h3>
+        <p class="desc">The stone rolled away and the sunrise coming up behind Him. The best news ever told, on a sweater.</p>
+        <span class="drop">NEW DESIGN — DROPPING BLACK FRIDAY</span>
+        <a class="shop-btn" href="https://shop.artificial-intelligencenow.com">SHOP THE DROP</a>
+      </div>
+    </div>
+
+  </div>
+  <p style="text-align:center;font-family:Arial,Helvetica,sans-serif;font-weight:bold;margin-top:18px;">Want these on a sweater YOUR way? The <a href="design.html" style="color:var(--gold);text-decoration:underline;">Design Studio</a> has a whole Faith shelf — Nativity, crosses, doves, praying hands and KJV verse badges — ready to tap onto your own custom.</p>
 </section>
 
 <!-- ============ SWEATER SHOP (DROPSHIP LANE) ============ -->
