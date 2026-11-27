@@ -67,11 +67,134 @@
   @media (max-width:560px){.duel{grid-template-columns:1fr;}.vs{margin:0 auto;}}
   @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important;}}
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+<style id="xmas-kit">
+  /* ============ XMAS OVERHAUL KIT — red+green Christmas everywhere (Nov 26) ============ */
+  :root{--x-red:#b23a2e;--x-reddeep:#6e1f16;--x-pine:#0d3b21;--x-pinebright:#175c33;--x-gold:#f5b921;--x-cream:#fff6e5;}
+  body{background:radial-gradient(900px 480px at 8% -40px,rgba(178,58,46,.40),transparent 60%),radial-gradient(900px 520px at 95% 12%,rgba(255,196,0,.13),transparent 60%),linear-gradient(180deg,#0e4023 0%,#0d3b21 45%,#0a3520 100%)!important;}
+  header{background:linear-gradient(90deg,var(--x-reddeep),var(--x-red) 50%,var(--x-reddeep))!important;border-bottom:4px solid var(--x-gold)!important;}
+  header nav a{background:var(--x-pine)!important;border-color:var(--x-gold)!important;color:#fff!important;}
+  header nav a:hover{background:var(--x-gold)!important;color:#000!important;}
+  .brandmark .pill,.pill{background:var(--x-pine)!important;color:var(--x-gold)!important;border:2px solid var(--x-gold);}
+  .wordmark .now,.foot-brand .now{background:linear-gradient(90deg,var(--x-gold),var(--x-cream),#2fe673)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;}
+  footer{background:linear-gradient(180deg,var(--x-pine),#06231a)!important;border-top:4px solid var(--x-gold);}
+  footer a{color:var(--x-gold)!important;}
+  .x-snow{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:200;}
+  /* mascot — our red-nose reindeer, nose pulsing like a C9 bulb (never named, just ours) */
+  .x-mascot{width:64px;flex:0 0 auto;}
+  .x-mascot svg{width:100%;height:auto;display:block;overflow:visible;}
+  .x-nose-halo{filter:blur(5px);animation:xNoseHalo 2.8s ease-in-out infinite;}
+  .x-nose-core{animation:xNose 2.8s ease-in-out infinite;}
+  @keyframes xNose{0%,100%{fill:#ff2d1e;filter:drop-shadow(0 0 11px rgba(255,45,30,.95))}50%{fill:#7a0d04;filter:drop-shadow(0 0 0 rgba(255,45,30,0))}}
+  @keyframes xNoseHalo{0%,100%{opacity:.85}50%{opacity:.06}}
+  /* BIG vintage C9 strings — fat bulbs, sagging wire */
+  .x-lights{background:linear-gradient(180deg,#04190f,#07281b);line-height:0;overflow:hidden;}
+  .x-lights svg{width:100%;height:auto;display:block;}
+  .x-lights .wire{fill:none;stroke:#0a3520;stroke-width:3.5;}
+  .x-lights .drop-line{stroke:#0a3520;stroke-width:3;}
+  .x-lights .socket{fill:#123f27;stroke:#000;stroke-width:1;}
+  .x-lights .glass{stroke:rgba(0,0,0,.35);stroke-width:1;animation:xGlass var(--d,3s) ease-in-out var(--dl,0s) infinite;}
+  .x-lights .glow{filter:blur(7px);animation:xGlow var(--d,3s) ease-in-out var(--dl,0s) infinite;}
+  @keyframes xGlow{0%,100%{opacity:.35}50%{opacity:.9}}
+  @keyframes xGlass{0%,100%{opacity:.85}50%{opacity:1}}
+  .x-lights .glow.sputter{animation:xSputG 6.8s linear var(--dl,0s) infinite;}
+  .x-lights .glass.sputter{animation:xSput 6.8s linear var(--dl,0s) infinite;}
+  @keyframes xSputG{0%,100%{opacity:.85}4%{opacity:.1}6%{opacity:.9}8%{opacity:.15}11%{opacity:.85}52%{opacity:.8}54%{opacity:.2}57%{opacity:.85}}
+  @keyframes xSput{0%,100%{opacity:1}4%{opacity:.45}6%{opacity:1}8%{opacity:.5}11%{opacity:1}52%{opacity:.95}54%{opacity:.55}57%{opacity:1}}
+  /* garland swag on section heads */
+  .section-head::before{content:"";display:block;height:30px;margin:0 auto 12px;max-width:640px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='30' viewBox='0 0 240 30'%3E%3Cpath d='M0 2 Q60 30 120 6 Q180 30 240 2' fill='none' stroke='%231d7a3a' stroke-width='5'/%3E%3Ccircle cx='40' cy='15' r='4.5' fill='%23c8102e'/%3E%3Ccircle cx='90' cy='18' r='4.5' fill='%23ffc400'/%3E%3Ccircle cx='150' cy='18' r='4.5' fill='%23c8102e'/%3E%3Ccircle cx='200' cy='15' r='4.5' fill='%234db2ff'/%3E%3C/svg%3E") repeat-x center top/auto 30px;}
+  /* candy-cane stripe on key cards */
+  .card::before,.qblock::before,.fighter::before,.pod::before,.step::before,.builder::before,.machine::before,.result::before{content:"";display:block;height:10px;background:repeating-linear-gradient(45deg,#b23a2e 0 14px,#fff6e5 14px 28px);flex:0 0 auto;}
+  .machine::before{margin:-26px -20px 20px;height:12px;}
+  /* candy dash inside pill buttons + tree on shop buttons */
+  .btn{position:relative;}
+  .btn::after{content:"";position:absolute;left:14px;right:14px;bottom:6px;height:5px;border-radius:3px;background:repeating-linear-gradient(45deg,#b23a2e 0 8px,#fff6e5 8px 16px);opacity:.85;pointer-events:none;}
+  .shop-btn::before{content:"\1F384 ";}
+  /* ornament bullets in content lists */
+  section ul li{list-style:none;}
+  section ul li::before{content:"";display:inline-block;width:11px;height:11px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#ff8fa3,#b23a2e);margin-right:9px;box-shadow:0 0 6px rgba(178,58,46,.8);}
+  /* pre-footer treescape + cast/crew parade */
+  .x-prefoot{padding:12px 16px 0;text-align:center;}
+  .x-treescape{display:flex;justify-content:center;align-items:flex-end;gap:14px;}
+  .x-treescape svg{height:auto;display:block;}
+  .x-ts-s{width:52px;} .x-ts-m{width:78px;} .x-ts-b{width:150px;}
+  .x-treescape .x-mascot{width:92px;margin-bottom:2px;}
+  .x-bigtree-svg{filter:drop-shadow(4px 4px 0 rgba(0,0,0,.35));}
+  .x-tb{animation:xTw 2.6s ease-in-out infinite;}
+  @keyframes xTw{0%,100%{opacity:1}50%{opacity:.3}}
+  .x-parade{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;padding:16px 8px 22px;align-items:flex-end;}
+  .x-parade .x-pitem{width:118px;height:118px;border-radius:16px;border:3px solid #000;box-shadow:5px 5px 0 rgba(0,0,0,.5);background:#fff6e5;overflow:hidden;flex:0 0 auto;}
+  .x-parade .x-pitem img{width:100%;height:100%;object-fit:cover;display:block;}
+  .x-parade .x-pitem svg{width:100%;height:100%;display:block;padding:5px;box-sizing:border-box;}
+  .x-parade .x-pitem:nth-child(odd){transform:rotate(-3deg);}
+  .x-parade .x-pitem:nth-child(even){transform:rotate(2.5deg);}
+  /* peeking characters at section corners */
+  section{position:relative;}
+  .x-peek{position:absolute;top:0;right:18px;width:118px;height:118px;border-radius:16px;border:3px solid #000;box-shadow:5px 5px 0 rgba(0,0,0,.5);transform:translateY(-42%) rotate(5deg);z-index:4;pointer-events:none;background:#fff6e5;overflow:hidden;}
+  .x-peek img{width:100%;height:100%;object-fit:cover;display:block;}
+  .x-peek svg{width:100%;height:100%;display:block;padding:5px;box-sizing:border-box;}
+  @media(max-width:900px){.x-peek{display:none;}}
+  @media (prefers-reduced-motion: reduce){
+    .x-nose-halo,.x-nose-core,.x-lights .glass,.x-lights .glow,.x-tb{animation:none!important;}
+    .x-nose-core{fill:#ff2d1e;filter:drop-shadow(0 0 8px rgba(255,45,30,.85));}
+    .x-nose-halo{opacity:.55;}
+    .x-lights .glow{opacity:.6;} .x-lights .glass{opacity:1;}
+  }
+  @media(max-width:640px){.x-mascot{width:46px;}.x-treescape .x-mascot{width:64px;}.x-ts-b{width:110px;}.x-ts-s{width:38px;}.x-ts-m{width:56px;}.x-parade .x-pitem{width:88px;height:88px;}}
+
+  h1,h2,h3{font-family:'Lilita One','Arial Black',Arial,sans-serif!important;letter-spacing:.5px;}
+  .x-treescape .x-bauble{width:36px;align-self:center;}
+
+  /* feature pages: alternating red/green section fields, saturated panels */
+  :where(section){background:linear-gradient(180deg,#0e4023,#0d3b21);}
+  :where(section:nth-of-type(even)){background:linear-gradient(180deg,#93392c,#6e1f16);}
+  .qblock,.card,.fighter,.pod,.builder,.wall-frame{background:#14532d!important;}
+  .step{background:#6e1f16!important;border-color:var(--x-gold)!important;}
+  .machine{background:linear-gradient(160deg,#93392c,#571d14)!important;}
+  .tallybar,.status-line{background:#6e1f16!important;}
+  .opt{background:#0d3b21!important;border-color:var(--x-gold)!important;}
+  .door .reveal{background:#14532d!important;}
+  .meter{background:#0d3b21!important;}
+
+  :where(section){background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 5 L6 11 L12 5 M12 5 L18 11 L24 5 M0 17 L6 23 L12 17 M12 17 L18 23 L24 17' fill='none' stroke='%23ffffff' stroke-opacity='.07' stroke-width='2.4'/%3E%3C/svg%3E"),linear-gradient(180deg,#0e4023,#0d3b21);}
+  :where(section:nth-of-type(even)){background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M0 5 L6 11 L12 5 M12 5 L18 11 L24 5 M0 17 L6 23 L12 17 M12 17 L18 23 L24 17' fill='none' stroke='%23ffffff' stroke-opacity='.07' stroke-width='2.4'/%3E%3C/svg%3E"),linear-gradient(180deg,#93392c,#6e1f16);}
+
+</style>
 </head>
 <body>
 
 <header>
   <div class="brandmark">
+    <div class="x-mascot" aria-hidden="true"><svg viewBox="0 0 220 208">
+      <g fill="none" stroke="#caa06a" stroke-width="8" stroke-linecap="round">
+        <path d="M74 62 C58 46 50 34 44 18"/>
+        <path d="M60 44 C50 40 42 40 34 44"/>
+        <path d="M66 54 C58 52 50 54 44 58"/>
+        <path d="M146 62 C162 46 170 34 176 18"/>
+        <path d="M160 44 C170 40 178 40 186 44"/>
+        <path d="M154 54 C162 52 170 54 176 58"/>
+      </g>
+      <ellipse cx="42" cy="86" rx="18" ry="10" fill="#a06a3b" transform="rotate(-28 42 86)"/>
+      <ellipse cx="178" cy="86" rx="18" ry="10" fill="#a06a3b" transform="rotate(28 178 86)"/>
+      <ellipse cx="44" cy="86" rx="9" ry="5" fill="#e0aa72" transform="rotate(-28 44 86)"/>
+      <ellipse cx="176" cy="86" rx="9" ry="5" fill="#e0aa72" transform="rotate(28 176 86)"/>
+      <ellipse cx="110" cy="118" rx="64" ry="56" fill="#b57e46"/>
+      <ellipse cx="110" cy="140" rx="36" ry="25" fill="#eccfa3"/>
+      <ellipse cx="66" cy="132" rx="10" ry="6" fill="#ff8fa3" opacity=".55"/>
+      <ellipse cx="154" cy="132" rx="10" ry="6" fill="#ff8fa3" opacity=".55"/>
+      <circle cx="84" cy="106" r="7" fill="#241407"/>
+      <circle cx="136" cy="106" r="7" fill="#241407"/>
+      <circle cx="86.5" cy="103.5" r="2.4" fill="#fff"/>
+      <circle cx="138.5" cy="103.5" r="2.4" fill="#fff"/>
+      <path d="M98 152 Q110 161 122 152" fill="none" stroke="#7c4a21" stroke-width="4" stroke-linecap="round"/>
+      <circle class="x-nose-halo" cx="110" cy="130" r="17" fill="#ff2d1e"/>
+      <circle class="x-nose-core" cx="110" cy="130" r="10.5" fill="#ff2d1e" stroke="#a30f02" stroke-width="1.5"/>
+      <ellipse cx="106" cy="126" rx="3.4" ry="2.4" fill="#fff" opacity=".75"/>
+      <path d="M50 160 Q110 184 170 160 L170 178 Q110 202 50 178 Z" fill="#c8102e"/>
+      <path d="M84 170 L84 188 M110 176 L110 194 M136 170 L136 188" stroke="#ffc400" stroke-width="5"/>
+    </svg></div>
     <div class="wordmark">A.I. <span class="now">NOW</span></div>
     <div class="pill">UGLY BLACK FRIDAY</div>
   </div>
@@ -88,6 +211,8 @@
   </nav>
 </header>
 
+<div class="x-lights" aria-hidden="true"></div>
+
 <div class="hero">
   <div class="kicker">HEAD-TO-HEAD • TAP THE UGLIER ONE</div>
   <h1>The Ugly<br><span class="yellow">Meter</span></h1>
@@ -95,6 +220,22 @@
 </div>
 
 <section>
+    <div class="x-peek" aria-hidden="true"><svg viewBox="0 0 120 200" aria-hidden="true">
+<ellipse cx="58" cy="168" rx="34" ry="24" fill="#f4f6f8" stroke="#9aa7b1" stroke-width="3"/>
+<path d="M74 152 C86 120 84 84 76 56" fill="none" stroke="#f4f6f8" stroke-width="17" stroke-linecap="round"/>
+<path d="M74 152 C86 120 84 84 76 56" fill="none" stroke="#9aa7b1" stroke-width="21" stroke-linecap="round" opacity=".28"/>
+<ellipse cx="74" cy="46" rx="17" ry="14" fill="#f4f6f8" stroke="#9aa7b1" stroke-width="3"/>
+<path d="M88 44 L110 50 L88 56 Z" fill="#ff9a1a" stroke="#d97a06" stroke-width="2"/>
+<circle cx="78" cy="42" r="3.2" fill="#241407"/><polygon points="78,42 78.64,38.64 81.36,41.2" fill="#fff"/><circle cx="79" cy="41" r="1.2" fill="#fff"/>
+<path d="M58 30 Q74 12 96 22 Q84 30 88 38 Q70 34 58 30Z" fill="#b23a2e"/>
+<circle cx="94" cy="24" r="6" fill="#fff6e5"/>
+<path d="M60 108 L96 100 M62 120 L98 112" stroke="#b23a2e" stroke-width="7" stroke-linecap="round"/>
+<path d="M60 108 L96 100 M62 120 L98 112" stroke="#fff6e5" stroke-width="7" stroke-linecap="round" stroke-dasharray="8 14" opacity=".85"/>
+<path d="M40 160 Q16 150 12 132" fill="none" stroke="#e8edf0" stroke-width="9" stroke-linecap="round"/>
+<path d="M52 190 L50 198 M76 188 L84 196" stroke="#ff9a1a" stroke-width="6" stroke-linecap="round"/>
+<path d="M40 198 L58 198 M78 200 L96 198" stroke="#ff9a1a" stroke-width="6" stroke-linecap="round"/>
+<path d="M14 118 l3 6 6 1 -4 4 1 6 -6-3 -5 3 1-6 -4-4 6-1z" fill="#ffc400"/>
+<g><circle cx="13" cy="133" r="7.5" fill="#ffffff" stroke="#241407" stroke-width="2.3"/><path d="M8.875 127.375 v-4.6 M13 126.625 v-5.6 M17.125 127.375 v-4.6" stroke="#241407" stroke-width="2" stroke-linecap="round"/></g></svg></div>
   <div class="duel" aria-live="polite">
     <button class="fighter" id="fA" type="button">
       <img id="imgA" src="cat-tangled-in-lights.png" alt="">
@@ -133,6 +274,54 @@
   <p class="fineprint">Honest fine print: this tally lives on this screen, in this visit — it's tonight's tally, counted from your taps only. There's no global leaderboard and no made-up vote counts; close the tab and the crown goes back up for grabs. Want your champion for real? Every design here is a real sweater in the Cartoon Sweaters collection.</p>
 </section>
 
+
+<div class="x-prefoot" aria-hidden="true">
+<div class="x-lights"></div>
+<div class="x-treescape" aria-hidden="true"><svg viewBox="0 0 40 64" class="x-bauble" aria-hidden="true"><line x1="20" y1="0" x2="20" y2="13" stroke="#0a3520" stroke-width="2.5"/><rect x="14" y="11" width="12" height="7" rx="2" fill="#c9a227"/><circle cx="20" cy="37" r="17" fill="#b23a2e"/><ellipse cx="14" cy="30" rx="5" ry="8" fill="#ffffff" opacity=".5"/></svg><svg class="x-ts-s" viewBox="0 0 120 170"><polygon points="60,6 96,58 78,58 108,104 84,104 116,150 4,150 36,104 12,104 42,58 24,58" fill="#1d7a3a" stroke="#0a3520" stroke-width="4"/><rect x="50" y="150" width="20" height="16" fill="#7a4a21"/><circle cx="60" cy="34" r="7" fill="#e4002b"/><circle cx="42" cy="76" r="6" fill="#ffc400"/><circle cx="80" cy="88" r="6" fill="#4db2ff"/><circle cx="56" cy="118" r="6" fill="#ff6fae"/><circle cx="86" cy="128" r="5" fill="#ffc400"/><polygon points="60,0 64,10 74,10 66,16 70,26 60,20 50,26 54,16 46,10 56,10" fill="#ffc400"/></svg><svg class="x-ts-m" viewBox="0 0 120 170"><polygon points="60,6 96,58 78,58 108,104 84,104 116,150 4,150 36,104 12,104 42,58 24,58" fill="#14532d" stroke="#0a3520" stroke-width="4"/><rect x="50" y="150" width="20" height="16" fill="#7a4a21"/><circle cx="60" cy="34" r="7" fill="#e4002b"/><circle cx="42" cy="76" r="6" fill="#ffc400"/><circle cx="80" cy="88" r="6" fill="#4db2ff"/><circle cx="56" cy="118" r="6" fill="#ff6fae"/><circle cx="86" cy="128" r="5" fill="#ffc400"/><polygon points="60,0 64,10 74,10 66,16 70,26 60,20 50,26 54,16 46,10 56,10" fill="#ffc400"/><ellipse cx="42" cy="80" rx="14" ry="5.5" fill="#ffffff" opacity=".92"/><ellipse cx="78" cy="80" rx="14" ry="5.5" fill="#ffffff" opacity=".92"/><ellipse cx="60" cy="52" rx="11" ry="4.6" fill="#ffffff" opacity=".92"/><ellipse cx="34" cy="126" rx="12" ry="5.5" fill="#ffffff" opacity=".88"/><ellipse cx="86" cy="126" rx="12" ry="5.5" fill="#ffffff" opacity=".88"/></svg><div class="x-mascot" aria-hidden="true"><svg viewBox="0 0 220 208">
+      <g fill="none" stroke="#caa06a" stroke-width="8" stroke-linecap="round">
+        <path d="M74 62 C58 46 50 34 44 18"/>
+        <path d="M60 44 C50 40 42 40 34 44"/>
+        <path d="M66 54 C58 52 50 54 44 58"/>
+        <path d="M146 62 C162 46 170 34 176 18"/>
+        <path d="M160 44 C170 40 178 40 186 44"/>
+        <path d="M154 54 C162 52 170 54 176 58"/>
+      </g>
+      <ellipse cx="42" cy="86" rx="18" ry="10" fill="#a06a3b" transform="rotate(-28 42 86)"/>
+      <ellipse cx="178" cy="86" rx="18" ry="10" fill="#a06a3b" transform="rotate(28 178 86)"/>
+      <ellipse cx="44" cy="86" rx="9" ry="5" fill="#e0aa72" transform="rotate(-28 44 86)"/>
+      <ellipse cx="176" cy="86" rx="9" ry="5" fill="#e0aa72" transform="rotate(28 176 86)"/>
+      <ellipse cx="110" cy="118" rx="64" ry="56" fill="#b57e46"/>
+      <ellipse cx="110" cy="140" rx="36" ry="25" fill="#eccfa3"/>
+      <ellipse cx="66" cy="132" rx="10" ry="6" fill="#ff8fa3" opacity=".55"/>
+      <ellipse cx="154" cy="132" rx="10" ry="6" fill="#ff8fa3" opacity=".55"/>
+      <circle cx="84" cy="106" r="7" fill="#241407"/>
+      <circle cx="136" cy="106" r="7" fill="#241407"/>
+      <circle cx="86.5" cy="103.5" r="2.4" fill="#fff"/>
+      <circle cx="138.5" cy="103.5" r="2.4" fill="#fff"/>
+      <path d="M98 152 Q110 161 122 152" fill="none" stroke="#7c4a21" stroke-width="4" stroke-linecap="round"/>
+      <circle class="x-nose-halo" cx="110" cy="130" r="17" fill="#ff2d1e"/>
+      <circle class="x-nose-core" cx="110" cy="130" r="10.5" fill="#ff2d1e" stroke="#a30f02" stroke-width="1.5"/>
+      <ellipse cx="106" cy="126" rx="3.4" ry="2.4" fill="#fff" opacity=".75"/>
+      <path d="M50 160 Q110 184 170 160 L170 178 Q110 202 50 178 Z" fill="#c8102e"/>
+      <path d="M84 170 L84 188 M110 176 L110 194 M136 170 L136 188" stroke="#ffc400" stroke-width="5"/>
+    </svg></div><svg class="x-ts-b" viewBox="0 0 200 252" class="x-bigtree-svg" aria-hidden="true">
+<polygon points="100,4 108,20 124,20 112,30 118,46 100,36 82,46 88,30 76,20 92,20" fill="#ffc400" stroke="#b8860b" stroke-width="2"/>
+<polygon points="100,26 142,86 118,86 156,140 128,140 168,196 32,196 72,140 44,140 82,86 58,86" fill="#1d7a3a" stroke="#0a3520" stroke-width="5"/>
+<rect x="88" y="196" width="24" height="22" fill="#7a4a21"/>
+<path d="M52 108 Q100 128 148 108" fill="none" stroke="#ffc400" stroke-width="3" stroke-dasharray="6 5"/>
+<path d="M44 156 Q100 178 156 156" fill="none" stroke="#ffc400" stroke-width="3" stroke-dasharray="6 5"/>
+<circle class="x-tb" cx="100" cy="58" r="7" fill="#ff4038" style="filter:drop-shadow(0 0 7px #ff2d1e)"/>
+<circle class="x-tb" cx="76" cy="98" r="6.5" fill="#ffc93c" style="animation-delay:.5s;filter:drop-shadow(0 0 7px #ffb300)"/>
+<circle class="x-tb" cx="126" cy="102" r="6.5" fill="#4db2ff" style="animation-delay:1s;filter:drop-shadow(0 0 7px #2196f3)"/>
+<circle class="x-tb" cx="62" cy="146" r="7" fill="#2fe673" style="animation-delay:1.4s;filter:drop-shadow(0 0 7px #00c853)"/>
+<circle class="x-tb" cx="104" cy="150" r="6.5" fill="#ff9a1a" style="animation-delay:.8s;filter:drop-shadow(0 0 7px #ff6d00)"/>
+<circle class="x-tb" cx="142" cy="152" r="6.5" fill="#ff4038" style="animation-delay:1.8s;filter:drop-shadow(0 0 7px #ff2d1e)"/>
+<circle class="x-tb" cx="84" cy="182" r="6.5" fill="#4db2ff" style="animation-delay:.2s;filter:drop-shadow(0 0 7px #2196f3)"/>
+<circle class="x-tb" cx="122" cy="184" r="7" fill="#ffc93c" style="animation-delay:1.2s;filter:drop-shadow(0 0 7px #ffb300)"/>
+<circle cx="90" cy="76" r="5" fill="#fff6e5"/><circle cx="116" cy="126" r="5" fill="#ff6fae"/><circle cx="70" cy="172" r="5" fill="#fff6e5"/>
+</svg><svg class="x-ts-m" viewBox="0 0 120 170"><polygon points="60,6 96,58 78,58 108,104 84,104 116,150 4,150 36,104 12,104 42,58 24,58" fill="#14532d" stroke="#0a3520" stroke-width="4"/><rect x="50" y="150" width="20" height="16" fill="#7a4a21"/><circle cx="60" cy="34" r="7" fill="#e4002b"/><circle cx="42" cy="76" r="6" fill="#ffc400"/><circle cx="80" cy="88" r="6" fill="#4db2ff"/><circle cx="56" cy="118" r="6" fill="#ff6fae"/><circle cx="86" cy="128" r="5" fill="#ffc400"/><polygon points="60,0 64,10 74,10 66,16 70,26 60,20 50,26 54,16 46,10 56,10" fill="#ffc400"/><ellipse cx="42" cy="80" rx="14" ry="5.5" fill="#ffffff" opacity=".92"/><ellipse cx="78" cy="80" rx="14" ry="5.5" fill="#ffffff" opacity=".92"/><ellipse cx="60" cy="52" rx="11" ry="4.6" fill="#ffffff" opacity=".92"/><ellipse cx="34" cy="126" rx="12" ry="5.5" fill="#ffffff" opacity=".88"/><ellipse cx="86" cy="126" rx="12" ry="5.5" fill="#ffffff" opacity=".88"/></svg><svg class="x-ts-s" viewBox="0 0 120 170"><polygon points="60,6 96,58 78,58 108,104 84,104 116,150 4,150 36,104 12,104 42,58 24,58" fill="#1d7a3a" stroke="#0a3520" stroke-width="4"/><rect x="50" y="150" width="20" height="16" fill="#7a4a21"/><circle cx="60" cy="34" r="7" fill="#e4002b"/><circle cx="42" cy="76" r="6" fill="#ffc400"/><circle cx="80" cy="88" r="6" fill="#4db2ff"/><circle cx="56" cy="118" r="6" fill="#ff6fae"/><circle cx="86" cy="128" r="5" fill="#ffc400"/><polygon points="60,0 64,10 74,10 66,16 70,26 60,20 50,26 54,16 46,10 56,10" fill="#ffc400"/></svg><svg viewBox="0 0 40 64" class="x-bauble" aria-hidden="true"><line x1="20" y1="0" x2="20" y2="13" stroke="#0a3520" stroke-width="2.5"/><rect x="14" y="11" width="12" height="7" rx="2" fill="#c9a227"/><circle cx="20" cy="37" r="17" fill="#2456a6"/><ellipse cx="14" cy="30" rx="5" ry="8" fill="#ffffff" opacity=".5"/></svg></div>
+<div class="x-parade"><div class="x-pitem"><img src="cat-tangled-in-lights.png" alt="" loading="lazy"></div><div class="x-pitem"><img src="pet-smug-cat-sweater.png" alt="" loading="lazy"></div><div class="x-pitem"><img src="dog-backup-reindeer.png" alt="" loading="lazy"></div><div class="x-pitem"><img src="chihuahua-sled-team.png" alt="" loading="lazy"></div></div>
+</div>
 <footer>
   <div class="foot-brand">A.I. <span class="now">NOW</span></div>
   <p>Ugly Black Friday is part of A.I. NOW.<br>
@@ -237,5 +426,74 @@
   showPair();
 })();
 </script>
+
+<script>
+/* XMAS KIT: fat vintage C9 strings into .x-lights + light falling snow. Defensive by design. */
+(function(){try{
+  var NS='http://www.w3.org/2000/svg';
+  var COLORS=[
+    {glass:'#ff4038', glow:'#ff2d1e'},
+    {glass:'#ffc93c', glow:'#ffb300'},
+    {glass:'#2fe673', glow:'#00c853'},
+    {glass:'#4db2ff', glow:'#2196f3'},
+    {glass:'#ff9a1a', glow:'#ff6d00'}
+  ];
+  function el(n,at){var e=document.createElementNS(NS,n);for(var k in at){e.setAttribute(k,at[k]);}return e;}
+  function build(container){
+    var W=1200,H=150,top=8,sag=34;
+    var w=container.clientWidth||1200;
+    var n=Math.max(8,Math.min(18,Math.round(w/100)));
+    var svg=el('svg',{viewBox:'0 0 '+W+' '+H,'aria-hidden':'true'});
+    function yAt(x){var t=x/W;return top+sag*4*t*(1-t);}
+    var step=W/(n-1),pts=[],i,x;
+    for(i=0;i<n;i++){x=i*step;pts.push([x,yAt(x)]);}
+    var d='M -10 '+(yAt(0)-4);
+    for(i=0;i<pts.length-1;i++){var x1=pts[i][0],y1=pts[i][1],x2=pts[i+1][0],y2=pts[i+1][1];d+=' Q '+((x1+x2)/2)+' '+((y1+y2)/2+20)+' '+x2+' '+y2;}
+    d+=' L '+(W+10)+' '+(yAt(W)-4);
+    svg.appendChild(el('path',{d:d,'class':'wire'}));
+    pts.forEach(function(p,idx){
+      var c=COLORS[idx%COLORS.length],bx=p[0],by=p[1];
+      var dur=(2.4+((idx*37)%10)*0.22).toFixed(2),delay=(-((idx*53)%20)*0.31).toFixed(2);
+      var style='--d:'+dur+'s;--dl:'+delay+'s',sputter=(idx%7===3)?' sputter':'';
+      var g=el('g',{});
+      g.appendChild(el('line',{x1:bx,y1:by,x2:bx,y2:by+10,'class':'drop-line'}));
+      var glow=el('ellipse',{cx:bx,cy:by+42,rx:27,ry:34,fill:c.glow,'class':'glow'+sputter});glow.setAttribute('style',style);g.appendChild(glow);
+      g.appendChild(el('rect',{x:bx-7,y:by+10,width:14,height:13,rx:2,'class':'socket'}));
+      var gp='M '+bx+' '+(by+22)+' C '+(bx+15)+' '+(by+30)+', '+(bx+17)+' '+(by+42)+', '+bx+' '+(by+62)+' C '+(bx-17)+' '+(by+42)+', '+(bx-15)+' '+(by+30)+', '+bx+' '+(by+22)+' Z';
+      var glass=el('path',{d:gp,fill:c.glass,'class':'glass'+sputter});glass.setAttribute('style',style);g.appendChild(glass);
+      g.appendChild(el('ellipse',{cx:bx-6,cy:by+42,rx:4,ry:9,fill:'#ffffff',opacity:'.55'}));
+      svg.appendChild(g);
+    });
+    container.appendChild(svg);
+  }
+  var xs=document.querySelectorAll('.x-lights');
+  for(var s=0;s<xs.length;s++){ if(!xs[s].firstChild) build(xs[s]); }
+}catch(e){}})();
+(function(){try{
+  if(!window.requestAnimationFrame) return;
+  if(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var c=document.createElement('canvas');c.className='x-snow';c.setAttribute('aria-hidden','true');
+  document.body.appendChild(c);
+  var ctx=c.getContext('2d'); if(!ctx) return;
+  var W=0,H=0,flakes=[],N=Math.max(24,Math.min(90,Math.floor(window.innerWidth/14))),i;
+  function rs(){W=c.width=window.innerWidth;H=c.height=window.innerHeight;}
+  rs(); window.addEventListener('resize',rs);
+  for(i=0;i<N;i++){flakes.push({x:Math.random()*1600,y:Math.random()*1200,r:1+Math.random()*2.2,s:.3+Math.random()*.9,o:.3+Math.random()*.5,ph:Math.random()*6.28});}
+  var running=true;
+  document.addEventListener('visibilitychange',function(){running=!document.hidden;if(running)window.requestAnimationFrame(tick);});
+  function tick(t){
+    if(!running) return;
+    ctx.clearRect(0,0,W,H); ctx.fillStyle='#ffffff';
+    for(var i=0;i<flakes.length;i++){var p=flakes[i];p.y+=p.s;p.x+=Math.sin((t||0)/1600+p.ph)*.3;
+      if(p.y>H+4){p.y=-4;p.x=Math.random()*W;}
+      var px=p.x%(W+8); if(px<0)px+=W+8;
+      ctx.globalAlpha=p.o;ctx.beginPath();ctx.arc(px,p.y,p.r,0,6.29);ctx.fill();}
+    ctx.globalAlpha=1;
+    window.requestAnimationFrame(tick);
+  }
+  window.requestAnimationFrame(tick);
+}catch(e){}})();
+</script>
+
 </body>
 </html>
